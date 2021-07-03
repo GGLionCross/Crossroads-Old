@@ -1,13 +1,12 @@
 <template>
   <q-page class="flex flex-center">
-    <crossroads-card></crossroads-card>
+    <crossroads-card :info="cards[0]"></crossroads-card>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import { useGetters } from 'vuex-composition-helpers';
-import { GET_CARDS } from 'store/constants/getters';
+import { computed, defineComponent } from 'vue';
+import { useStore } from 'vuex';
 import CrossroadsCard from 'components/CrossroadsCard.vue';
 
 export default defineComponent({
@@ -16,7 +15,12 @@ export default defineComponent({
     CrossroadsCard
   },
   setup() {
-    const { cards } = useGetters({ cards: GET_CARDS });
+    const store = useStore();
+    const cards = computed(() => store.getters.getCards);
+
+    return {
+      cards
+    }
   }
 })
 </script>

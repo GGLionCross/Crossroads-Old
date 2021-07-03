@@ -1,2 +1,3 @@
-export function someGetter (/* state */) {
+export function getCards (state) {
+  return state.cards;
 }

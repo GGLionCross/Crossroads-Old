@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card row justify-center">
     <q-card
       class="card side-back absolute column justify-end items-center"
       :class="{ 'card-rotate': isVisible }"
@@ -7,7 +7,7 @@
       <q-btn
         color="green-10"
         icon="play_circle_filled"
-        size="10vh"
+        size="3.5em"
         flat
         round
         @click="showCard"
@@ -34,12 +34,14 @@
                 <q-btn
                   color="grey-14"
                   icon="close"
+                  size="1.5em"
                   flat
                   round
                 ></q-btn>
                 <q-btn
                   color="grey-14"
                   icon="undo"
+                  size="1.5em"
                   flat
                   round
                   @click="hideCard"
@@ -47,6 +49,7 @@
                 <q-btn
                   color="red-10"
                   icon="arrow_forward"
+                  size="1.5em"
                   flat
                   round
                   @click="showCardInfo"
@@ -78,6 +81,7 @@
                     <q-btn
                       color="grey-14"
                       icon="undo"
+                      size="1.5em"
                       flat
                       round
                       @click="hideCardInfo"
@@ -91,6 +95,7 @@
                     <q-btn
                       color="grey-14"
                       icon="undo"
+                      size="1.5em"
                       flat
                       round
                       @click="hideResult"
@@ -98,6 +103,7 @@
                     <q-btn
                       color="red-10"
                       icon="arrow_forward"
+                      size="1.5em"
                       flat
                       round
                       @click="showCardInfo"
@@ -170,14 +176,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$card-height: 70vh;
+$card-width: 90vw;
 .card {
-  /* 2.5in x 3.5in */
-  width: calc(#{$card-height} * 2.5 / 3.5);
-  height: $card-height;
+  width: $card-width;
+  max-height: 80vh;
+  aspect-ratio: 2.5 / 3.5;
   background-size: cover;
   backface-visibility: hidden;
-  transition: all 1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 .side-back {
   background-image: url('assets/backgrounds/crossroads-back.jpg');

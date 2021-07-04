@@ -62,6 +62,7 @@
               >
                 <div key="options" v-show="!isShowingResult">
                   <div>{{ intro }}</div>
+                  <q-separator color="grey-10" spaced></q-separator>
                   <div v-for="op in options" :key="op.label">
                     <div class="option-label text-center text-uppercase text-subtitle2">
                       {{ op.label }}
@@ -83,8 +84,9 @@
                     ></q-btn>
                   </div>
                 </div>
-                <div key="result" v-show="isShowingResult">
-                  {{ result }}
+                <div key="result" v-show="isShowingResult" class="column">
+                  <div>{{ result }}</div>
+                  <q-space></q-space>
                   <div class="row justify-around">
                     <q-btn
                       color="grey-14"

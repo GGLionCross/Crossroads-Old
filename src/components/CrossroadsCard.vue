@@ -7,7 +7,7 @@
       <q-btn
         color="green-10"
         icon="play_circle_filled"
-        size="1em"
+        size="2em"
         flat
         round
         @click="showCard"

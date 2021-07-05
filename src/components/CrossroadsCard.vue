@@ -17,8 +17,9 @@
       class="card side-front absolute"
       :class="{ 'card-rotate': !isVisible }"
     >
-      <q-card-section class="full-height">
-        <q-scroll-area class="full-height">
+      <q-card-section class="full-height column">
+        <div v-if="isTriggered" class="text-center text-uppercase text-h6">{{ name }}</div>
+        <q-scroll-area class="col-grow">
           <transition-group
             appear
             enter-active-class="animated fadeIn"
@@ -27,7 +28,7 @@
             <div
               key="trigger"
               v-if="!isTriggered"
-              class="trigger full-height absolute"
+              class="full-height absolute"
             >
               <div class="text-italic">{{ trigger }}</div>
               <div class="row justify-around">
@@ -56,61 +57,51 @@
                 ></q-btn>
               </div>
             </div>
-            <div key="card-info" v-else class="card-info absolute">
-              <div class="text-center text-uppercase text-h6">{{ name }}</div>
-              <transition-group
-                appear
-                enter-active-class="animated fadeIn"
-                leave-active-class="animated fadeOut"
-              >
-                <div key="options" v-show="!isShowingResult">
-                  <div>{{ intro }}</div>
-                  <q-separator color="grey-10" spaced></q-separator>
-                  <div v-for="op in options" :key="op.label">
-                    <div class="option-label text-center text-uppercase text-subtitle2">
-                      {{ op.label }}
-                    </div>
-                    <div
-                      class="cursor-pointer border-blink q-pa-xs"
-                      @click="showResult(op.result)"
-                    >
-                      <div>{{ op.subtext }}</div>
-                    </div>
-                  </div>
-                  <div class="row justify-center">
-                    <q-btn
-                      color="grey-14"
-                      icon="undo"
-                      size="1.5em"
-                      flat
-                      round
-                      @click="hideCardInfo"
-                    ></q-btn>
-                  </div>
+            <div key="options" v-else-if="!isShowingResult" class="absolute">
+              <div>{{ intro }}</div>
+              <q-separator color="grey-10" spaced></q-separator>
+              <div v-for="op in options" :key="op.label">
+                <div class="option-label text-center text-uppercase text-subtitle2">
+                  {{ op.label }}
                 </div>
-                <div key="result" v-show="isShowingResult" class="column">
-                  <div>{{ result }}</div>
-                  <q-space></q-space>
-                  <div class="row justify-around">
-                    <q-btn
-                      color="grey-14"
-                      icon="undo"
-                      size="1.5em"
-                      flat
-                      round
-                      @click="hideResult"
-                    ></q-btn>
-                    <q-btn
-                      color="red-10"
-                      icon="arrow_forward"
-                      size="1.5em"
-                      flat
-                      round
-                      @click="showCardInfo"
-                    ></q-btn>
-                  </div>
+                <div
+                  class="cursor-pointer border-blink q-pa-xs"
+                  @click="showResult(op.result)"
+                >
+                  <div>{{ op.subtext }}</div>
                 </div>
-              </transition-group>
+              </div>
+              <div class="row justify-center">
+                <q-btn
+                  color="grey-14"
+                  icon="undo"
+                  size="1.5em"
+                  flat
+                  round
+                  @click="hideCardInfo"
+                ></q-btn>
+              </div>
+            </div>
+            <div key="result" v-else class="column absolute">
+              <div>{{ result }}</div>
+              <div class="row justify-around">
+                <q-btn
+                  color="grey-14"
+                  icon="undo"
+                  size="1.5em"
+                  flat
+                  round
+                  @click="hideResult"
+                ></q-btn>
+                <q-btn
+                  color="red-10"
+                  icon="arrow_forward"
+                  size="1.5em"
+                  flat
+                  round
+                  @click="showCardInfo"
+                ></q-btn>
+              </div>
             </div>
           </transition-group>
         </q-scroll-area>
@@ -145,7 +136,7 @@ export default defineComponent({
     const hideCardInfo = () => {
       isTriggered.value = false;
     }
-    const result = ref('');
+    const result = ref('Result');
     const isShowingResult = ref(false);
     const showResult = (r) => {
       result.value = r;

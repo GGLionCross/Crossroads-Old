@@ -7,7 +7,7 @@
       <q-btn
         color="green-10"
         icon="play_circle_filled"
-        size="3.5em"
+        size="5vw"
         flat
         round
         @click="showCard"
@@ -35,14 +35,14 @@
                 <q-btn
                   color="grey-14"
                   icon="close"
-                  size="1.5em"
+                  size="1em"
                   flat
                   round
                 ></q-btn>
                 <q-btn
                   color="grey-14"
                   icon="undo"
-                  size="1.5em"
+                  size="1em"
                   flat
                   round
                   @click="hideCard"
@@ -50,7 +50,7 @@
                 <q-btn
                   color="red-10"
                   icon="arrow_forward"
-                  size="1.5em"
+                  size="1em"
                   flat
                   round
                   @click="showCardInfo"
@@ -75,7 +75,7 @@
                 <q-btn
                   color="grey-14"
                   icon="undo"
-                  size="1.5em"
+                  size="1em"
                   flat
                   round
                   @click="hideCardInfo"
@@ -88,7 +88,7 @@
                 <q-btn
                   color="grey-14"
                   icon="undo"
-                  size="1.5em"
+                  size="1em"
                   flat
                   round
                   @click="hideResult"
@@ -96,7 +96,7 @@
                 <q-btn
                   color="red-10"
                   icon="arrow_forward"
-                  size="1.5em"
+                  size="1em"
                   flat
                   round
                   @click="showCardInfo"

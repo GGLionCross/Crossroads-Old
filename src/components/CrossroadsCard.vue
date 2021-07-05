@@ -1,5 +1,5 @@
 <template>
-  <div class="card row justify-center">
+  <div class="card-ctn row justify-center">
     <q-card
       class="card side-back absolute column justify-end items-center"
       :class="{ 'card-rotate': isVisible }"
@@ -18,7 +18,7 @@
       :class="{ 'card-rotate': !isVisible }"
     >
       <q-card-section class="full-height column">
-        <div v-if="isTriggered" class="text-center text-uppercase text-h6">{{ name }}</div>
+        <div v-if="isTriggered" class="card-name text-center text-uppercase">{{ name }}</div>
         <q-scroll-area class="col-grow">
           <transition-group
             appear
@@ -61,7 +61,7 @@
               <div>{{ intro }}</div>
               <q-separator color="grey-10" spaced></q-separator>
               <div v-for="op in options" :key="op.label">
-                <div class="option-label text-center text-uppercase text-subtitle2">
+                <div class="option-label text-center text-uppercase">
                   {{ op.label }}
                 </div>
                 <div
@@ -172,9 +172,20 @@ $card-width: 90vw;
   width: $card-width;
   max-height: 80vh;
   aspect-ratio: 2.5 / 3.5;
+  padding: 2%;
   background-size: cover;
   backface-visibility: hidden;
   transition: transform 1s ease-in-out;
+  font-size: 2em;
+}
+.card-ctn {
+  width: $card-width;
+  max-height: 80vh;
+  aspect-ratio: 2.5 / 3.5;
+}
+.card-name {
+  font-size: 1.5em;
+  font-weight: 900;
 }
 .side-back {
   background-image: url('assets/backgrounds/crossroads-back.jpg');
@@ -186,6 +197,7 @@ $card-width: 90vw;
   transform: rotateY(180deg);
 }
 .option-label {
+  font-size: 1em;
   font-weight: bold;
 }
 @keyframes border-blink {

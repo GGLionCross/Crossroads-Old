@@ -1,6 +1,6 @@
 export default function () {
   return {
-    cards: [
+    filteredCards: [
       {
         name: 'Army',
         trigger: 'If a survivor the player controls is at the colony:',

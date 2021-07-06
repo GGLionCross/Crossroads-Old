@@ -16,7 +16,7 @@ export default defineComponent({
   },
   setup() {
     const store = useStore();
-    const cards = computed(() => store.getters.getCards);
+    const cards = computed(() => store.getters.getFilteredCards);
 
     return {
       cards

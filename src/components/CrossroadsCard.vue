@@ -176,7 +176,7 @@ $card-width: 90vw;
   background-size: cover;
   backface-visibility: hidden;
   transition: transform 1s ease-in-out;
-  font-size: 2em;
+  font-size: 1em;
 }
 .card-ctn {
   width: $card-width;

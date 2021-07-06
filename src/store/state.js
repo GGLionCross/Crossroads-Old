@@ -1,5 +1,6 @@
 export default function () {
   return {
+    counter: 0,
     filteredCards: [
       {
         name: 'Army',

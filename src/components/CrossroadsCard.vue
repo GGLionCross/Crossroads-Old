@@ -17,7 +17,7 @@
       class="card side-front absolute"
       :class="{ 'card-rotate': !isVisible }"
     >
-      <q-card-section class="full-height column">
+      <q-card-section v-if="isVisible" class="full-height column">
         <div v-if="isTriggered" class="card-name text-center text-uppercase">{{ name }}</div>
         <q-scroll-area class="col-grow">
           <transition-group

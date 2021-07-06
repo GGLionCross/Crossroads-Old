@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue';
 import DrawerMenu from 'components/DrawerMenu.vue';
 import FooterControls from 'components/FooterControls.vue';
 

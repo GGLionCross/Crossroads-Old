@@ -50,13 +50,9 @@ export default defineComponent({
     const cards = computed(() => store.getters.getFilteredCards);
     const counter = computed(() => store.getters.getCounter);
     const disablePrevButton = computed(() => counter.value < 1);
-    const showPrevCard = () => {
-      store.commit('setCounter', counter.value - 1);
-    }
+    const showPrevCard = () => store.dispatch('showPrevCard');
     const disableNextButton = computed(() => counter.value >= cards.value.length - 1);
-    const showNextCard = () => {
-      store.commit('setCounter', counter.value + 1);
-    }
+    const showNextCard = () => store.dispatch('showNextCard');
     const emitOpenMenu = () => {
       emit('openMenu');
     }

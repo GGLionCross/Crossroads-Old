@@ -31,6 +31,7 @@ export default defineComponent({
   },
   setup() {
     const store = useStore();
+    store.dispatch('resetCrossroads');
     const cards = computed(() => store.getters.getFilteredCards);
     const selected = computed(() => cards.value[store.getters.getCounter].name);
 

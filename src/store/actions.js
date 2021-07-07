@@ -1,5 +1,18 @@
-export function resetCrossroads (/* context */) {
+function shuffle(array) {
+  let current = array.length, random;
+  while (0 !== current) {
+    random = Math.floor(Math.random() * current);
+    current--;
+
+    [array[current], array[random]] = [array[random], array[current]];
+  }
+  return array;
+}
+
+export function resetCrossroads ({ getters, commit }) {
   /* Shuffles deck and sets counter to 0 */
+  let filteredCards = Object.values(getters.getCards).filter(card => card.use);
+  commit('setFilteredCards', shuffle(filteredCards));
 }
 export function showNextCard({ getters, commit }) {
   /* Shows next card if we are not at the end */

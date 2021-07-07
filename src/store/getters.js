@@ -1,3 +1,6 @@
+export function getCards(state) {
+  return state.cards;
+}
 export function getFilteredCards(state) {
   return state.filteredCards;
 }

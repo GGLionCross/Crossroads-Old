@@ -47,17 +47,17 @@ export default defineComponent({
   name: 'FooterControls',
   setup(props, { emit }) {
     const store = useStore();
-    const cards = computed(() => store.getters.getFilteredCards);
+    const cardMax = computed(() => store.getters.getFilteredCards.length);
     const counter = computed(() => store.getters.getCounter);
     const disablePrevButton = computed(() => counter.value < 1);
     const showPrevCard = () => store.dispatch('showPrevCard');
-    const disableNextButton = computed(() => counter.value >= cards.value.length - 1);
+    const disableNextButton = computed(() => counter.value >= cardMax.value - 1);
     const showNextCard = () => store.dispatch('showNextCard');
     const emitOpenMenu = () => {
       emit('openMenu');
     }
     return {
-      cardMax: cards.value.length,
+      cardMax,
       counter,
       disablePrevButton,
       showPrevCard,

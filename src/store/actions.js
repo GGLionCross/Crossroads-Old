@@ -1,3 +1,5 @@
+import { firebaseAuth } from "src/boot/firebase";
+
 function shuffle(array) {
   let current = array.length, random;
   while (0 !== current) {
@@ -9,6 +11,16 @@ function shuffle(array) {
   return array;
 }
 
+export function registerUser({}, payload) {
+  console.error("Registering User...");
+  firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.error(error.message);
+    });
+}
 export function resetCrossroads ({ getters, commit }) {
   /* Shuffles deck and sets counter to 0 */
   let filteredCards = Object.values(getters.getCards).filter(card => card.use);

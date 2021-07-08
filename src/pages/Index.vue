@@ -25,7 +25,6 @@ import { useStore } from 'vuex';
 import CrossroadsCard from 'components/CrossroadsCard.vue';
 
 export default defineComponent({
-  name: 'PageIndex',
   components: {
     CrossroadsCard
   },

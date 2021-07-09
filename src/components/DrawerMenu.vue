@@ -1,5 +1,5 @@
 <template>
-  <q-drawer v-bind="$attrs" class="bg-drawer column justify-between">
+  <q-drawer v-bind="$attrs" class="bg-drawer column justify-between no-wrap">
     <login-register />
     <q-list>
       <drawer-menu-item label="Reset" icon="loop" @click="resetCrossroads" />

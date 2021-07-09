@@ -17,6 +17,7 @@
     "core-js": "^3.6.5",
     "firebase": "^8.7.0",
     "quasar": "^2.0.1",
+    "vuelidate": "^0.7.6",
     "vuex": "^4.0.1"
   },
   "devDependencies": {

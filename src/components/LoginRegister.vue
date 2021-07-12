@@ -58,6 +58,17 @@
         </q-tab-panel>
         <q-tab-panel name="register" class="q-gutter-y-sm">
           <q-input
+            v-model="v$.registerInfo.email.$model"
+            :error="v$.registerInfo.email.$error"
+            :error-message="getErrorMessage(v$.registerInfo.email.$errors)"
+            label="Email"
+            color="yellow-14"
+            dark
+            dense
+            hide-bottom-space
+            outlined
+          ></q-input>
+          <q-input
             v-model="v$.registerInfo.username.$model"
             :error="v$.registerInfo.username.$error"
             :error-message="getErrorMessage(v$.registerInfo.username.$errors)"
@@ -80,9 +91,9 @@
             outlined
           ></q-input>
           <q-input
-            v-model="v$.registerInfo.confirm.$model"
-            :error="v$.registerInfo.confirm.$error"
-            :error-message="getErrorMessage(v$.registerInfo.confirm.$errors)"
+            v-model="registerInfo.confirm"
+            :rules="[value => passwordsMatch || 'Passwords don\'t match']"
+            lazy-rules
             label="Confirm Password"
             color="yellow-14"
             dark
@@ -111,6 +122,7 @@ import { useVuelidate } from "@vuelidate/core";
 import {
   getErrorMessage,
   vRequired,
+  vEmail,
   vUsername,
   vPassword,
   vConfirm
@@ -130,10 +142,13 @@ export default defineComponent({
       password: ""
     });
     const registerInfo = ref({
+      email: "",
       username: "",
       password: "",
       confirm: ""
     });
+    const passwordsMatch = computed(() =>
+      registerInfo.value.password === registerInfo.value.confirm);
 
     const store = useStore();
 
@@ -143,9 +158,9 @@ export default defineComponent({
         password: { vRequired, vPassword }
       },
       registerInfo: {
+        email: { vRequired, vEmail },
         username: { vRequired, vUsername },
-        password: { vRequired, vPassword },
-        confirm: vConfirm(registerInfo.value.password)
+        password: { vRequired, vPassword }
       }
     }
     const v$ = useVuelidate(rules, {
@@ -154,25 +169,26 @@ export default defineComponent({
     });
 
     const loginUser = () => {
-      
+      v$.value.loginInfo.$touch();
+      if (!v$.value.loginInfo.$invalid) {
+        store.dispatch("loginUser", loginInfo.value);
+      }
     };
 
     const registerUser = () => {
       v$.value.registerInfo.$touch();
-      if (!v$.value.registerInfo.$invalid) {
-        store.dispatch("registerUser");
+      if (!v$.value.registerInfo.$invalid && passwordsMatch) {
+        store.dispatch("registerUser", registerInfo.value);
       }
     };
-
-    console.error("v$:", v$.value);
 
     return {
       v$,
       getErrorMessage,
       tab,
       isClosed,
-      loginInfo,
       registerInfo,
+      passwordsMatch,
       closeLoginRegister,
       loginUser,
       registerUser

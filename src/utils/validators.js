@@ -1,4 +1,4 @@
-import { required } from "@vuelidate/validators";
+import { required, email } from "@vuelidate/validators";
 
 export const getErrorMessage = ($errors) => {
   return $errors.length ? $errors[0].$message : "";
@@ -7,6 +7,11 @@ export const getErrorMessage = ($errors) => {
 export const vRequired = {
   ...required,
   $message: "Field is required"
+}
+
+export const vEmail = {
+  ...email,
+  $message: "Invalid email"
 }
 
 export const vUsername = {

@@ -1,4 +1,4 @@
-import { firebaseAuth } from "src/boot/firebase";
+import { firebaseAuth, firebaseDb } from "src/boot/firebase";
 
 function shuffle(array) {
   let current = array.length, random;
@@ -11,11 +11,20 @@ function shuffle(array) {
   return array;
 }
 
+export function loginUser({}, payload) {
+  console.error("Logging User In...");
+}
 export function registerUser({}, payload) {
   console.error("Registering User...");
-  firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
+  firebaseAuth.createUserWithEmailAndPassword(payload.username, payload.password)
     .then(response => {
       console.log(response);
+      const userId = firebaseAuth.currentUser.uid;
+      firebaseDb.ref("users/" + userId).set({
+        email: payload.email,
+        username: payload.username,
+        password: payload.password
+      });
     })
     .catch(error => {
       console.error(error.message);

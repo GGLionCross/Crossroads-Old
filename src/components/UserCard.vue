@@ -15,12 +15,12 @@
       >
         <q-item clickable>
           <q-item-section>
-            <q-item-label>Settings</q-item-label>
+            <q-item-label class="text-center">Settings</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable>
           <q-item-section>
-            <q-item-label>Logout</q-item-label>
+            <q-item-label class="text-center">Logout</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>

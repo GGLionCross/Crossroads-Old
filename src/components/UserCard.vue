@@ -11,7 +11,6 @@
       <q-list
         class="bg-drawer text-white no-shadow"
         bordered
-        separator
       >
         <q-item clickable>
           <q-item-section>

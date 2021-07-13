@@ -7,3 +7,9 @@ export function getFilteredCards(state) {
 export function getCounter(state) {
   return state.counter;
 }
+export function getCurrentUser(state) {
+  return state.currentUser;
+}
+export function isUserLoggedIn(state) {
+  return !!state.currentUser.userId;
+}

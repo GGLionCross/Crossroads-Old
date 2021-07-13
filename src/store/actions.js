@@ -12,25 +12,47 @@ function shuffle(array) {
 }
 
 export function loginUser({}, payload) {
-  console.error("Logging User In...");
+  firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.error(error.message);
+    });
 }
 export function registerUser({}, payload) {
-  console.error("Registering User...");
-  firebaseAuth.createUserWithEmailAndPassword(payload.username, payload.password)
+  firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
     .then(response => {
       console.log(response);
       const userId = firebaseAuth.currentUser.uid;
       firebaseDb.ref("users/" + userId).set({
         email: payload.email,
-        username: payload.username,
-        password: payload.password
+        username: payload.username
       });
     })
     .catch(error => {
       console.error(error.message);
     });
 }
-export function resetCrossroads ({ getters, commit }) {
+export function handleAuthStateChanged({ commit }) {
+  firebaseAuth.onAuthStateChanged((user) => {
+    if (user) {
+      // User is logged in
+      const userId = firebaseAuth.currentUser.uid;
+      firebaseDb.ref("users/" + userId).once("value", (snapshot) => {
+        let userDetails = snapshot.val();
+        commit("setCurrentUser", {
+          ...userDetails,
+          userId
+        });
+      });
+    } else {
+      // User is logged out
+      commit("setCurrentUser", {});
+    }
+  });
+}
+export function resetCrossroads({ getters, commit }) {
   /* Shuffles deck and sets counter to 0 */
   let filteredCards = Object.values(getters.getCards).filter(card => card.use);
   commit('setFilteredCards', shuffle(filteredCards));

@@ -36,6 +36,7 @@
             :error="v$.loginInfo.password.$error"
             :error-message="getErrorMessage(v$.loginInfo.password.$errors)"
             label="Password"
+            type="password"
           ></base-input>
           <div class="row justify-end">
             <q-btn
@@ -43,6 +44,7 @@
               icon="arrow_forward"
               size="1em"
               flat
+              @click="loginUser"
             ></q-btn>
           </div>
         </q-tab-panel>
@@ -54,7 +56,7 @@
             label="Email"
           ></base-input>
           <base-input
-            v-model="v$.registerInfo.username.$model"
+            v-model.lazy="v$.registerInfo.username.$model"
             :error="v$.registerInfo.username.$error"
             :error-message="getErrorMessage(v$.registerInfo.username.$errors)"
             label="Username"
@@ -64,12 +66,13 @@
             :error="v$.registerInfo.password.$error"
             :error-message="getErrorMessage(v$.registerInfo.password.$errors)"
             label="Password"
+            type="password"
           ></base-input>
           <base-input
             v-model="registerInfo.confirm"
             :rules="[value => passwordsMatch || 'Passwords don\'t match']"
             label="Confirm Password"
-            lazy-rules
+            type="password"
           ></base-input>
           <div class="row justify-end">
             <q-btn

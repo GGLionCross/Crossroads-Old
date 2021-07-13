@@ -24,10 +24,10 @@ export const vUsername = {
 }
 
 export const vPassword = {
-  $message: "8-16 characters. Valid: a-z A-Z 0-9 _ ! @ # $ % ^ & *",
+  $message: "6-16 characters. Valid: a-z A-Z 0-9 _ ! @ # $ % ^ & *",
   $params: { type: "password" },
   $validator: (value) => {
-    const regex = /^[a-zA-Z0-9_!@#$%^&*]{8,16}$/g
+    const regex = /^[a-zA-Z0-9_!@#$%^&*]{6,16}$/g
     return value.match(regex);
   }
 }

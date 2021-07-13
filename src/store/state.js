@@ -1,6 +1,6 @@
 export default function () {
   return {
-    currentUser: null,
+    currentUser: {},
     counter: 0,
     filteredCards: [],
     // special: bandits, character specific, improvements, raxxon

@@ -1,5 +1,9 @@
 <template>
-  <q-drawer v-bind="$attrs" class="bg-drawer column justify-between no-wrap">
+  <q-drawer
+    v-bind="$attrs"
+    class="bg-drawer column justify-between no-wrap"
+    side="right"
+  >
     <login-register v-if="!isUserLoggedIn" />
     <user-card v-else />
     <q-list>

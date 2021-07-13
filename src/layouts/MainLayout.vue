@@ -1,5 +1,13 @@
 <template>
   <q-layout view="lHh Lpr lFf">
+    <q-header class="mobile-only bg-header-footer">
+      <q-toolbar>
+        <q-toolbar-title class="text-center">
+          Crossroads
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-header>
+
     <drawer-menu
       v-model="leftDrawerOpen"
       bordered

@@ -12,14 +12,8 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  props: {
-    localV: {
-      type: Object,
-      default: () => {}
-    }
-  },
   setup(props) {
-    console.error(props);
+    return {};
   }
 })
 </script>

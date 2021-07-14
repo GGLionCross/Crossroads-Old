@@ -1,5 +1,5 @@
 import { firebaseAuth, firebaseDb } from "src/boot/firebase";
-import { Notify } from "quasar";
+import { Loading, Notify, QSpinnerFacebook } from "quasar";
 
 function shuffle(array) {
   let current = array.length, random;
@@ -39,13 +39,17 @@ export function handleAuthStateChanged({ commit, dispatch }) {
     }
   });
 }
-export function retrieveCards({ commit, dispatch }) {
-  firebaseDb.ref("cards").once("value", (snapshot) => {
+export async function retrieveCards({ commit, dispatch }) {
+  Loading.show({
+    spinner: QSpinnerFacebook
+  });
+  await firebaseDb.ref("cards").once("value", (snapshot) => {
     let cards = snapshot.val();
     commit("setCards", cards);
     dispatch("filterAddAll");
     dispatch("shuffleCrossroads");
   });
+  Loading.hide();
 }
 export function showNextCard({ getters, commit }) {
   /* Shows next card if we are not at the end */

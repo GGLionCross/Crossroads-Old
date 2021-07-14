@@ -59,6 +59,7 @@ export function resetCrossroads({ getters, commit }) {
   /* Shuffles deck and sets counter to 0 */
   let filteredCards = Object.values(getters.getCards).filter(card => card.use);
   commit('setFilteredCards', shuffle(filteredCards));
+  commit('setCounter', 0)
 }
 export function showNextCard({ getters, commit }) {
   /* Shows next card if we are not at the end */

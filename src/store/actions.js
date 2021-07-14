@@ -18,9 +18,12 @@ export function loginUser({}, payload) {
       console.log(response);
     })
     .catch(error => {
-      console.error(error);
+      // console.error(error);
       let notifyObj = { type: "negative" }
       switch(error.code) {
+        case "auth/user-not-found":
+          notifyObj.message = "Unregistered email";
+          break;
         case "auth/wrong-password":
           notifyObj.message = "Incorrect password";
           break;

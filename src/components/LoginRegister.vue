@@ -1,5 +1,5 @@
 <template>
-  <q-card class="bg-drawer overflow-hidden" flat>
+  <q-card class="bg-drawer" flat>
     <q-tabs v-model="tab" class="col-grow">
       <q-tab name="login" label="Login" />
       <q-tab name="register" label="Register" />
@@ -129,7 +129,6 @@ export default defineComponent({
         store.dispatch("loginUser", loginInfo.value);
       }
     };
-
     const registerUser = () => {
       v$.value.registerInfo.$touch();
       if (!v$.value.registerInfo.$invalid && passwordsMatch) {

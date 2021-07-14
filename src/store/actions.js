@@ -12,44 +12,6 @@ function shuffle(array) {
   return array;
 }
 
-export function loginUser({}, payload) {
-  firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)
-    .then(response => {
-      console.log(response);
-    })
-    .catch(error => {
-      // console.error(error);
-      let notifyObj = { type: "negative" }
-      switch(error.code) {
-        case "auth/user-not-found":
-          notifyObj.message = "Unregistered email";
-          break;
-        case "auth/wrong-password":
-          notifyObj.message = "Incorrect password";
-          break;
-        default:
-          notifyObj.message = error.message;
-      }
-      Notify.create(notifyObj);
-    });
-}
-export function logoutUser({}, payload) {
-  firebaseAuth.signOut();
-}
-export function registerUser({}, payload) {
-  firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
-    .then(response => {
-      console.log(response);
-      const userId = firebaseAuth.currentUser.uid;
-      firebaseDb.ref("users/" + userId).set({
-        email: payload.email,
-        username: payload.username
-      });
-    })
-    .catch(error => {
-      console.error(error.message);
-    });
-}
 export function handleAuthStateChanged({ commit }) {
   firebaseAuth.onAuthStateChanged((user) => {
     if (user) {
@@ -88,4 +50,42 @@ export function showPrevCard({ getters, commit }) {
   if (counter > 0) {
     commit('setCounter', counter - 1)
   }
+}
+export function userLogin({}, payload) {
+  firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      // console.error(error);
+      let notifyObj = { type: "negative" }
+      switch(error.code) {
+        case "auth/user-not-found":
+          notifyObj.message = "Unregistered email";
+          break;
+        case "auth/wrong-password":
+          notifyObj.message = "Incorrect password";
+          break;
+        default:
+          notifyObj.message = error.message;
+      }
+      Notify.create(notifyObj);
+    });
+}
+export function userLogout({}, payload) {
+  firebaseAuth.signOut();
+}
+export function userRegister({}, payload) {
+  firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
+    .then(response => {
+      console.log(response);
+      const userId = firebaseAuth.currentUser.uid;
+      firebaseDb.ref("users/" + userId).set({
+        email: payload.email,
+        username: payload.username
+      });
+    })
+    .catch(error => {
+      console.error(error.message);
+    });
 }

@@ -25,7 +25,7 @@
             icon="arrow_forward"
             size="1em"
             flat
-            @click="loginUser"
+            @click="userLogin"
           ></q-btn>
         </div>
       </q-tab-panel>
@@ -61,7 +61,7 @@
             icon="arrow_forward"
             size="1em"
             flat
-            @click="registerUser"
+            @click="userRegister"
           ></q-btn>
         </div>
       </q-tab-panel>
@@ -123,16 +123,16 @@ export default defineComponent({
       registerInfo
     });
 
-    const loginUser = () => {
+    const userLogin = () => {
       v$.value.loginInfo.$touch();
       if (!v$.value.loginInfo.$invalid) {
-        store.dispatch("loginUser", loginInfo.value);
+        store.dispatch("userLogin", loginInfo.value);
       }
     };
-    const registerUser = () => {
+    const userRegister = () => {
       v$.value.registerInfo.$touch();
       if (!v$.value.registerInfo.$invalid && passwordsMatch) {
-        store.dispatch("registerUser", registerInfo.value);
+        store.dispatch("userRegister", registerInfo.value);
       }
     };
 
@@ -144,8 +144,8 @@ export default defineComponent({
       registerInfo,
       passwordsMatch,
       closeLoginRegister,
-      loginUser,
-      registerUser
+      userLogin,
+      userRegister
     }
   }
 });

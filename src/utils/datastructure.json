@@ -6,7 +6,22 @@
     }
   },
   "cards": {
+    "template": {
+      "key": "template",
+      "name": "",
+      "trigger": ":",
+      "intro": "",
+      "options": [
+        {
+          "label": "",
+          "subtext": "",
+          "result": ""
+        }
+      ],
+      "basic": true
+    },
     "army": {
+      "key": "army",
       "name": "Army",
       "trigger": "If a survivor the player controls is at the colony:",
       "intro": "The soldiers in army uniforms make predictable demands - have food ready when they return, or the colony will be burnt to the ground. Every player with 1 or more survivors at the colony must vote with a thumbs up or down. The option with most votes takes effect. The ALTERNATIVE option triggers if Thomas Heart is at the colony.",
@@ -26,9 +41,69 @@
           "subtext": "If Thomas Heart is at the colony:",
           "result": "Thomas Heart notices that the man calling himself colonel has a sergeant's uniform. He calls them on their lie at the gate, and the imposters angrily retreat."
         }
-      ]
+      ],
+      "basic": true
+    },
+    "disturbed": {
+      "key": "disturbed",
+      "name": "Disturbed",
+      "trigger": "If there are 4 or more helpless survivors in play:",
+      "intro": "\"What are you up to buddy?\" you mean to ask, but the words stick in your throat as you suddenly realize what the little boy is doing. He holds a bloody stone over a pulpy mass of flesh and hair that used to be some kind of small animal.",
+      "options": [
+        {
+          "label": "Tell Everyone",
+          "subtext": "Everyone should know.",
+          "result": "You tell the others, but instead of taking action, bickering breaks out as they vehemently disagree on how to handle the situation. Roll a die. A number of helpless survivors equal to the result become unruly."
+        },
+        {
+          "label": "Say Nothing",
+          "subtext": "Who knows what may happen to the child if people found out?",
+          "result": "Later the child is caught bashing in the head of one of his playmates. Remove 2 helpless survivors from the colony and lose 1 morale."
+        },
+        {
+          "label": "Alternative",
+          "subtext": "If James Meyers is in play, you tell him:",
+          "result": "You tell him. He recognizes the behavior as a response to deep trauma and takes action. You watch as the weeks pass by and life slowly comes back into the child's once blank eyes. You may remove a despair or wound token from a survivor you control."
+        }
+      ],
+      "explicit": true,
+      "changed": "Changed healing of just despair token to any type of wound, including despair tokens"
+    },
+    "dying_wish": {
+      "key": "dying_wish",
+      "name": "Dying Wish",
+      "trigger": "If a non-exiled survivor the player controls is killed:",
+      "intro": "You look up at the faces gathered around you. It's your life that's ending, yet your heart mourns for them. They look so scared. \"I know I'm dying,\" in a weak voice. \"But that's okay. Don't let it slow you down. If they didn't end, our lives would have no meaning. You still have so much to do. So much to fight for. It's easy to feel lost in a world that seems like it's rotting, but really, our lives never had more purpose than they do now. So please, for me, stop and think about what you are doing here. What is it that you want? Don't waste any more time. Find out what it is, then take hold of it and never let go.\"",
+      "options": [
+        {
+          "label": "Only Option",
+          "subtext": "Each player may choose to draw a new secret objective.",
+          "result": "Build a new set of secret objectives using the secret objective setup rules on page 6, section 4, of the Long Night rulebook. Each player may choose to remove their secret objective from the game without revealing it and draw a new secret objective."
+        }
+      ],
+      "basic": true
+    },
+    "highway_to_hell": {
+      "key": "highway_to_hell",
+      "name": "Highway To Hell",
+      "trigger": "If a player controls a survivor at the colony:",
+      "intro": "You're knocked to the ground as a boom shakes the entire building. \"Breach!\" You find the barricades smashed, and a truck crunched into the building's side. Classic rock blares from the speaker in the cab. The zombie sitting in the driver's seat gnashes its teeth at you before a club obliterates its head. The note pinned to its jacket reveals the culprits - the other colony has sent you a message.",
+      "options": [
+        {
+          "label": "Kill Zombies",
+          "subtext": "Players may spend 2 action die to fend off the remaining zombies.",
+          "result": "Gain 1 morale for acquiring some sweet tunes."
+        },
+        {
+          "label": "Fall Back",
+          "subtext": "Waste no time retreating.",
+          "result": "Add 3 zombies to the colony"
+        }
+      ],
+      "basic": true
     },
     "ill_show_them_i_can_help": {
+      "key": "ill_show_them_i_can_help",
       "name": "I'll Show Them I Can Help!",
       "trigger": "If a player is accused of being a betrayer (a casual accusation is enough) and there is at least 1 helpless survivor at the colony:",
       "intro": "Once again, a loud mouth is accusing someone else of betrayal. However, the next morning, the accused is found dead. \"Who did this?!\" you demand. \"Me,\" says a meek little girl in the crowd. \"I... I saved everybody... Didn't I?\" Kill the leader of the player that was being accused of being a betrayer. Every non-exiled player must vote with a thumbs up or down.",
@@ -36,7 +111,7 @@
         {
           "label": "Thumbs Up",
           "subtext": "Blame the accuser",
-          "result": "The fault doesn't lay with the girl but with the accuser. Exiler the player that made the accusation."
+          "result": "The fault doesn't lay with the girl but with the accuser. Exile the player that made the accusation."
         },
         {
           "label": "Thumbs Down",
@@ -48,9 +123,50 @@
           "subtext": "If the colony votes thumbs down, any player may choose this option: leave to protect the girl",
           "result": "\"Monsters! I'll not leave her to die out there.\" The player that chose this option must remove a survivor they control and 1 helpless survivor. No morale is lost."
         }
-      ]
+      ],
+      "basic": true
+    },
+    "let_there_be_light": {
+      "key": "let_there_be_light",
+      "name": "Let There Be Light",
+      "trigger": "If a player performs a search:",
+      "intro": "\"How are the lights on in this place?\"",
+      "options": [
+        {
+          "label": "Investigate",
+          "subtext": "Search for the energy source.",
+          "result": "You can't figure it out until discovering a maintenance hatch that leads to the roof. Up on top you find two rows of solar panels that appear to be in excellent condition. You have to get word to the colony! Players may collectively spend 5 action dice. If they do, the solar panels are installed at the colony, providing heat and light. Raise morale by 1 and for the remaining of the game crisis cards requiring FUEL symbol cards require 2 fewer FUEL symbol cards to succeed. Set this card aside to remember this persisting effect."
+        },
+        {
+          "label": "Ignore",
+          "subtext": "\"Might as well take advantage of it while we're here.\"",
+          "result": "Draw and keep 3 cards from the item deck you just searched. "
+        }
+      ],
+      "basic": true,
+      "persistent": true
+    },
+    "no_ammo": {
+      "key": "no_ammo",
+      "name": "No Ammo",
+      "trigger": "If the player uses the ability of a gun symbol card, after resolving that ability:",
+      "intro": "\"That's right you ugly freak,\" you snarl at the zombie whose head you just blew off. \"Plenty more where that came from!\" You reach down to your belt for another clip, only to realize you were on your last one. \"Or not,\" you say to yourself. Looking over at the bloody ruin of the zombie, you wish you had shown a little restraint.",
+      "options": [
+        {
+          "label": "Toss",
+          "subtext": "Throw the weapon away.",
+          "result": "Place the used weapon in the waste pile."
+        },
+        {
+          "label": "Scavenge",
+          "subtext": "Hunt down for more ammunition.",
+          "result": "Move all action dice from your unused action dice pool to your used action dice pool."
+        }
+      ],
+      "basic": true
     },
     "oh_what_a_feeling": {
+      "key": "oh_what_a_feeling",
       "name": "Oh What A Feeling...",
       "trigger": "If a human survivor the player controls shares a location a human survivor another player controls and those are the only 2 survivors at that location:",
       "intro": "The storm is unexpected and so is the company. \"We should probably share a blanket, right?\" you ask awkwardly. You don't know each other very well, but the time has passed pleasantly so far. Your hands brush under the blanket. Your eyes lock. Both players that control a survivor at that location must vote on the count of 3 with a thumbs up or down.",
@@ -70,9 +186,11 @@
           "subtext": "Unrequited desire",
           "result": "That's awkward. The player that voted with a thumbs up receives 1 despair token."
         }
-      ]
+      ],
+      "basic": true
     },
     "riot": {
+      "key": "riot",
       "name": "Riot",
       "trigger": "If a player controls a survivor at the colony, there are more helpless survivors in the colony than non-helpless survivors, and there is food in the supply:",
       "intro": "\"They don't care that we're starving! I can feel my ribs, yet the pantry door is locked up tight. Why? We need food. Well I don't care what those scum bags say - there's way more of us than them. I say we break that door down, and if any of them get in our way, well... it's their choice if things get ugly.\"",
@@ -85,14 +203,59 @@
         {
           "label": "Stand Firm",
           "subtext": "Fight back against the rioters",
-          "result": "Each non-helpless survivor at the colony receivs 1 wound"
+          "result": "Each non-helpless survivor at the colony receives 1 wound"
         },
         {
           "label": "Make An Example",
           "subtext": "Kill one of the rioters to make an example",
           "result": "Kill 1 helpless survivor. Lose 1 morale."
         }
-      ]
+      ],
+      "basic": true
+    },
+    "the_buddy_system": {
+      "key": "the_buddy_system",
+      "name": "The Buddy System",
+      "trigger": "If a survivor the player controls receives any type of wound as a result of moving:",
+      "intro": "You suck in your breath sharply as she wraps the bandage around the wound. \"I barely made it back on this leg,\" you gasp. \"I haven't felt that alone since before the colony. It's only dumb luck I made it back. I think it needs to be standard operating procedure to go out in pairs.\" Every non-exiled player, when moving, may choose to implement the buddy system.",
+      "options": [
+        {
+          "label": "Implementation",
+          "subtext": "Implement the buddy system when moving away from the colony",
+          "result": "When moving a survivor, you may move another survivor with it. The player controlling that other survivor must agree. When moving a pair of survivors, instead of rolling for exposure normally, roll for exposure twice and choose 1 result. Apply that result to both survivors. Set this card aside to remember this persisting effect."
+        }
+      ],
+      "basic": true,
+      "persistent": true,
+      "changed": "Changed to trigger on move to anywhere instead of just to the colony. Also combined options into 1 to allow players to implement the buddy system more flexibly."
+    },
+    "this_is_hopeless": {
+      "key": "this_is_hopeless",
+      "name": "This Is Hopeless",
+      "trigger": "If morale is 2 or lower:",
+      "intro": "\"Guys, it's been real. Real shitty to be precise. If ya'll want to stay and watch this boat sink, that's your business. But us, we aren't sticking around. I'd wish you the best, but let's be honest - you poor bastards are screwed.\" Players who have completed all parts of their secret objective except for 'complete the main objective' may choose to leave the group as potential winners.",
+      "options": [
+        {
+          "label": "Only Option",
+          "subtext": "After everyone who has decided to leave the group comes forward, proceed.",
+          "result": "Each player that has decided to leave the group must roll for exposure on each of their survivors 5 times (bite effects do not spread). If a player has any survivors remaining, that player is considered to be a winner. If a player has no survivor remaining, that player is considered to be a loser. Either way the game continues without those players."
+        }
+      ],
+      "explicit": true
+    },
+    "unsanitary_conditions": {
+      "key": "unsanitary_conditions",
+      "name": "Unsanitary Conditions",
+      "trigger": "If the player controls 1 or more wounded survivors and there are 5 or more cards in the waste pile:",
+      "intro": "You can feel the heat coming from your throbbing wound. The slightest press of your index finger produces a foul colored pus and a pain that can't be ignored. You suppose infection was inevitable - there are no showers, no running water, and the soap ran out a week ago. And you're not the only one like this. Antibiotics are a precious resource now, so everyone's hoping to shake off infections naturally. But a glance at your wound tells you all you need to know. If you don't get treated soon you could die.",
+      "options": [
+        {
+          "label": "Only Option",
+          "subtext": "You may place 1 medicine card into the waste pile to remove all wounds from a survivor you control. You may do this multiple times.",
+          "result": "If you still control any survivors with wound tokens on them, place 1 additional wound token on those survivors."
+        }
+      ],
+      "basic": true
     }
   }
 }

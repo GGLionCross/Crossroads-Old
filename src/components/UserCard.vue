@@ -17,7 +17,7 @@
             <q-item-label class="text-center">Settings</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable>
+        <q-item clickable @click="logoutUser">
           <q-item-section>
             <q-item-label class="text-center">Logout</q-item-label>
           </q-item-section>
@@ -34,9 +34,11 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const currentUser = computed(() => store.getters.getCurrentUser);
+    const logoutUser = () => store.dispatch("logoutUser");
 
     return {
-      currentUser
+      currentUser,
+      logoutUser
     }
   }
 })

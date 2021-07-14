@@ -20,6 +20,9 @@ export function loginUser({}, payload) {
       console.error(error.message);
     });
 }
+export function logoutUser({}, payload) {
+  firebaseAuth.signOut();
+}
 export function registerUser({}, payload) {
   firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
     .then(response => {

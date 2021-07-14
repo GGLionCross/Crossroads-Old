@@ -1,4 +1,5 @@
 import { firebaseAuth, firebaseDb } from "src/boot/firebase";
+import { Notify } from "quasar";
 
 function shuffle(array) {
   let current = array.length, random;
@@ -17,7 +18,16 @@ export function loginUser({}, payload) {
       console.log(response);
     })
     .catch(error => {
-      console.error(error.message);
+      console.error(error);
+      let notifyObj = { type: "negative" }
+      switch(error.code) {
+        case "auth/wrong-password":
+          notifyObj.message = "Incorrect password";
+          break;
+        default:
+          notifyObj.message = error.message;
+      }
+      Notify.create(notifyObj);
     });
 }
 export function logoutUser({}, payload) {
@@ -59,7 +69,7 @@ export function resetCrossroads({ getters, commit }) {
   /* Shuffles deck and sets counter to 0 */
   let filteredCards = Object.values(getters.getCards).filter(card => card.use);
   commit('setFilteredCards', shuffle(filteredCards));
-  commit('setCounter', 0)
+  commit('setCounter', 0);
 }
 export function showNextCard({ getters, commit }) {
   /* Shows next card if we are not at the end */

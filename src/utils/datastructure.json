@@ -29,7 +29,7 @@
         {
           "label": "Thumbs Up",
           "subtext": "Abide by the soldiers' demands",
-          "result": "Add the following victory condition to the current main objective: Have 5 food in the supply"
+          "result": "Add the following victory condition to the current main objective: Have 5 food in the supply. Set this card aside to remember this persisting effect."
         },
         {
           "label": "Thumbs Down",
@@ -42,7 +42,8 @@
           "result": "Thomas Heart notices that the man calling himself colonel has a sergeant's uniform. He calls them on their lie at the gate, and the imposters angrily retreat."
         }
       ],
-      "basic": true
+      "basic": true,
+      "persistent": true
     },
     "disturbed": {
       "key": "disturbed",

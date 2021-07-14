@@ -12,6 +12,12 @@ function shuffle(array) {
   return array;
 }
 
+export function filterAddAll({ getters, commit }) {
+  // Add all cards
+  const allCards = getters.getCards;
+  commit("setFilter", Object.keys(allCards));
+  // Optional: Include all custom cards
+}
 export function handleAuthStateChanged({ commit }) {
   firebaseAuth.onAuthStateChanged((user) => {
     if (user) {
@@ -32,24 +38,24 @@ export function handleAuthStateChanged({ commit }) {
 }
 export function showNextCard({ getters, commit }) {
   /* Shows next card if we are not at the end */
-  const max = getters.getFilteredCards.length - 1;
+  const max = getters.getFilter.length - 1;
   const counter = getters.getCounter;
   if (counter < max) {
-    commit('setCounter', counter + 1)
+    commit("setCounter", counter + 1);
   }
 }
 export function showPrevCard({ getters, commit }) {
   /* Shows previous card if we are not at the beginning */
   const counter = getters.getCounter;
   if (counter > 0) {
-    commit('setCounter', counter - 1)
+    commit("setCounter", counter - 1);
   }
 }
 export function shuffleCrossroads({ getters, commit }) {
   /* Shuffles deck and sets counter to 0 */
-  let filteredCards = Object.values(getters.getCards).filter(card => card.use);
-  commit('setFilteredCards', shuffle(filteredCards));
-  commit('setCounter', 0);
+  const filter = shuffle([...getters.getFilter]);
+  commit("setFilter", filter);
+  commit("setCounter", 0);
 }
 export function userLogin({}, payload) {
   firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)

@@ -4,6 +4,6 @@ export function setCounter (state, i) {
 export function setCurrentUser (state, user) {
   state.currentUser = user;
 }
-export function setFilteredCards (state, cards) {
-  state.filteredCards = cards;
+export function setFilter (state, filter) {
+  state.filter = filter;
 }

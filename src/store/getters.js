@@ -1,8 +1,17 @@
 export function getCards(state) {
   return state.cards;
 }
+export function getFilter(state) {
+  return state.filter;
+}
 export function getFilteredCards(state) {
-  return state.filteredCards;
+  let allCards = state.cards;
+  let filter = state.filter;
+  let filteredCards = [];
+  for (const name of filter) {
+    filteredCards.push(allCards[name]);
+  }
+  return filteredCards;
 }
 export function getCounter(state) {
   return state.counter;

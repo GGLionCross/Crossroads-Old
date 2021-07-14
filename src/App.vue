@@ -10,6 +10,7 @@ export default defineComponent({
   mounted() {
     const store = useStore();
     store.dispatch("handleAuthStateChanged");
+    store.dispatch("filterAddAll");
   }
 })
 </script>

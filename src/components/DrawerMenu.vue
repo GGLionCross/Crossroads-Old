@@ -8,7 +8,7 @@
     <login-register v-if="!isUserLoggedIn" />
     <user-card v-else />
     <q-list>
-      <drawer-menu-item v-close-popup label="Reset" icon="loop" @click="resetCrossroads" />
+      <drawer-menu-item v-close-popup label="Shuffle" icon="shuffle" @click="shuffleCrossroads" />
       <drawer-menu-item label="Filter" icon="filter_alt" />
     </q-list>
   </q-drawer>
@@ -32,14 +32,14 @@ export default defineComponent({
     const isUserLoggedIn = computed(() => store.getters.isUserLoggedIn);
 
     const drawer = ref(null);
-    const resetCrossroads = () => {
-      store.dispatch('resetCrossroads');
+    const shuffleCrossroads = () => {
+      store.dispatch('shuffleCrossroads');
       drawer.value.hide();
     }
     return {
       isUserLoggedIn,
       drawer,
-      resetCrossroads
+      shuffleCrossroads
     };
   }
 })

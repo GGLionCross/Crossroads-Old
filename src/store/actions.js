@@ -30,12 +30,6 @@ export function handleAuthStateChanged({ commit }) {
     }
   });
 }
-export function resetCrossroads({ getters, commit }) {
-  /* Shuffles deck and sets counter to 0 */
-  let filteredCards = Object.values(getters.getCards).filter(card => card.use);
-  commit('setFilteredCards', shuffle(filteredCards));
-  commit('setCounter', 0);
-}
 export function showNextCard({ getters, commit }) {
   /* Shows next card if we are not at the end */
   const max = getters.getFilteredCards.length - 1;
@@ -50,6 +44,12 @@ export function showPrevCard({ getters, commit }) {
   if (counter > 0) {
     commit('setCounter', counter - 1)
   }
+}
+export function shuffleCrossroads({ getters, commit }) {
+  /* Shuffles deck and sets counter to 0 */
+  let filteredCards = Object.values(getters.getCards).filter(card => card.use);
+  commit('setFilteredCards', shuffle(filteredCards));
+  commit('setCounter', 0);
 }
 export function userLogin({}, payload) {
   firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)

@@ -28,7 +28,7 @@
             <div
               key="trigger"
               v-if="!isTriggered"
-              class="full-height absolute"
+              class="absolute full-width full-height column justify-between"
             >
               <div class="text-italic">{{ trigger }}</div>
               <div class="row justify-around">
@@ -59,7 +59,7 @@
                 ></q-btn>
               </div>
             </div>
-            <div key="options" v-else-if="!isShowingResult" class="absolute">
+            <div key="options" v-else-if="!isShowingResult" class="absolute full-width">
               <div>{{ intro }}</div>
               <q-separator color="grey-10" spaced></q-separator>
               <div v-for="op in options" :key="op.label">
@@ -84,7 +84,7 @@
                 ></q-btn>
               </div>
             </div>
-            <div key="result" v-else class="column absolute">
+            <div key="result" v-else class="absolute full-width full-height column justify-between">
               <div>{{ result }}</div>
               <div class="row justify-around">
                 <q-btn

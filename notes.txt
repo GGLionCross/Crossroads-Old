@@ -1,0 +1,21 @@
+"template": {
+      "key": "template",
+      "name": "",
+      "trigger": ":",
+      "intro": "",
+      "options": [
+        {
+          "label": "",
+          "subtext": "",
+          "result": ""
+        }
+      ],
+      "basic": true
+    },
+	
+Set this card aside to remember this persisting effect.
+
+Persistent:
+Army
+Let There Be Light
+The Buddy System

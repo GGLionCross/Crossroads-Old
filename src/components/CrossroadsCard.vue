@@ -33,11 +33,13 @@
               <div class="text-italic">{{ trigger }}</div>
               <div class="row justify-around">
                 <q-btn
+                  v-if="!hideNextCardButton"
                   color="grey-14"
                   icon="close"
                   size="1em"
                   flat
                   round
+                  @click="showNextCard"
                 ></q-btn>
                 <q-btn
                   color="grey-14"
@@ -94,12 +96,13 @@
                   @click="hideResult"
                 ></q-btn>
                 <q-btn
+                  v-if="!hideNextCardButton"
                   color="red-10"
                   icon="arrow_forward"
                   size="1em"
                   flat
                   round
-                  @click="showCardInfo"
+                  @click="showNextCard"
                 ></q-btn>
               </div>
             </div>
@@ -111,10 +114,10 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from "vue";
+import { useStore } from "vuex";
 
 export default defineComponent({
-  name: 'CrossroadsCard',
   props: {
     info: {
       type: Object,
@@ -126,6 +129,11 @@ export default defineComponent({
     const showCard = () => {
       isVisible.value = true;
     }
+    const store = useStore();
+    const cardMax = computed(() => store.getters.getFilteredCards.length);
+    const counter = computed(() => store.getters.getCounter);
+    const hideNextCardButton = computed(() => counter.value >= cardMax.value - 1);
+    const showNextCard = () => store.dispatch('showNextCard');
     const hideCard = () => {
       isVisible.value = false;
     }
@@ -149,6 +157,8 @@ export default defineComponent({
     return {
       isVisible,
       showCard,
+      hideNextCardButton,
+      showNextCard,
       hideCard,
       isTriggered,
       showCardInfo,

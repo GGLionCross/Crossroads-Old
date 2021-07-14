@@ -1,3 +1,6 @@
+export function setCards (state, cards) {
+  state.cards = cards;
+}
 export function setCounter (state, i) {
   state.counter = i;
 }

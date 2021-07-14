@@ -18,7 +18,10 @@ export function filterAddAll({ getters, commit }) {
   commit("setFilter", Object.keys(allCards));
   // Optional: Include all custom cards
 }
-export function handleAuthStateChanged({ commit }) {
+export function handleAuthStateChanged({ commit, dispatch }) {
+  // For custom cards, idea:
+  // If user is logged in, append their cards to the cards object in state
+  // If user is logged out, remove cards from state with property custom:true
   firebaseAuth.onAuthStateChanged((user) => {
     if (user) {
       // User is logged in
@@ -34,6 +37,14 @@ export function handleAuthStateChanged({ commit }) {
       // User is logged out
       commit("setCurrentUser", {});
     }
+  });
+}
+export function retrieveCards({ commit, dispatch }) {
+  firebaseDb.ref("cards").once("value", (snapshot) => {
+    let cards = snapshot.val();
+    commit("setCards", cards);
+    dispatch("filterAddAll");
+    dispatch("shuffleCrossroads");
   });
 }
 export function showNextCard({ getters, commit }) {

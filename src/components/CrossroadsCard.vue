@@ -137,6 +137,10 @@ export default defineComponent({
     const hideCard = () => {
       isVisible.value = false;
     }
+    const trigger = computed(() => props.info ? props.info.trigger : "");
+    const name = computed(() => props.info ? props.info.name : "");
+    const intro = computed(() => props.info ? props.info.intro : "");
+    const options = computed(() => props.info ? props.info.options : "");
     const isTriggered = ref(false);
     const showCardInfo = () => {
       isTriggered.value = true;
@@ -160,17 +164,17 @@ export default defineComponent({
       hideNextCardButton,
       showNextCard,
       hideCard,
+      trigger,
+      name,
+      intro,
+      options,
       isTriggered,
       showCardInfo,
       hideCardInfo,
       result,
       isShowingResult,
       showResult,
-      hideResult,
-      trigger: props.info.trigger,
-      name: props.info.name,
-      intro: props.info.intro,
-      options: props.info.options
+      hideResult
     }
   }
 })

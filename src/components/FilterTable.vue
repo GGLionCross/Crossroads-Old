@@ -10,7 +10,7 @@
       ]"
       @click="toggleTableVisible"
     >
-      <div class="text-uppercase">Original</div>
+      <div class="text-uppercase">{{ category }} ({{rowCount}})</div>
       <q-icon
         name="expand_more"
         size="xs"
@@ -31,18 +31,26 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
 
 export default defineComponent({
-  setup() {
+  props: {
+    category: {
+      type: String,
+      required: true
+    }
+  },
+  setup(props, { attrs }) {
     const tableVisible = ref(false);
     const toggleTableVisible = () => {
       tableVisible.value = !tableVisible.value;
     }
+    const rowCount = computed(() => attrs.rows.length);
 
     return {
       tableVisible,
-      toggleTableVisible
+      toggleTableVisible,
+      rowCount
     };
   }
 })

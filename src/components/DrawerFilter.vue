@@ -9,7 +9,8 @@
     <div class="full-width row">
       <q-scroll-area class="col-grow">
         <filter-table
-          :rows="cards"
+          category="Basic"
+          :rows="basicCards"
           :columns="columns"
         ></filter-table>
       </q-scroll-area>
@@ -51,10 +52,12 @@ export default defineComponent({
   components: { FilterTable },
   setup(props, { emit }) {
     const store = useStore();
-    const cards = computed(() => store.getters.getFilteredCards);
+    const allCards = computed(() => Object.values(store.getters.getCards));
+    const basicCards = computed(() => allCards.value.filter(c => c.basic));
+
     const hideDrawerFilter = () => emit("update:modelValue", false);
     return {
-      cards,
+      basicCards,
       columns,
       hideDrawerFilter
     }

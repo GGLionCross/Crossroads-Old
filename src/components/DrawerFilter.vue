@@ -7,12 +7,12 @@
     persistent
   >
     <div class="full-width row">
-      <div class="col-grow">
+      <q-scroll-area class="col-grow">
         <filter-table
           :rows="cards"
           :columns="columns"
         ></filter-table>
-      </div>
+      </q-scroll-area>
       <div class="column justify-end">
         <q-btn
           color="white"

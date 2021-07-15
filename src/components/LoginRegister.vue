@@ -21,7 +21,7 @@
         ></base-input>
         <div class="row justify-end">
           <q-btn
-            color="red-10"
+            color="negative"
             icon="arrow_forward"
             size="1em"
             flat
@@ -57,7 +57,7 @@
         ></base-input>
         <div class="row justify-end">
           <q-btn
-            color="red-10"
+            color="negative"
             icon="arrow_forward"
             size="1em"
             flat

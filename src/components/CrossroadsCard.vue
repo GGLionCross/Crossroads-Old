@@ -50,7 +50,7 @@
                   @click="hideCard"
                 ></q-btn>
                 <q-btn
-                  color="red-10"
+                  color="negative"
                   icon="arrow_forward"
                   size="1em"
                   flat
@@ -97,7 +97,7 @@
                 ></q-btn>
                 <q-btn
                   v-if="!hideNextCardButton"
-                  color="red-10"
+                  color="negative"
                   icon="arrow_forward"
                   size="1em"
                   flat

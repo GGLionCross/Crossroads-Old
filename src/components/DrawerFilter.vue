@@ -13,7 +13,7 @@
           :columns="columns"
         ></filter-table>
       </q-scroll-area>
-      <div class="column justify-end">
+      <div class="close-ctn column justify-end">
         <q-btn
           color="white"
           icon="close"
@@ -71,6 +71,9 @@ export default defineComponent({
     background: none;
     // bg-color same as bg-drawer in app.scss
     background-color: #404040;
+  }
+  .close-ctn {
+    border-left: 1px solid rgba(255, 255, 255, 0.28);
   }
 }
 </style>

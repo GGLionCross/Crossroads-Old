@@ -19,9 +19,13 @@
       />
     </div>
     <q-table
+      v-if="tableVisible"
       v-bind="$attrs"
       class="bg-drawer"
+      :rows-per-page-options="[0]"
       dark
+      hide-pagination
+      virtual-scroll
     ></q-table>
   </div>
 </template>

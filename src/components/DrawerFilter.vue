@@ -8,12 +8,10 @@
   >
     <div class="full-width row">
       <div class="col-grow">
-        <q-table
+        <filter-table
           :rows="cards"
           :columns="columns"
-          class="bg-drawer"
-          dark
-        ></q-table>
+        ></filter-table>
       </div>
       <div class="column justify-end">
         <q-btn
@@ -33,6 +31,7 @@
 <script>
 import { computed, defineComponent } from "vue";
 import { useStore } from "vuex";
+import FilterTable from "./FilterTable.vue";
 
 const columns = [
   {
@@ -49,6 +48,7 @@ const columns = [
 ];
 
 export default defineComponent({
+  components: { FilterTable },
   setup(props, { emit }) {
     const store = useStore();
     const cards = computed(() => store.getters.getFilteredCards);

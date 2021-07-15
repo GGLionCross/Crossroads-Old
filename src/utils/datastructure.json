@@ -7,20 +7,6 @@
     }
   },
   "cards": {
-    "template": {
-      "key": "template",
-      "name": "",
-      "trigger": ":",
-      "intro": "",
-      "options": [
-        {
-          "label": "",
-          "subtext": "",
-          "result": ""
-        }
-      ],
-      "basic": true
-    },
     "army": {
       "key": "army",
       "name": "Army",

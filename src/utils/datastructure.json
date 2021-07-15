@@ -1,8 +1,9 @@
 {
   "users": {
-    "USERID1": {
+    "T79gTLdZK3cmNSdFcxJScXoQW6E3": {
       "email": "lionelsquiambao@gmail.com",
-      "username": "GGLionCross"
+      "username": "GGLionCross",
+      "filter": ["army", "riot"]
     }
   },
   "cards": {

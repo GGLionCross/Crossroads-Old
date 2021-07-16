@@ -32,6 +32,7 @@ export function handleAuthStateChanged({ commit, dispatch }) {
           ...userDetails,
           userId
         });
+        commit("setFilter", userDetails.filter);
       });
     } else {
       // User is logged out
@@ -72,6 +73,22 @@ export function shuffleCrossroads({ getters, commit }) {
   commit("setFilter", filter);
   commit("setCounter", 0);
 }
+export function toggleFilter({ getters, commit }, { value, key }) {
+  let filter = [...getters.getFilter];
+  if (value) {
+    filter.push(key);
+  } else {
+    const index = filter.indexOf(key);
+    filter.splice(index, 1);
+  }
+  commit("setFilter", filter);
+  const userId = getters.getCurrentUser.userId;
+  if (userId) {
+    firebaseDb.ref("users/" + userId).update({
+      filter
+    });
+  }
+}
 export function userLogin({}, payload) {
   firebaseAuth.signInWithEmailAndPassword(payload.email, payload.password)
     .then(response => {
@@ -96,7 +113,7 @@ export function userLogin({}, payload) {
 export function userLogout({}, payload) {
   firebaseAuth.signOut();
 }
-export function userRegister({}, payload) {
+export function userRegister({ getters }, payload) {
   firebaseAuth.createUserWithEmailAndPassword(payload.email, payload.password)
     .then(response => {
       console.log(response);
@@ -109,5 +126,7 @@ export function userRegister({}, payload) {
     })
     .catch(error => {
       console.error(error.message);
+      let notifyObj = { type: "negative", message: error.message }
+      Notify.create(notifyObj);
     });
 }

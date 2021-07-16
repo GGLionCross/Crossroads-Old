@@ -23,16 +23,27 @@
       v-bind="$attrs"
       class="bg-drawer"
       :pagination="pagination"
+      selection="multiple"
       dark
       flat
       hide-pagination
       virtual-scroll
-    ></q-table>
+    >
+      <template v-slot:body-selection="props">
+        <q-checkbox
+          :model-value="isInFilter(props.row.key)"
+          color="negative"
+          dark
+          @update:model-value="toggleFilter($event, props.row.key)"
+        />
+      </template>
+    </q-table>
   </div>
 </template>
 
 <script>
 import { computed, defineComponent, ref } from "vue";
+import { useStore } from "vuex";
 
 export default defineComponent({
   props: {
@@ -42,6 +53,7 @@ export default defineComponent({
     }
   },
   setup(props, { attrs }) {
+    const store = useStore();
     const tableVisible = ref(false);
     const toggleTableVisible = () => {
       tableVisible.value = !tableVisible.value;
@@ -51,13 +63,20 @@ export default defineComponent({
       sortBy: "name",
       descending: false,
       rowsPerPage: 0
-    })
+    });
+    const filter = computed(() => store.getters.getFilter);
+    const isInFilter = (key) => filter.value.includes(key);
+    const toggleFilter = (value, key) =>
+      store.dispatch('toggleFilter', { value, key });
 
     return {
       tableVisible,
       toggleTableVisible,
       rowCount,
-      pagination
+      pagination,
+      filter,
+      isInFilter,
+      toggleFilter
     };
   }
 })

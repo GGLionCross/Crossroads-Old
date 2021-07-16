@@ -103,7 +103,8 @@ export function userRegister({}, payload) {
       const userId = firebaseAuth.currentUser.uid;
       firebaseDb.ref("users/" + userId).set({
         email: payload.email,
-        username: payload.username
+        username: payload.username,
+        filter: Object.keys(getters.getCards)
       });
     })
     .catch(error => {

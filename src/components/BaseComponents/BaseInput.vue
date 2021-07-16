@@ -1,7 +1,7 @@
 <template>
   <q-input
     v-bind="$attrs"
-    color="yellow-14"
+    color="info"
     dark
     dense
     hide-bottom-space

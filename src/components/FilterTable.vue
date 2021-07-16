@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="filter-table">
     <div :class="[
         'row',
         'justify-between',
@@ -24,6 +24,7 @@
       class="bg-drawer"
       :rows-per-page-options="[0]"
       dark
+      flat
       hide-pagination
       virtual-scroll
     ></q-table>
@@ -57,6 +58,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.filter-table {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
 .icon-dropdown {
   transition: transform .3s;
 }

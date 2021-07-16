@@ -13,6 +13,11 @@
           :rows="basicCards"
           :columns="columns"
         ></filter-table>
+        <filter-table
+          category="Explicit"
+          :rows="explicitCards"
+          :columns="columns"
+        ></filter-table>
       </q-scroll-area>
       <div class="close-ctn column justify-end">
         <q-btn
@@ -54,11 +59,13 @@ export default defineComponent({
     const store = useStore();
     const allCards = computed(() => Object.values(store.getters.getCards));
     const basicCards = computed(() => allCards.value.filter(c => c.basic));
+    const explicitCards = computed(() => allCards.value.filter(c => c.explicit));
 
     const hideDrawerFilter = () => emit("update:modelValue", false);
     return {
-      basicCards,
       columns,
+      basicCards,
+      explicitCards,
       hideDrawerFilter
     }
   }

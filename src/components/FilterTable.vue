@@ -22,6 +22,7 @@
       v-if="tableVisible"
       v-bind="$attrs"
       class="bg-drawer"
+      :columns="columns"
       :pagination="pagination"
       selection="multiple"
       dark
@@ -37,13 +38,40 @@
           @update:model-value="toggleFilter($event, props.row.key)"
         />
       </template>
+      <template v-slot:body-cell-preview="props">
+        <q-td :props="props">
+          <q-btn
+            color="info"
+            icon="open_in_new"
+            text-color="negative"
+            glossy
+            round
+          ></q-btn>
+        </q-td>
+      </template>
     </q-table>
+    <q-dialog></q-dialog>
   </div>
 </template>
 
 <script>
 import { computed, defineComponent, ref } from "vue";
 import { useStore } from "vuex";
+
+const columns = [
+  {
+    name: "name",
+    label: "Name",
+    field: "name",
+    align: "center"
+  },
+  {
+    name: "preview",
+    label: "Preview",
+    field: "name",
+    align: "center"
+  }
+];
 
 export default defineComponent({
   props: {
@@ -70,6 +98,7 @@ export default defineComponent({
       store.dispatch('toggleFilter', { value, key });
 
     return {
+      columns,
       tableVisible,
       toggleTableVisible,
       rowCount,

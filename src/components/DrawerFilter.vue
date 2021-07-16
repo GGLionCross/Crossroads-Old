@@ -11,12 +11,10 @@
         <filter-table
           category="Basic"
           :rows="basicCards"
-          :columns="columns"
         ></filter-table>
         <filter-table
           category="Explicit"
           :rows="explicitCards"
-          :columns="columns"
         ></filter-table>
       </q-scroll-area>
       <div class="close-ctn column justify-end">
@@ -39,20 +37,6 @@ import { computed, defineComponent } from "vue";
 import { useStore } from "vuex";
 import FilterTable from "./FilterTable.vue";
 
-const columns = [
-  {
-    name: "name",
-    label: "Name",
-    field: "name",
-    align: "center"
-  },
-  {
-    name: "preview",
-    label: "Preview",
-    field: "name"
-  }
-];
-
 export default defineComponent({
   components: { FilterTable },
   setup(props, { emit }) {
@@ -63,7 +47,6 @@ export default defineComponent({
 
     const hideDrawerFilter = () => emit("update:modelValue", false);
     return {
-      columns,
       basicCards,
       explicitCards,
       hideDrawerFilter

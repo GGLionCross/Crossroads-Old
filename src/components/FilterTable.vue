@@ -22,7 +22,7 @@
       v-if="tableVisible"
       v-bind="$attrs"
       class="bg-drawer"
-      :rows-per-page-options="[0]"
+      :pagination="pagination"
       dark
       flat
       hide-pagination
@@ -47,11 +47,17 @@ export default defineComponent({
       tableVisible.value = !tableVisible.value;
     }
     const rowCount = computed(() => attrs.rows.length);
+    const pagination = ref({
+      sortBy: "name",
+      descending: false,
+      rowsPerPage: 0
+    })
 
     return {
       tableVisible,
       toggleTableVisible,
-      rowCount
+      rowCount,
+      pagination
     };
   }
 })

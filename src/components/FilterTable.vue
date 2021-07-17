@@ -46,17 +46,27 @@
             text-color="negative"
             glossy
             round
+            @click="previewCard(props.row)"
           ></q-btn>
         </q-td>
       </template>
     </q-table>
-    <q-dialog></q-dialog>
+    <q-dialog v-model="previewVisible" @hide="clearCardToPreview">
+      <div class="preview-ctn absolute overflow-hidden">
+        <crossroads-card
+          :info="cardToPreview"
+          preview
+          @close-preview="closePreview"
+        />
+      </div>
+    </q-dialog>
   </div>
 </template>
 
 <script>
 import { computed, defineComponent, ref } from "vue";
 import { useStore } from "vuex";
+import CrossroadsCard from "./CrossroadsCard.vue";
 
 const columns = [
   {
@@ -80,6 +90,9 @@ export default defineComponent({
       required: true
     }
   },
+  components: {
+    CrossroadsCard
+  },
   setup(props, { attrs }) {
     const store = useStore();
     const tableVisible = ref(false);
@@ -92,10 +105,20 @@ export default defineComponent({
       descending: false,
       rowsPerPage: 0
     });
+
     const filter = computed(() => store.getters.getFilter);
     const isInFilter = (key) => filter.value.includes(key);
     const toggleFilter = (value, key) =>
       store.dispatch('toggleFilter', { value, key });
+
+    const previewVisible = ref(false);
+    const cardToPreview = ref({});
+    const previewCard = (card) => {
+      cardToPreview.value = card;
+      previewVisible.value = true;
+    };
+    const clearCardToPreview = () => cardToPreview.value = {};
+    const closePreview = () => previewVisible.value = false;
 
     return {
       columns,
@@ -105,7 +128,12 @@ export default defineComponent({
       pagination,
       filter,
       isInFilter,
-      toggleFilter
+      toggleFilter,
+      previewVisible,
+      cardToPreview,
+      previewCard,
+      clearCardToPreview,
+      closePreview
     };
   }
 })
@@ -117,5 +145,11 @@ export default defineComponent({
 }
 .icon-dropdown {
   transition: transform .3s;
+}
+$card-width: 90vw;
+.preview-ctn {
+  width: $card-width;
+  max-height: 80vh;
+  aspect-ratio: 2.5 / 3.5;
 }
 </style>

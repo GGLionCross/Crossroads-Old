@@ -1,8 +1,9 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page>
     <q-carousel
       v-model="selected"
-      class="cr-carousel full-height full-width"
+      class="cr-carousel"
+      height="86vh"
       transition-prev="slide-right"
       transition-next="slide-left"
       animated
@@ -45,9 +46,9 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-.cr-carousel {
+<style lang="scss">
+.cr-carousel.q-carousel {
   background-color: inherit;
+  height: unset;
 }
 </style>

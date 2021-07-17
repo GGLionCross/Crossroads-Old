@@ -1,5 +1,5 @@
 <template>
-  <div class="card-ctn row justify-center">
+  <div class="card-ctn absolute">
     <q-card
       class="card side-back absolute column justify-end items-center"
       :class="{ 'card-rotate': isVisible }"
@@ -42,6 +42,7 @@
                   @click="showNextCard"
                 ></q-btn>
                 <q-btn
+                  v-if="!preview"
                   color="grey-14"
                   icon="undo"
                   size="1em"
@@ -122,10 +123,14 @@ export default defineComponent({
     info: {
       type: Object,
       required: true
+    },
+    preview: {
+      type: Boolean,
+      default: false
     }
   },
-  setup(props) {
-    const isVisible = ref(false);
+  setup(props, { emit }) {
+    const isVisible = props.preview ? ref(true) : ref(false);
     const showCard = () => {
       isVisible.value = true;
     }
@@ -133,7 +138,13 @@ export default defineComponent({
     const cardMax = computed(() => store.getters.getFilteredCards.length);
     const counter = computed(() => store.getters.getCounter);
     const hideNextCardButton = computed(() => counter.value >= cardMax.value - 1);
-    const showNextCard = () => store.dispatch('showNextCard');
+    const showNextCard = () => {
+      if (props.preview) {
+        emit("closePreview");
+      } else {
+        store.dispatch('showNextCard');
+      }
+    };
     const hideCard = () => {
       isVisible.value = false;
     }

@@ -11,6 +11,7 @@
         <filter-table
           category="Basic"
           :rows="basicCards"
+          basic
         ></filter-table>
         <filter-table
           category="Explicit"

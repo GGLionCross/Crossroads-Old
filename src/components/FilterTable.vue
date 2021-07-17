@@ -30,10 +30,19 @@
       hide-pagination
       virtual-scroll
     >
+      <template v-slot:header-selection>
+        <q-checkbox
+          :model-value="areAllInFilter"
+          color="negative"
+          dark
+          @update:model-value="toggleFilterAll"
+        />
+      </template>
       <template v-slot:body-selection="props">
         <q-checkbox
           :model-value="isInFilter(props.row.key)"
           color="negative"
+          :disable="disableFilter(props.row.key)"
           dark
           @update:model-value="toggleFilter($event, props.row.key)"
         />
@@ -88,6 +97,10 @@ export default defineComponent({
     category: {
       type: String,
       required: true
+    },
+    basic: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -100,6 +113,15 @@ export default defineComponent({
       tableVisible.value = !tableVisible.value;
     }
     const rowCount = computed(() => attrs.rows.length);
+    const cardsAdded = computed(() => {
+      let cardsAdded = 0;
+      for (let card of attrs.rows) {
+        if (isInFilter(card.key)) {
+          cardsAdded++;
+        }
+      }
+      return cardsAdded;
+    })
     const pagination = ref({
       sortBy: "name",
       descending: false,
@@ -110,6 +132,29 @@ export default defineComponent({
     const isInFilter = (key) => filter.value.includes(key);
     const toggleFilter = (value, key) =>
       store.dispatch('toggleFilter', { value, key });
+    const areAllInFilter = computed(() => {
+      if (rowCount.value === cardsAdded.value) {
+        return true;
+      }
+      if (cardsAdded.value === 0) {
+        return false;
+      }
+      return null;
+    });
+    // If this Filter Table is the basic keep at least 1 card active
+    // This prevents issues with Firebase having an empty array
+    // As well as any issues our site may have with an empty filter
+    const disableFilter = (key) =>
+      props.basic && cardsAdded.value === 1 && isInFilter(key);
+    const toggleFilterAll = (value) => {
+      for (let i = 0; i < attrs.rows.length; i++) {
+        if (!i && props.basic && !value) {
+          toggleFilter(true, attrs.rows[i].key);
+          continue;
+        }
+        toggleFilter(value, attrs.rows[i].key);
+      }
+    }
 
     const previewVisible = ref(false);
     const cardToPreview = ref({});
@@ -129,6 +174,9 @@ export default defineComponent({
       filter,
       isInFilter,
       toggleFilter,
+      areAllInFilter,
+      disableFilter,
+      toggleFilterAll,
       previewVisible,
       cardToPreview,
       previewCard,

@@ -75,17 +75,17 @@ export function shuffleCrossroads({ getters, commit }) {
 }
 export function toggleFilter({ getters, commit }, { value, key }) {
   let filter = [...getters.getFilter];
-  if (value) {
+  const index = filter.indexOf(key);
+  if (value && index === -1) {
     filter.push(key);
-  } else {
-    const index = filter.indexOf(key);
+  } else if (!value && index !== -1) {
     filter.splice(index, 1);
   }
   commit("setFilter", filter);
   const userId = getters.getCurrentUser.userId;
   if (userId) {
     firebaseDb.ref("users/" + userId).update({
-      filter
+      filter: filter
     });
   }
 }

@@ -30,7 +30,7 @@
               v-if="!isTriggered"
               class="absolute full-width full-height column justify-between"
             >
-              <div class="text-italic text-justify">{{ trigger }}</div>
+              <div class="text-italic">{{ trigger }}</div>
               <div class="row justify-around">
                 <q-btn
                   v-if="!hideNextCardButton"
@@ -61,7 +61,7 @@
               </div>
             </div>
             <div key="options" v-else-if="!isShowingResult" class="absolute full-width">
-              <div class="text-justify">{{ intro }}</div>
+              <div>{{ intro }}</div>
               <q-separator color="grey-10" spaced></q-separator>
               <div v-for="op in options" :key="op.label">
                 <div class="option-label text-center text-uppercase">
@@ -86,7 +86,7 @@
               </div>
             </div>
             <div key="result" v-else class="absolute full-width full-height column justify-between">
-              <div class="text-justify">{{ result }}</div>
+              <div>{{ result }}</div>
               <div class="row justify-around">
                 <q-btn
                   color="grey-14"

@@ -10,7 +10,7 @@
       ]"
       @click="toggleTableVisible"
     >
-      <div class="text-uppercase">{{ category }} ({{rowCount}})</div>
+      <div class="text-uppercase">{{ category }} ( {{ cardsAdded }} / {{rowCount}} )</div>
       <q-icon
         name="expand_more"
         size="xs"
@@ -174,6 +174,7 @@ export default defineComponent({
       tableVisible,
       toggleTableVisible,
       rowCount,
+      cardsAdded,
       pagination,
       filter,
       isInFilter,

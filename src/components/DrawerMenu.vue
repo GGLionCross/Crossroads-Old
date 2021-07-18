@@ -4,12 +4,15 @@
       v-bind="$attrs"
       class="bg-drawer column justify-between no-wrap"
       side="right"
+      dark
     >
       <login-register v-if="!isUserLoggedIn" />
       <user-card v-else />
       <q-list>
         <drawer-menu-item v-close-popup label="Shuffle" icon="shuffle" @click="shuffleCrossroads" />
         <drawer-menu-item label="Filter" icon="filter_alt" @click="showDrawerFilter" />
+        <q-separator dark />
+        <drawer-menu-item label="Close" icon="close" @click="hideDrawer" />
       </q-list>
     </q-drawer>
     <drawer-filter v-model="filtersVisible" />
@@ -32,17 +35,20 @@ export default defineComponent({
     DrawerFilter
   },
   setup(props, { emit }) {
+    const hideDrawer = () => emit("update:modelValue", false);
+
     const store = useStore();
     const isUserLoggedIn = computed(() => store.getters.isUserLoggedIn);
     const shuffleCrossroads = () => {
       store.dispatch('shuffleCrossroads');
-      emit("update:modelValue", false); // Closes drawer
+      hideDrawer();
     }
     const filtersVisible = ref(false);
     const showDrawerFilter = () => {
       filtersVisible.value = true;
     }
     return {
+      hideDrawer,
       isUserLoggedIn,
       shuffleCrossroads,
       filtersVisible,

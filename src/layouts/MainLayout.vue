@@ -8,13 +8,7 @@
       </q-toolbar>
     </q-header>
 
-    <drawer-menu
-      v-model="leftDrawerOpen"
-      bordered
-      dark
-      class="text-white"
-    >
-    </drawer-menu>
+    <drawer-menu v-model="leftDrawerOpen" />
     
     <footer-controls @openMenu="toggleLeftDrawer"></footer-controls>
 

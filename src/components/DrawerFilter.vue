@@ -2,11 +2,11 @@
   <q-dialog
     v-bind="$attrs"
     class="drawer-filter"
-    position="right"
+    position="bottom"
     maximized
     persistent
   >
-    <div class="full-width row">
+    <div class="column overflow-hidden">
       <q-scroll-area class="col-grow">
         <filter-table
           category="Basic"
@@ -18,14 +18,13 @@
           :rows="explicitCards"
         ></filter-table>
       </q-scroll-area>
-      <div class="close-ctn column justify-end">
+      <div class="close-ctn row justify-center">
         <q-btn
+          class="full-width"
           color="white"
           icon="close"
-          size="1em"
           dark
           flat
-          round
           @click="hideDrawerFilter"
         ></q-btn>
       </div>
@@ -59,7 +58,7 @@ export default defineComponent({
 <style lang="scss">
 .drawer-filter {
   .q-dialog__inner {
-    width: 100%;
+    height: 100%;
   }
   .q-dialog__backdrop {
     background: none;
@@ -67,7 +66,7 @@ export default defineComponent({
     background-color: #404040;
   }
   .close-ctn {
-    border-left: 1px solid rgba(255, 255, 255, 0.28);
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
   }
 }
 </style>

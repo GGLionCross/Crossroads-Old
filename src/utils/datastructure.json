@@ -32,6 +32,25 @@
       "basic": true,
       "persistent": true
     },
+    "bitter_cold_night": {
+      "key": "bitter_cold_night",
+      "name": "Bitter Cold Night",
+      "trigger": "If the player receives a frostbite wound as the result of rolling for exposure after moving to a location with 1 or more other survivors:",
+      "intro": "The night brings with it a new understanding of cold. The snow stopped, but the wind picked up, and your extremities all ache from the icy pain that stabs you. You stagger to the door and bang as loudly as you can, shouting for someone to let you in. But the wind howls louder, and your hat is torn from your head. You hammer on the door again, panic gripping you as the cold instantly starts chewing on your ears. Every player with 1 or more survivors at the location that was moved to must vote with a thumbs up or thumbs down.",
+      "options": [
+        {
+          "label": "Thumbs Up",
+          "subtext": "Open the door despite the extremely frigid temperatures.",
+          "result": "The door opens, but the icy wind enters with you, sending loose items scuttling across the floor, and putting the fire out with an audible \"whump\". Every survivor at the location receives 1 frostbite wound."
+        },
+        {
+          "label": "Thumbs Down",
+          "subtext": "Keep the door shut",
+          "result": "The door stays tight. The moving survivor is killed."
+        }
+      ],
+      "basic": true
+    },
     "disturbed": {
       "key": "disturbed",
       "name": "Disturbed",
@@ -177,6 +196,25 @@
       ],
       "basic": true
     },
+    "outbreak": {
+      "key": "outbreak",
+      "name": "Outbreak",
+      "trigger": "If a survivor the player controls is at the colony and there are 1 or more helpless survivors at the colony:",
+      "intro": "At first Jerry just had a light fever, but the next day his neck was swollen and had a strange purple tint to it. Now three days have passed and you've never seen anything like it. The yellow buboes that have formed under Jerry's jaw are leaking pus, and the odor that surrounds him is harsh and bitter. This can't end well.",
+      "options": [
+        {
+          "label": "Kick Jerry Out",
+          "subtext": "Kick the helpless survivor out",
+          "result": "Jerry gotta go. Remove a helpless survivor token from the colony. Lose 1 morale."
+        },
+        {
+          "label": "Let Jerry Stay",
+          "subtext": "Maybe it will get better",
+          "result": "The sickness spreads through the colony. Each survivor at the colony receives 1 wound. If Olivia Brown or Janet Taylor are not in play, roll a die for each helpless survivor at the colony. On a result of 1, kill that helpless survivor (losing 1 morale)."
+        }
+      ],
+      "basic": true
+    },
     "riot": {
       "key": "riot",
       "name": "Riot",
@@ -216,6 +254,25 @@
       "basic": true,
       "persistent": true,
       "changed": "Changed to trigger on move to anywhere instead of just to the colony. Also combined options into 1 to allow players to implement the buddy system more flexibly."
+    },
+    "the_sunshine_state": {
+      "key": "the_sunshine_state",
+      "name": "The Sunshine State",
+      "trigger": "If the player controls a survivor at the colony and there are 2 or more helpless survivors in the colony:",
+      "intro": "The sun shines brightly, reflecting off the beach's perfect white sands and light blue waters. \"The Sunshine State,\" declares Harold, shaking the postcard in your face. \"That's where we're headed. Why should we be fighting both the weather and the dead? I think the birds have it right. The wife and I are flying south.\"",
+      "options": [
+        {
+          "label": "Leave",
+          "subtext": "Let them leave",
+          "result": "\"Great idea as always Harold.\" Remove 2 helpless survivor tokens in the colony from the game. The very next morning they're found at the gates staring in hungrily at the living. Lose 1 morale."
+        },
+        {
+          "label": "Stay",
+          "subtext": "Don't let them leave",
+          "result": "\"Who's doing the fighting Harold? It ain't either of you. So leave and die, or stop being an ingrate and shut up.\" He walks away, but you realize he feels ashamed at having to rely on others. Nothing happens."
+        }
+      ],
+      "basic": true
     },
     "this_is_hopeless": {
       "key": "this_is_hopeless",

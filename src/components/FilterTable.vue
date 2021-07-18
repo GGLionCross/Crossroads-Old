@@ -32,6 +32,7 @@
     >
       <template v-slot:header-selection>
         <q-checkbox
+          v-if="!basic"
           :model-value="areAllInFilter"
           color="negative"
           dark
@@ -144,14 +145,17 @@ export default defineComponent({
     // If this Filter Table is the basic keep at least 1 card active
     // This prevents issues with Firebase having an empty array
     // As well as any issues our site may have with an empty filter
+    // If table is for basic cards, we should not be making it accessible
+    // to unfilter them all
     const disableFilter = (key) =>
       props.basic && cardsAdded.value === 1 && isInFilter(key);
     const toggleFilterAll = (value) => {
       for (let i = 0; i < attrs.rows.length; i++) {
-        if (!i && props.basic && !value) {
-          toggleFilter(true, attrs.rows[i].key);
-          continue;
-        }
+        // Only needed if we're allowing Filter All on a Basic table
+        // if (!i && props.basic && !value) {
+        //   toggleFilter(true, attrs.rows[i].key);
+        //   continue;
+        // }
         toggleFilter(value, attrs.rows[i].key);
       }
     }

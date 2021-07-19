@@ -21,7 +21,6 @@
     <q-table
       v-if="tableVisible"
       v-bind="$attrs"
-      class="bg-drawer"
       :columns="columns"
       :pagination="pagination"
       selection="multiple"
@@ -204,5 +203,12 @@ $card-width: 90vw;
   width: $card-width;
   max-height: 80vh;
   aspect-ratio: 2.5 / 3.5;
+}
+</style>
+
+<style lang="scss">
+.filter-table thead {
+  background-color: #303030;
+  text-transform: uppercase;
 }
 </style>

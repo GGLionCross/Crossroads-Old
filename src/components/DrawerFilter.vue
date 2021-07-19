@@ -14,6 +14,10 @@
           basic
         ></filter-table>
         <filter-table
+          category="Character Exclusive"
+          :rows="characterCards"
+        ></filter-table>
+        <filter-table
           category="Explicit"
           :rows="explicitCards"
         ></filter-table>
@@ -43,11 +47,13 @@ export default defineComponent({
     const store = useStore();
     const allCards = computed(() => Object.values(store.getters.getCards));
     const basicCards = computed(() => allCards.value.filter(c => c.basic));
+    const characterCards = computed(() => allCards.value.filter(c => c.character));
     const explicitCards = computed(() => allCards.value.filter(c => c.explicit));
 
     const hideDrawerFilter = () => emit("update:modelValue", false);
     return {
       basicCards,
+      characterCards,
       explicitCards,
       hideDrawerFilter
     }

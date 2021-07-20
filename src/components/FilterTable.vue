@@ -30,8 +30,15 @@
       virtual-scroll
     >
       <template v-slot:header-selection>
-        <q-checkbox
+        <!-- <q-checkbox
           v-if="!basic"
+          :model-value="areAllInFilter"
+          color="negative"
+          dark
+          @update:model-value="toggleFilterAll"
+        /> -->
+        <!-- Allow for testing -->
+        <q-checkbox
           :model-value="areAllInFilter"
           color="negative"
           dark
@@ -151,10 +158,11 @@ export default defineComponent({
     const toggleFilterAll = (value) => {
       for (let i = 0; i < attrs.rows.length; i++) {
         // Only needed if we're allowing Filter All on a Basic table
-        // if (!i && props.basic && !value) {
-        //   toggleFilter(true, attrs.rows[i].key);
-        //   continue;
-        // }
+        // Allow for testing
+        if (!i && props.basic && !value) {
+          toggleFilter(true, attrs.rows[i].key);
+          continue;
+        }
         toggleFilter(value, attrs.rows[i].key);
       }
     }

@@ -1,0 +1,578 @@
+{
+  "cards" : {
+    "army" : {
+      "basic" : true,
+      "intro" : "The soldiers in army uniforms make predictable demands - have food ready when they return, or the colony will be burnt to the ground. Every player with 1 or more survivors at the colony must vote with a thumbs up or down. The option with most votes takes effect. The ALTERNATIVE option triggers if Thomas Heart is at the colony.",
+      "key" : "army",
+      "name" : "Army",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "Add the following victory condition to the current main objective: Have 5 food in the supply. Set this card aside to remember this persisting effect.",
+        "subtext" : "Abide by the soldiers' demands"
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "Your ambush is surprisingly effective, and their losses are worse than yours. The cowards flee in a disorganized fashion. Roll a die for each survivor at the colony. On each result of 3 or lower that survivor receives 1 wound.",
+        "subtext" : "Confront the soldiers"
+      }, {
+        "label" : "Alternative",
+        "result" : "Thomas Heart notices that the man calling himself colonel has a sergeant's uniform. He calls them on their lie at the gate, and the imposters angrily retreat.",
+        "subtext" : "If Thomas Heart is at the colony:"
+      } ],
+      "persistent" : true,
+      "trigger" : "If a survivor the player controls is at the colony:"
+    },
+    "bitter_cold_night" : {
+      "basic" : true,
+      "intro" : "The night brings with it a new understanding of cold. The snow stopped, but the wind picked up, and your extremities all ache from the icy pain that stabs you. You stagger to the door and bang as loudly as you can, shouting for someone to let you in. But the wind howls louder, and your hat is torn from your head. You hammer on the door again, panic gripping you as the cold instantly starts chewing on your ears. Every player with 1 or more survivors at the location that was moved to must vote with a thumbs up or down.",
+      "key" : "bitter_cold_night",
+      "name" : "Bitter Cold Night",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "The door opens, but the icy wind enters with you, sending loose items scuttling across the floor, and putting the fire out with an audible \"whump\". Every survivor at the location receives 1 frostbite wound.",
+        "subtext" : "Open the door despite the extremely frigid temperatures."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "The door stays tight. The moving survivor is killed.",
+        "subtext" : "Keep the door shut"
+      } ],
+      "trigger" : "If the player receives a frostbite wound as the result of rolling for exposure after moving to a location with 1 or more other survivors:"
+    },
+    "collapsing_barriers" : {
+      "basic" : true,
+      "intro" : "\"We've got a problem. They're piling up on the barricades. I've seen it - they're just a wall of meat, teeth, and claws. There's no way the barricades can hold up under that kind of weight. It's all makeshift anyway. I'm afraid we don't have a choice - we need to send in a team to clear them out.\" Every player with 1 or mor survivors at the colony must vote with a thumbs up or down.",
+      "key" : "collapsing_barriers",
+      "name" : "Collapsing Barriers",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "Each player that controls 1 or more survivors at the colony chooses a survivor they control at the colony and rolls for exposure on that survivor.",
+        "subtext" : "Clear the zombies."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "Remove all barricades from the colony.",
+        "subtext" : "Let the barricades fall."
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony and there is at least 1 barricade and 1 zombie at the colony:"
+    },
+    "disturbed" : {
+      "explicit" : true,
+      "intro" : "\"What are you up to buddy?\" you mean to ask, but the words stick in your throat as you suddenly realize what the little boy is doing. He holds a bloody stone over a pulpy mass of flesh and hair that used to be some kind of small animal.",
+      "key" : "disturbed",
+      "name" : "Disturbed",
+      "notes" : "Changed healing of just despair token to any type of wound, including despair tokens",
+      "options" : [ {
+        "label" : "Tell Everyone",
+        "result" : "You tell the others, but instead of taking action, bickering breaks out as they vehemently disagree on how to handle the situation. Roll a die. A number of helpless survivors equal to the result become unruly.",
+        "subtext" : "Everyone should know."
+      }, {
+        "label" : "Say Nothing",
+        "result" : "Later the child is caught bashing in the head of one of his playmates. Remove 2 helpless survivors from the colony and lose 1 morale.",
+        "subtext" : "Who knows what may happen to the child if people found out?"
+      }, {
+        "label" : "Alternative",
+        "result" : "You tell him. He recognizes the behavior as a response to deep trauma and takes action. You watch as the weeks pass by and life slowly comes back into the child's once blank eyes. You may remove a despair or wound token from a survivor you control.",
+        "subtext" : "If James Meyers is in play, you tell him:"
+      } ],
+      "trigger" : "If there are 4 or more helpless survivors in play:"
+    },
+    "dying_wish" : {
+      "basic" : true,
+      "intro" : "You look up at the faces gathered around you. It's your life that's ending, yet your heart mourns for them. They look so scared. \"I know I'm dying,\" in a weak voice. \"But that's okay. Don't let it slow you down. If they didn't end, our lives would have no meaning. You still have so much to do. So much to fight for. It's easy to feel lost in a world that seems like it's rotting, but really, our lives never had more purpose than they do now. So please, for me, stop and think about what you are doing here. What is it that you want? Don't waste any more time. Find out what it is, then take hold of it and never let go.\"",
+      "key" : "dying_wish",
+      "name" : "Dying Wish",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Build a new set of secret objectives using the secret objective setup rules on page 6, section 4, of the Long Night rulebook. Each player may choose to remove their secret objective from the game without revealing it and draw a new secret objective.",
+        "subtext" : "Each player may choose to draw a new secret objective."
+      } ],
+      "trigger" : "If a non-exiled survivor the player controls is killed:"
+    },
+    "flier" : {
+      "basic" : true,
+      "intro" : "Strong winds in the evening yielded a strange surprise when the sun rose. Fliers printed on bright orange paper covered the ground, and more were stuck in the surrounding trees, flapping there like dying birds. \"NO HELP COMING\" read the header, making the rest of the flier seem redundant. A last act of the government, it served both as a warning and a catalog of their failed attempts at combatting the dead. NO HELP COMING. Welcome to the new normal.",
+      "key" : "flier",
+      "name" : "Flier",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "\"This doesn't have to break us. It was naive for us to ever have thought that help was on the way. We can lie down and die or we can hunker down for the long haul and outlast this.\" At the end of the next round, if there is not at least 1 barricade at each location, lose 1 morale. If there are 2 or more barricades at each location, gain 1 morale. Set this card aside to remember this persisting effect.",
+        "subtext" : "Persisting effect."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player controls a survivor at the colony:"
+    },
+    "fuel_tanker" : {
+      "basic" : true,
+      "intro" : "\"Holy crap.\" The fuel tanker sits just off the road, and it appears in excellent condition. You exit your car, and checking the perimeter you approach the cab, its driver side door hanging open. You slice the seatbelt apart, and bludgeon the head of the zombie that falls out. The trucker's bloody hat says Beaver Inspector, and you marvel at how stupid and frivolous your species used to be. Climbing into the cab you give the keys a twist, and the loud diesel engine roars to life like some ancient monster reborn into the world. You cringe. Noise like that is going to draw every dead thing for a mile.",
+      "key" : "fuel_tanker",
+      "name" : "Fuel Tanker",
+      "notes" : "Set aside 4 fuel cards from base game to use for option 1 result.",
+      "options" : [ {
+        "label" : "Drive",
+        "result" : "You drive the tanker back to the colony, drawing every zombie in the area back with you. Place 6 zombies at the colony and add up to 4 fuel cards that have been set aside to your hand.",
+        "subtext" : "Take the tanker back to the colony."
+      }, {
+        "label" : "Leave",
+        "result" : "You sigh regretfully and turn the motor back off. It's just too loud to risk driving into the colony. Nothing happens.",
+        "subtext" : "It's just too risky."
+      } ],
+      "trigger" : "If the player moves a non-exiled survivor:"
+    },
+    "gabriel_diaz" : {
+      "character" : true,
+      "intro" : "An explosion rocks the building as you cower in a back room. Thick black smoke billows in, and soon your eyes water and you begin to cough. You set the fire to distract the horde that trapped you, but things quickly got out of hand. The one window you found to escape from proved to be too small, and now there is nothing to do but wait for the smoke to asphyxiate you. The last thing you see before passing out, is a shape lurching toward you through the flames. You awake in the arms of a burly stranger. \"Good thing me and my family were passing by when we did,\" he says.",
+      "key" : "gabriel_diaz",
+      "name" : "Gabriel Diaz",
+      "options" : [ {
+        "label" : "Recruit",
+        "result" : "You gratefully tell your rescuer and his family about the colony. Search the survivor deck for Gabriel Diaz and add him to your following. Add him and 3 helpless survivors to the colony",
+        "subtext" : "Tell the family about the colony."
+      }, {
+        "label" : "Reward",
+        "result" : "As thankful as you are, you know the colony cannot afford to feed more mouths. You give the Diaz family a reward before parting ways on the road. Remove 1 card in your hand from the game.",
+        "subtext" : "Although we can't sustain another family, we can show a token of our appreciation."
+      } ],
+      "trigger" : "If the player controls a non-exiled survivor at a non-colony location and Gabriel Diaz is in the survivor deck:"
+    },
+    "heads_up" : {
+      "basic" : true,
+      "intro" : "You knew better than to go down into the morgue, but you figure it's the one place that has been searched the least. But once you find yourself downstairs in the darkness, you are so overcome with fear that you only have enough willpower to look in either the refrigerator, or the chemical vat.",
+      "key" : "heads_up",
+      "name" : "Heads Up",
+      "options" : [ {
+        "label" : "Refrigerator",
+        "result" : "You open the refrigerator and let out a shrill scream. A severed head springs to life gnashing its teeth at you. You flee in terror, knocking over shelves and God knows what else. Fill the police station with noise tokens.",
+        "subtext" : "Open the refrigerator."
+      }, {
+        "label" : "Chemical Vat",
+        "result" : "You lift the lid on the chemical vat and let out a shrill scream. It's a severed head! You flee in terror, knocking over shelves and God knows what else. Fill the police station with noise tokens.",
+        "subtext" : "Lift the lid on the chemical vat."
+      } ],
+      "trigger" : "If a survivor the player controls performs a search at the police station:"
+    },
+    "highway_to_hell" : {
+      "basic" : true,
+      "intro" : "You're knocked to the ground as a boom shakes the entire building. \"Breach!\" You find the barricades smashed, and a truck crunched into the building's side. Classic rock blares from the speaker in the cab. The zombie sitting in the driver's seat gnashes its teeth at you before a club obliterates its head. The note pinned to its jacket reveals the culprits - the other colony has sent you a message.",
+      "key" : "highway_to_hell",
+      "name" : "Highway To Hell",
+      "options" : [ {
+        "label" : "Kill Zombies",
+        "result" : "Gain 1 morale for acquiring some sweet tunes.",
+        "subtext" : "Players may spend 2 action die to fend off the remaining zombies."
+      }, {
+        "label" : "Fall Back",
+        "result" : "Add 3 zombies to the colony",
+        "subtext" : "Waste no time retreating."
+      } ],
+      "trigger" : "If a player controls a survivor at the colony:"
+    },
+    "horse" : {
+      "basic" : true,
+      "intro" : "You slip through the alleyways, moving as quietly as you can, when you hear the clip-clop of a horse's hooves on pavement. Peering out from the wreckage of a burned out bakery, you see a half-starved horse walking down the street. The poor thing looks like it's been through a lot, but if it keeps walking through town it doesn't stand a chance of surviving.",
+      "key" : "horse",
+      "name" : "Horse",
+      "options" : [ {
+        "label" : "Tame",
+        "result" : "Attach this card to the moved survivor. For the remainder of the game the survivor no longer has to roll for exposure when moving. As long as the survivor is not exiled, during the pay food portion of the colony phase, the colony must pay 1 additional food.",
+        "subtext" : "Feed and nourish the horse."
+      }, {
+        "label" : "Kill",
+        "result" : "\"Sorry, old girl.\" Add 3 food to the supply.",
+        "subtext" : "We don't have the resources to sustain you."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player moves a non-exiled survivor:"
+    },
+    "hunted" : {
+      "basic" : true,
+      "intro" : "\"They shot me! It was no accident either. I saw them! They were all decked out in camouflage and they had no interest in the zombies in the area. They were hunting me, and I tell you what - they don't look as rough as us. They look well fed. We've got armed cannibals in our backyard.\"",
+      "key" : "hunted",
+      "name" : "Hunted",
+      "options" : [ {
+        "label" : "Go Hunting",
+        "result" : "You hunt down the cannibals. Roll for exposure twice on each survivor you control.",
+        "subtext" : "Hunt down the cannibals."
+      }, {
+        "label" : "Continue To Hide",
+        "result" : "For the remainder of the game, whenever any player moves a survivor, in addition to rolling the exposure die they must roll a 6-sided die. On a result of 2 or lower, that survivor receives 1 wound.",
+        "subtext" : "Play it safe. Don't seek confrontation."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player receives a non-frostbite wound as the result of rolling for exposure while moving:"
+    },
+    "ice_fishing" : {
+      "basic" : true,
+      "intro" : "\"So we just cut a hole in the ice and stick the lures in there and, what? Jiggle them around? Are you sure there isn't more to it than this?\" you ask. The old timer just laughs and shakes his head.\n\"Well you're supposed to drink booze too, but seeing as the whiskey is reserved for medicine now, no, that's pretty much it.\"\n\"Ice fishing sucks,\" you grumble.\n\"That's why we drank,\" he replies.",
+      "key" : "ice_fishing",
+      "name" : "Ice Fishing",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Roll a dice to fish. If you roll a 4 or higher, add 3 food to the supply. If you roll a 1, choose a survivor you control. The chosen survivor receives 1 frostbite wound.",
+        "subtext" : "You may spend an unused action dice to try your hand at ice fishing for some food."
+      } ],
+      "trigger" : "If there is no food in the supply:"
+    },
+    "ill_show_them_i_can_help" : {
+      "basic" : true,
+      "intro" : "Once again, a loud mouth is accusing someone else of betrayal. However, the next morning, the accused is found dead. \"Who did this?!\" you demand. \"Me,\" says a meek little girl in the crowd. \"I... I saved everybody... Didn't I?\" Kill the leader of the player that was being accused of being a betrayer. Every non-exiled player must vote with a thumbs up or down.",
+      "key" : "ill_show_them_i_can_help",
+      "name" : "I'll Show Them I Can Help!",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "The fault doesn't lay with the girl but with the accuser. Exile the player that made the accusation.",
+        "subtext" : "Blame the accuser"
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "The girl is exiled from the colony. Remove 1 helpless survivor and lost 1 morale.",
+        "subtext" : "Send the little girl packin'"
+      }, {
+        "label" : "Alternative",
+        "result" : "\"Monsters! I'll not leave her to die out there.\" The player that chose this option must remove a survivor they control and 1 helpless survivor. No morale is lost.",
+        "subtext" : "If the colony votes thumbs down, any player may choose this option: leave to protect the girl"
+      } ],
+      "trigger" : "If a player is accused of being a betrayer (a casual accusation is enough) and there is at least 1 helpless survivor at the colony:"
+    },
+    "john_price" : {
+      "character" : true,
+      "intro" : "As you search through the school, you hear screaming and pounding at a door down the hallway. When you investigate, you see a teenager frantically banging on the door to the cafeteria. You start to unlock the door, when you notice the dead converging on him from behind. (DON'T READ ALOUD: Give the player 5 seconds to choose, after reading the options. If they do not choose, automatically choose the 2nd option.)",
+      "key" : "john_price",
+      "name" : "John Price",
+      "notes" : "Added a time limit of 5 seconds to the decision process.",
+      "options" : [ {
+        "label" : "Unlock",
+        "result" : "You unlock the door and rescue the boy. He runs past you and leaves you to deal with the zombies. Add John Price to your following. Add 2 zombies to the school. Place John Price at the school (or at the colony if there are no available spaces at the school).",
+        "subtext" : "Unlock the door and let the teenager in."
+      }, {
+        "label" : "Keep Shut",
+        "result" : "Your moment's hesitation gives the zombies enough time to reach the boy. You decide to take advantage of the distraction and rush into the cafeteria, grabbing supplies, as the teenager's anguished screams echo throughout the school. Add 2 food to the supply. Search the survivor deck for John Price and remove him from the game.",
+        "subtext" : "Keep the door closed."
+      } ],
+      "trigger" : "If the player performs a search action at the school, and John Price is in the survivor deck:"
+    },
+    "let_there_be_light" : {
+      "basic" : true,
+      "intro" : "\"How are the lights on in this place?\"",
+      "key" : "let_there_be_light",
+      "name" : "Let There Be Light",
+      "options" : [ {
+        "label" : "Investigate",
+        "result" : "You can't figure it out until discovering a maintenance hatch that leads to the roof. Up on top you find two rows of solar panels that appear to be in excellent condition. You have to get word to the colony! Players may collectively spend 5 action dice. If they do, the solar panels are installed at the colony, providing heat and light. Raise morale by 1 and for the remaining of the game crisis cards requiring FUEL symbol cards require 2 fewer FUEL symbol cards to succeed. Set this card aside to remember this persisting effect.",
+        "subtext" : "Search for the energy source."
+      }, {
+        "label" : "Ignore",
+        "result" : "Draw and keep 3 cards from the item deck you just searched. ",
+        "subtext" : "\"Might as well take advantage of it while we're here.\""
+      } ],
+      "persistent" : true,
+      "trigger" : "If a player performs a search:"
+    },
+    "mike_cho" : {
+      "character" : true,
+      "intro" : "The zombie crashing through the window cuts off your final escape route. There's no way out. The inevitability of your death begins to sink in, and you find you're surprised at how at peace you feel. The gnashing dead press in on you, and you close your eyes and whisper a final prayer. You hear a high pitched battle cry and open your eyes again to see a man dressed entirely in black, slicing through a zombie with a sword.",
+      "key" : "mike_cho",
+      "name" : "Mike Cho",
+      "options" : [ {
+        "label" : "Help",
+        "result" : "You join him, helping him fight off the zombies. Grateful for your help he agrees to join your group. Search the survivor deck for Mike Cho and add him to your following. Place Mike Cho with a survivor at a non-colony location with 1 or more zombies. Remove all zombies from that location. Place 1 wound on Mike Cho and 1 survivor you control that is with him.",
+        "subtext" : "Join the fight"
+      }, {
+        "label" : "Escape",
+        "result" : "As he expertly dispatches the zombies you see your chance to get away. Remove all zombies from a non-colony location where you have a survivor.",
+        "subtext" : "Use the distraction to get away"
+      } ],
+      "trigger" : "If the player controls a survivor at a non-colony location, there is at least 1 zombie there, and Mike Cho is still in the survivor deck:"
+    },
+    "missing_child" : {
+      "basic" : true,
+      "intro" : "\"Oh my God, Cindy! She was here a moment ago. Have you seen her? I think she was climbing on the old treat near the south wall. Did she go over? Did anyone see? Please, we have to look for her. We have to find my baby!\" Every player with 1 or mor survivors must vote with a thumbs up or down.",
+      "key" : "missing_child",
+      "name" : "Missing Child",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "If every non-colony location has been searched between now and the end of the next round gain 1 morale, otherwise lose 1 morale and remove a helpless survivor from the colony. Set this card aside to remember this persisting effect.",
+        "subtext" : "Search for the child."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "Lose 1 morale and remove a helpless survivor from the colony.",
+        "subtext" : "Do nothing."
+      } ],
+      "persistent" : true,
+      "trigger" : "If there is at least 1 helpless survivor at the colony:"
+    },
+    "mugging" : {
+      "intro" : "Rough hands grab you from behind, and your head is slammed into a wall. You try to stagger to your feet, but you end up sprawled on the ground at someone's boots. Your attacker kneels down and a low voice whispers, \"I just want your gear. I can kill you for it, or you can spare yourself a lot of trouble and hand it over. Please believe that I'm perfectly happy to do it either way.\"",
+      "key" : "mugging",
+      "name" : "Mugging",
+      "options" : [ {
+        "label" : "Surrender",
+        "result" : "Give all but 1 card in your hand to the player who controls the exiled survivor.",
+        "subtext" : "Give your gear."
+      }, {
+        "label" : "Fight",
+        "result" : "You attempt to fight back. Add 2 wounds to a survivor you control that shares a location with an exiled survivor. Or, if you have a weapon, you may instead kill the exiled survivor and add only 1 wound to your survivor.",
+        "subtext" : "Stand and fight."
+      } ],
+      "traitor" : true,
+      "trigger" : "If a non-exiled survivor that the player controls shares a location with an exiled survivor:"
+    },
+    "no_ammo" : {
+      "basic" : true,
+      "intro" : "\"That's right you ugly freak,\" you snarl at the zombie whose head you just blew off. \"Plenty more where that came from!\" You reach down to your belt for another clip, only to realize you were on your last one. \"Or not,\" you say to yourself. Looking over at the bloody ruin of the zombie, you wish you had shown a little restraint.",
+      "key" : "no_ammo",
+      "name" : "No Ammo",
+      "options" : [ {
+        "label" : "Toss",
+        "result" : "Place the used weapon in the waste pile.",
+        "subtext" : "Throw the weapon away."
+      }, {
+        "label" : "Scavenge",
+        "result" : "Move all action dice from your unused action dice pool to your used action dice pool.",
+        "subtext" : "Hunt down for more ammunition."
+      } ],
+      "trigger" : "If the player uses the ability of a gun symbol card, after resolving that ability:"
+    },
+    "oh_what_a_feeling" : {
+      "basic" : true,
+      "intro" : "The storm is unexpected and so is the company. \"We should probably share a blanket, right?\" you ask awkwardly. You don't know each other very well, but the time has passed pleasantly so far. Your hands brush under the blanket. Your eyes lock. Both players that control a survivor at that location must vote on the count of 3 (no discussion) with a thumbs up or down.",
+      "key" : "oh_what_a_feeling",
+      "name" : "Oh What A Feeling...",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "You haven't felt this alive in ages. Remove all wound markers and despair tokens from both survivors. Each player controlling one of the survivors rolls a die. The player with the higher roll adds the other player's survivor to their following.",
+        "subtext" : "Let's do this!"
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "You both sleep. Nothing happens.",
+        "subtext" : "Mutual disagreement"
+      }, {
+        "label" : "Split Vote",
+        "result" : "That's awkward. The player that voted with a thumbs up receives 1 despair token.",
+        "subtext" : "Unrequited desire"
+      } ],
+      "trigger" : "If a human survivor the player controls shares a location a human survivor another player controls and those are the only 2 survivors at that location:"
+    },
+    "outbreak" : {
+      "basic" : true,
+      "intro" : "At first Jerry just had a light fever, but the next day his neck was swollen and had a strange purple tint to it. Now three days have passed and you've never seen anything like it. The yellow buboes that have formed under Jerry's jaw are leaking pus, and the odor that surrounds him is harsh and bitter. This can't end well.",
+      "key" : "outbreak",
+      "name" : "Outbreak",
+      "options" : [ {
+        "label" : "Kick Jerry Out",
+        "result" : "Jerry gotta go. Remove a helpless survivor token from the colony. Lose 1 morale.",
+        "subtext" : "Kick the helpless survivor out"
+      }, {
+        "label" : "Let Jerry Stay",
+        "result" : "The sickness spreads through the colony. Each survivor at the colony receives 1 wound. If Olivia Brown or Janet Taylor are not in play, roll a die for each helpless survivor at the colony. On a result of 1, kill that helpless survivor (losing 1 morale).",
+        "subtext" : "Maybe it will get better"
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony and there are 1 or more helpless survivors at the colony:"
+    },
+    "radio_signal" : {
+      "basic" : true,
+      "intro" : "\"Check it out - I found this old mobile CB radio. It's beat up bad, but it seems to be receiving a signal.I think it's coming from close by. I can't pick up most of what they're saying, but I'd guess someone needs our help.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
+      "key" : "radio_signal",
+      "name" : "Radio Signal",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "Players may collectively spend 3 unused action dice. If they do, add a helpless survivor token to the colony and gain 1 morale. If they do not, lose 1 morale.",
+        "subtext" : "Help"
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "Lose 1 morale.",
+        "subtext" : "Ignore"
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony:"
+    },
+    "rascals" : {
+      "basic" : true,
+      "intro" : "The air from the storage room is cold, and at first your heart sinks - aside from a stack of wooden pallets, the room is empty. It certainly isn't the trove of medical supplies you were hoping for. But then... you catch a glimpse of medical behind the pallets, and you walk around to investigate. Sitting there are four Rascal scooters. A quick check shows they are all fully charged, but a quick joyride down the hospital hallway forces you to admit the scooters are garbage. They couldn't even outrun a zombie. Hmm. Perhaps they could serve another purpose?",
+      "key" : "rascals",
+      "name" : "Rascals",
+      "options" : [ {
+        "label" : "Entertainment",
+        "result" : "Yeah, sure! You could take these back to the colony and have races. The fact that the scooters are so slow would just make the whole thing hilarious! Your hunch proves accurate, and the four hours of racing the batteries provide raise morale by 1. But the loud cheering also draws in the dead. Add 5 zombies to the colony.",
+        "subtext" : "Take the scooters back to the colony for some hilariously slow racing."
+      }, {
+        "label" : "Do nothing",
+        "result" : "Hilarious? Man, that's exactly the kind of stupid thinking that makes everyone dislike me. Nothing happens.",
+        "subtext" : "Leave the scooters behind."
+      } ],
+      "trigger" : "If a survivor the player controls performs a search at the hospital:"
+    },
+    "riot" : {
+      "basic" : true,
+      "intro" : "\"They don't care that we're starving! I can feel my ribs, yet the pantry door is locked up tight. Why? We need food. Well I don't care what those scum bags say - there's way more of us than them. I say we break that door down, and if any of them get in our way, well... it's their choice if things get ugly.\"",
+      "key" : "riot",
+      "name" : "Riot",
+      "options" : [ {
+        "label" : "Give In",
+        "result" : "Remove all food in the supply",
+        "subtext" : "Let the rioters raid the pantry"
+      }, {
+        "label" : "Stand Firm",
+        "result" : "Each non-helpless survivor at the colony receives 1 wound",
+        "subtext" : "Fight back against the rioters"
+      }, {
+        "label" : "Make An Example",
+        "result" : "Kill 1 helpless survivor. Lose 1 morale.",
+        "subtext" : "Kill one of the rioters to make an example"
+      } ],
+      "trigger" : "If a player controls a survivor at the colony, there are more helpless survivors in the colony than non-helpless survivors, and there is food in the supply:"
+    },
+    "sewer_passage" : {
+      "basic" : true,
+      "intro" : "You casually walk past an aisle of public records, when an idea strikes you. In half an hour you locate the city's sewage layout, and plot a route that goes from a manhole just outside the colony all the way to the hospital. You show your findings to the colony but no one is interested in traversing a pitch black labyrinth of waste.",
+      "key" : "sewer_passage",
+      "name" : "Sewer Passage",
+      "options" : [ {
+        "label" : "Do It Alone",
+        "result" : "You're terrified but know this is your chance to do something meaningful for the colony, even if they don't realize it.. You decide to try to clear a path. Choose a survivor you control at the library. Roll a 6-sided die. Roll for exposure on the chosen survivor a number of times equal to the die result. If you are not killed by one of those exposure rolls, survivors do not have to roll for exposure for the remainder of the game when traversing between the colony the hospital. Place this card next to the hospital as a reference.",
+        "subtext" : "Clear a path from a colony to the hospital."
+      }, {
+        "label" : "Pass",
+        "result" : "It was a good idea, but no one to support it.",
+        "subtext" : "\"This is hard enough as a group, let alone myself.\""
+      } ],
+      "persisting" : true,
+      "trigger" : "If a survivor the player controls is at the library:"
+    },
+    "sleep" : {
+      "basic" : true,
+      "intro" : "God, you're tired. Anxiety kept you tossing and turning last night, and now you feel like you're passing through the day in a fog. You consider playing sick so you can turn in early, and really it isn't a bad idea. You've been making bad decisions all day and could genuinely use the rest.",
+      "key" : "sleep",
+      "name" : "Sleep",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Until the end of this round, at the beginning of each player's turn, they may choose to spend all their unused action dice to remove 1 wound from each survivor they control. Set this card aside to remember this persisting effect.",
+        "subtext" : "Persistent effect."
+      } ],
+      "persistent" : true,
+      "trigger" : "If a player other than the player reading this card yawns:"
+    },
+    "sophie_robinson" : {
+      "character" : true,
+      "intro" : "You run after the smoking helicopter as it spins through the sky. It vanishes from view behind a wall of towering trees, and the ground shakes from impact. Passing through the trees, you see fire and smoke billowing from the cab, but so too do you see the pilot's arms waving wildly. As you draw closer you see she's still alive, but her legs are pinned. \"Help me!\" she screams.",
+      "key" : "sophie_robinson",
+      "name" : "Sophie Robinson",
+      "notes" : "Made the 2nd option's reward come from the moved-to location, and also, placed Sophie Robinson at the moved-to location for the 1st option.",
+      "options" : [ {
+        "label" : "Help",
+        "result" : "You drag the pilot out of her seat and away from the wreckage. The blast of an explosion knocks the two of you to the ground as the fire reaches the fuel tank. Search the survivor deck for Sophie Robinson and add her to your following. Place her with 2 wound tokens next to the survivor that just moved (if there are no available spaces, place her at the colony).",
+        "subtext" : "Save the pilot."
+      }, {
+        "label" : "Search",
+        "result" : "Your eyes meet the pilot's, but you quickly look away abd begin searching through her supplies. \"You monster!\" she screams as you grab what looks valuable and stumble clear of the wreckage. Draw and keep 2 cards from the deck where the survivor moved to. Search the survivor deck for Sophie Robinson and remove her from the game.",
+        "subtext" : "Search for valuable necessities."
+      } ],
+      "trigger" : "If the player moves a survivor and Sophie Robinson is currently in the survivor deck:"
+    },
+    "supply_drop" : {
+      "basic" : true,
+      "intro" : "You lived near the airport when you were a kid, and used to climb up on the roof of your house to watch the planes take off. When one passed overhead you'd cheer as the displaced air whipped over your body. Just like right now. Wait, what? You snap awake and fall out of your lawn chair. An immense plane, like something from an old war movie, roars overhead before disgorging what looks like a crate. An orange parachute pops open, carrying the crate to safety - and away from the colony.",
+      "key" : "supply_drop",
+      "name" : "Supply Drop",
+      "options" : [ {
+        "label" : "Go",
+        "result" : "\"Someone knows we're here. There's no way this is random. We have to find that crate!\" Choose a survivor you control and roll for exposure on that survivor 3 times. If they aren't killed by that exposure, add 5 food to the supply. \"The container had Chinese or something stenciled on it. It wasn't our government that made the drop, that's for sure.\" If Annaleigh Chan is in play, she is able to translate the text. The Chinese government is still intact and is trying to provide relief efforts. Gain 1 morale.",
+        "subtext" : "It could be supplies."
+      }, {
+        "label" : "Stay",
+        "result" : "Nothing happens.",
+        "subtext" : "Leave it be."
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony:"
+    },
+    "the_buddy_system" : {
+      "basic" : true,
+      "intro" : "You suck in your breath sharply as she wraps the bandage around the wound. \"I barely made it back on this leg,\" you gasp. \"I haven't felt that alone since before the colony. It's only dumb luck I made it back. I think it needs to be standard operating procedure to go out in pairs.\" Every non-exiled player, when moving, may choose to implement the buddy system.",
+      "key" : "the_buddy_system",
+      "name" : "The Buddy System",
+      "notes" : "Changed to trigger on move to anywhere instead of just to the colony. Also combined options into 1 to allow players to implement the buddy system more flexibly.",
+      "options" : [ {
+        "label" : "Implementation",
+        "result" : "When moving a survivor, you may move another survivor with it. The player controlling that other survivor must agree. When moving a pair of survivors, instead of rolling for exposure normally, roll for exposure twice and choose 1 result. Apply that result to both survivors. Set this card aside to remember this persisting effect.",
+        "subtext" : "Implement the buddy system when moving away from the colony"
+      } ],
+      "persistent" : true,
+      "trigger" : "If a survivor the player controls receives any type of wound as a result of moving:"
+    },
+    "the_deputy" : {
+      "basic" : true,
+      "intro" : "A tap on the glass grabs your attention and you're startled to see four uniformed officers standing outside. One tips his hat at you. You begin to undo the simple barricade you set at the door, but the door is kicked open, and the four men wrestle you to the ground. A gun is placed to your head. \"We've seen your people around town. That's fine. I've got a key here to the gun locker back at the police station. We'll give it to you, but you got to promise your people will keep the area clear for us. Think you can do that?\"",
+      "key" : "the_deputy",
+      "name" : "The Deputy",
+      "options" : [ {
+        "label" : "Take Key",
+        "result" : "Reveal the top 8 cards of the Police Station item deck. Add any weapons from the revealed cards to your hand. Shuffle the rest of the cards back into the deck. Add the following victory condition to the current main objective, in addition to any victory conditions already listed: \"There are no zombies at the Gas Station, Hospital, and Police Station.\" Set this card aside to remember this persisting effect.",
+        "subtext" : "Maybe we'll find something useful at the police station."
+      }, {
+        "label" : "Refuse Key",
+        "result" : "Nothing happens.",
+        "subtext" : "I won't make no promises."
+      } ],
+      "persistent" : true,
+      "trigger" : "If a non-exiled survivor the player controls is at a non-colony location:"
+    },
+    "the_sunshine_state" : {
+      "basic" : true,
+      "intro" : "The sun shines brightly, reflecting off the beach's perfect white sands and light blue waters. \"The Sunshine State,\" declares Harold, shaking the postcard in your face. \"That's where we're headed. Why should we be fighting both the weather and the dead? I think the birds have it right. The wife and I are flying south.\"",
+      "key" : "the_sunshine_state",
+      "name" : "The Sunshine State",
+      "options" : [ {
+        "label" : "Leave",
+        "result" : "\"Great idea as always Harold.\" Remove 2 helpless survivor tokens in the colony from the game. The very next morning they're found at the gates staring in hungrily at the living. Lose 1 morale.",
+        "subtext" : "Let them leave"
+      }, {
+        "label" : "Stay",
+        "result" : "\"Who's doing the fighting Harold? It ain't either of you. So leave and die, or stop being an ingrate and shut up.\" He walks away, but you realize he feels ashamed at having to rely on others. Nothing happens.",
+        "subtext" : "Don't let them leave"
+      } ],
+      "trigger" : "If the player controls a survivor at the colony and there are 2 or more helpless survivors in the colony:"
+    },
+    "this_is_hopeless" : {
+      "explicit" : true,
+      "intro" : "\"Guys, it's been real. Real shitty to be precise. If ya'll want to stay and watch this boat sink, that's your business. But us, we aren't sticking around. I'd wish you the best, but let's be honest - you poor bastards are screwed.\" Players who have completed all parts of their secret objective except for 'complete the main objective' may choose to leave the group as potential winners.",
+      "key" : "this_is_hopeless",
+      "name" : "This Is Hopeless",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Each player that has decided to leave the group must roll for exposure on each of their survivors 5 times (bite effects do not spread). If a player has any survivors remaining, that player is considered to be a winner. If a player has no survivor remaining, that player is considered to be a loser. Either way the game continues without those players.",
+        "subtext" : "After everyone who has decided to leave the group comes forward, proceed."
+      } ],
+      "trigger" : "If morale is 2 or lower:"
+    },
+    "toxic_waste" : {
+      "basic" : true,
+      "intro" : "\"I told that lazy jerk to get the fuel and medical waste offsite. So guess what he didn't do? God only knows what's leeching into the ground now. Is our water supply contaminated? How about the garden? And of course now it's colder than a snowman's balls outside and we have to go clean that crap up.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
+      "key" : "toxic_waste",
+      "name" : "Toxic Waste",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "Each player must place a frostbite wound on a survivor they control at the colony.",
+        "subtext" : "Go out in the frigid cold to clean the mess"
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "Place all fuel and medicine cards that have been removed from game (from crisis or other means) into the waste pile.",
+        "subtext" : "Stay inside where it's nice and warm"
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony:"
+    },
+    "unsanitary_conditions" : {
+      "basic" : true,
+      "intro" : "You can feel the heat coming from your throbbing wound. The slightest press of your index finger produces a foul colored pus and a pain that can't be ignored. You suppose infection was inevitable - there are no showers, no running water, and the soap ran out a week ago. And you're not the only one like this. Antibiotics are a precious resource now, so everyone's hoping to shake off infections naturally. But a glance at your wound tells you all you need to know. If you don't get treated soon you could die.",
+      "key" : "unsanitary_conditions",
+      "name" : "Unsanitary Conditions",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "If you still control any survivors with wound tokens on them, place 1 additional wound token on those survivors.",
+        "subtext" : "You may place 1 medicine card into the waste pile to remove all wounds from a survivor you control. You may do this multiple times."
+      } ],
+      "trigger" : "If the player controls 1 or more wounded survivors and there are 5 or more cards in the waste pile:"
+    }
+  },
+  "users" : {
+    "T79gTLdZK3cmNSdFcxJScXoQW6E3" : {
+      "email" : "lionelsquiambao@gmail.com",
+      "filter" : [ "army", "riot", "mugging", "disturbed", "this_is_hopeless", "gabriel_diaz", "john_price", "mike_cho", "sophie_robinson", "bitter_cold_night", "collapsing_barriers", "dying_wish", "flier", "fuel_tanker", "heads_up", "highway_to_hell", "horse", "hunted", "ice_fishing", "ill_show_them_i_can_help", "let_there_be_light", "missing_child", "no_ammo", "oh_what_a_feeling", "outbreak", "radio_signal", "rascals", "sewer_passage", "sleep", "supply_drop", "the_buddy_system", "the_deputy", "the_sunshine_state", "toxic_waste", "unsanitary_conditions" ],
+      "username" : "GGLionCross"
+    }
+  }
+}

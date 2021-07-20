@@ -18,10 +18,13 @@ Set this card aside to remember this persisting effect.
 Persistent:
 Army
 Flier
+Horse
 Hunted
 Let There Be Light
 Missing Child
+Sewer Passage
 The Buddy System
+The Deputy
 
 Notes:
 Fuel Tanker (Set aside 4 fuel cards)

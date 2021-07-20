@@ -18,6 +18,10 @@
           :rows="characterCards"
         ></filter-table>
         <filter-table
+          category="Traitor"
+          :rows="traitorCards"
+        ></filter-table>
+        <filter-table
           category="Explicit"
           :rows="explicitCards"
         ></filter-table>
@@ -48,12 +52,14 @@ export default defineComponent({
     const allCards = computed(() => Object.values(store.getters.getCards));
     const basicCards = computed(() => allCards.value.filter(c => c.basic));
     const characterCards = computed(() => allCards.value.filter(c => c.character));
+    const traitorCards = computed(() => allCards.value.filter(c => c.traitor));
     const explicitCards = computed(() => allCards.value.filter(c => c.explicit));
 
     const hideDrawerFilter = () => emit("update:modelValue", false);
     return {
       basicCards,
       characterCards,
+      traitorCards,
       explicitCards,
       hideDrawerFilter
     }

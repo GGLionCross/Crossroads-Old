@@ -10,6 +10,7 @@ export default function () {
     // persistent (Has persisting effect / a physical copy is needed)
     //   Set this card aside to remember this persisting effect.
     // raxxon (Raxxon Module)
+    // traitor (Potential Traitor / Not Playing in Cooperative Mode)
     // warring (Warring Colonies Expansion)
     cards: {
       // "template": {

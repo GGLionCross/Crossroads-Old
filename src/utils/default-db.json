@@ -1,24 +1,21 @@
 {
   "cards" : {
-    "addiction": {
-      "key": "addiction",
-      "name": "Addiction",
-      "trigger": "If the player plays a medicine card to heal a survivor:",
-      "intro": "Holy crap, this is the pure stuff. Most painkillers have a ton of filler, but you've really hit the jackpot now. Oh God, that feels good. It's been so long. When was the last time you felt like this? Hell, when was the last time you felt anything but terror and despair? You want more. Just the thought of not having the feeling again... it's almost too much. The player that the medicine was used on is the one who makes the choice.",
-      "options": [
-        {
-          "label": "Bliss",
-          "subtext": "Swallow the rest of the pills.",
-          "result": "You swallow the rest of the pills all at once and melt into a warm oblivion. Kill the survivor that the medicine was used on. Do not reduce morale."
-        },
-        {
-          "label": "Reliant",
-          "subtext": "You must consume pills to be functional.",
-          "result": "Place this card under the survivor that the medicine was used on. As long as you control this survivor, at the beginning of your turn you may play a medicine card applying its effects to this survivor. If you do not, you must place 1 action dice from your unused action dice pool to your used action dice pool."
-        }
-      ],
-      "explicit": true,
-      "persistent": true
+    "addiction" : {
+      "explicit" : true,
+      "intro" : "Holy crap, this is the pure stuff. Most painkillers have a ton of filler, but you've really hit the jackpot now. Oh God, that feels good. It's been so long. When was the last time you felt like this? Hell, when was the last time you felt anything but terror and despair? You want more. Just the thought of not having the feeling again... it's almost too much. The player that the medicine was used on is the one who makes the choice.",
+      "key" : "addiction",
+      "name" : "Addiction",
+      "options" : [ {
+        "label" : "Bliss",
+        "result" : "You swallow the rest of the pills all at once and melt into a warm oblivion. Kill the survivor that the medicine was used on. Do not reduce morale.",
+        "subtext" : "Swallow the rest of the pills."
+      }, {
+        "label" : "Reliant",
+        "result" : "Place this card under the survivor that the medicine was used on. As long as you control this survivor, at the beginning of your turn you may play a medicine card applying its effects to this survivor. If you do not, you must place 1 action dice from your unused action dice pool to your used action dice pool.",
+        "subtext" : "You must consume pills to be functional."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player plays a medicine card to heal a survivor:"
     },
     "army" : {
       "basic" : true,
@@ -57,58 +54,50 @@
       } ],
       "trigger" : "If the player receives a frostbite wound as the result of rolling for exposure after moving to a location with 1 or more other survivors:"
     },
-    "book_of_the_dead": {
-      "key": "book_of_the_dead",
-      "name": "Book Of The Dead",
-      "trigger": "If a non-exiled survivor the player controls performs a search at the library:",
-      "intro": "Deep in the stacks of the Special Collection, you discover a large, leather bound tome blanketed in dust. The title says Book of the Dead.",
-      "options": [
-        {
-          "label": "Secrets",
-          "subtext": "This looks interesting, the secrets in this book may help the colony.",
-          "result": "Convinced you've uncovered the key to saving all of humanity, you quickly stash the book in your pack. Upon returning to the colony, you call everyone together, and proudly reveal your find. To your surprise, the revelation is met with an uproar of laughter.\n\"Dude,\" someone says. \"That's the biography of a rock band.\" Your idiocy provides much needed levity. Gain 1 morale."
-        },
-        {
-          "label": "Weapon",
-          "subtext": "This book is so heavy, it might be useful as a weapon.",
-          "result": "\"Wow, this weighs a ton!\" you say to yourself. \"I bet it could do some real damage.\" You hoist the book to a second story window and drop it onto the head of a passing zombie dressed like a bike courier, its crushed head exploding like a rotting melon. Later when you exit the library, you nab the dead zombie's delivery bag. Remove 1 zombie from the library (if able) and add 4 food tokens to the colony's supply."
-        }
-      ],
-      "basic": true
+    "book_of_the_dead" : {
+      "basic" : true,
+      "intro" : "Deep in the stacks of the Special Collection, you discover a large, leather bound tome blanketed in dust. The title says Book of the Dead.",
+      "key" : "book_of_the_dead",
+      "name" : "Book Of The Dead",
+      "options" : [ {
+        "label" : "Secrets",
+        "result" : "Convinced you've uncovered the key to saving all of humanity, you quickly stash the book in your pack. Upon returning to the colony, you call everyone together, and proudly reveal your find. To your surprise, the revelation is met with an uproar of laughter.\n\"Dude,\" someone says. \"That's the biography of a rock band.\" Your idiocy provides much needed levity. Gain 1 morale.",
+        "subtext" : "This looks interesting, the secrets in this book may help the colony."
+      }, {
+        "label" : "Weapon",
+        "result" : "\"Wow, this weighs a ton!\" you say to yourself. \"I bet it could do some real damage.\" You hoist the book to a second story window and drop it onto the head of a passing zombie dressed like a bike courier, its crushed head exploding like a rotting melon. Later when you exit the library, you nab the dead zombie's delivery bag. Remove 1 zombie from the library (if able) and add 4 food tokens to the colony's supply.",
+        "subtext" : "This book is so heavy, it might be useful as a weapon."
+      } ],
+      "trigger" : "If a non-exiled survivor the player controls performs a search at the library:"
     },
-    "cabin_fever": {
-      "key": "cabin_fever",
-      "name": "Cabin Fever",
-      "trigger": "If there are more non-helpless survivors at the colony than all other locations combined:",
-      "intro": "\"I swear to God,\" you say. \"If I have to stare at these walls a minute longer, I'm going to freaking snap. I don't care how dangerous it is, I'm getting outside. Never thought I'd feel running from dead people was more desirable than holing up.\"\n\"That's not a bad idea,\" your friend agrees. \"Why should the zombies be the only ones enjoying the sunshine?\"",
-      "options": [
-        {
-          "label": "Only Option",
-          "subtext": "Get out of the colony, enjoy the sunshine.",
-          "result": "If at the end of this round, there are more non-helpless survivors at the colony than all other locations combined, place 1 despair token on each survivor at the colony. Set this card aside to remember this persisting effect."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "cabin_fever" : {
+      "basic" : true,
+      "intro" : "\"I swear to God,\" you say. \"If I have to stare at these walls a minute longer, I'm going to freaking snap. I don't care how dangerous it is, I'm getting outside. Never thought I'd feel running from dead people was more desirable than holing up.\"\n\"That's not a bad idea,\" your friend agrees. \"Why should the zombies be the only ones enjoying the sunshine?\"",
+      "key" : "cabin_fever",
+      "name" : "Cabin Fever",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "If at the end of this round, there are more non-helpless survivors at the colony than all other locations combined, place 1 despair token on each survivor at the colony. Set this card aside to remember this persisting effect.",
+        "subtext" : "Get out of the colony, enjoy the sunshine."
+      } ],
+      "persistent" : true,
+      "trigger" : "If there are more non-helpless survivors at the colony than all other locations combined:"
     },
-    "car_crash": {
-      "key": "car_crash",
-      "name": "Car Crash",
-      "trigger": "If the player uses a fuel when moving a non-exiled survivor:",
-      "intro": "Your headlights cut through the darkness, random snowflakes scuttling by on a bitter wind. The car is nowhere near as warm as you want, but every drop of fuel is precious. When your windshield begins to fog, you reach down and fumble at the dash for some heat. Suddenly a child walks into your oncoming lights. Instinct takes over before your brain registers that the child is dead, and you jerk hard on the wheel. Wheels screech as your car tumbles off the side of the road. Time slows as the world swirls sickeningly around you.",
-      "options": [
-        {
-          "label": "Wait",
-          "subtext": "Wait for the colony to rescue you.",
-          "result": "You wait in the wrecked car for the colony to rescue you. Add a frostbite wound to the moved survivor. Place the moved survivor in the colony (this does not count as a move)."
-        },
-        {
-          "label": "Continue",
-          "subtext": "Push forward towards your destination despite your injuries.",
-          "result": "You make your way to your destination, dazed from the crash. Place the moved survivor at the intended location. Roll for exposure on that survivor 3 times."
-        }
-      ],
-      "basic": true
+    "car_crash" : {
+      "basic" : true,
+      "intro" : "Your headlights cut through the darkness, random snowflakes scuttling by on a bitter wind. The car is nowhere near as warm as you want, but every drop of fuel is precious. When your windshield begins to fog, you reach down and fumble at the dash for some heat. Suddenly a child walks into your oncoming lights. Instinct takes over before your brain registers that the child is dead, and you jerk hard on the wheel. Wheels screech as your car tumbles off the side of the road. Time slows as the world swirls sickeningly around you.",
+      "key" : "car_crash",
+      "name" : "Car Crash",
+      "options" : [ {
+        "label" : "Wait",
+        "result" : "You wait in the wrecked car for the colony to rescue you. Add a frostbite wound to the moved survivor. Place the moved survivor in the colony (this does not count as a move).",
+        "subtext" : "Wait for the colony to rescue you."
+      }, {
+        "label" : "Continue",
+        "result" : "You make your way to your destination, dazed from the crash. Place the moved survivor at the intended location. Roll for exposure on that survivor 3 times.",
+        "subtext" : "Push forward towards your destination despite your injuries."
+      } ],
+      "trigger" : "If the player uses a fuel when moving a non-exiled survivor:"
     },
     "collapsing_barriers" : {
       "basic" : true,
@@ -126,40 +115,47 @@
       } ],
       "trigger" : "If a survivor the player controls is at the colony and there is at least 1 barricade and 1 zombie at the colony:"
     },
-    "crazed_soccer_mom": {
-      "key": "crazed_soccer_mom",
-      "name": "Crazed Soccer Mom",
-      "trigger": "If a non-exiled survivor the player controls is ast the school:",
-      "intro": "\"These kids are just sick!\" screams a woman from the school window. You see her level a gun at you and you duck behind a pillar. \"Baby killers!\" she shrieks.",
-      "options": [
-        {
-          "label": "Opportunity",
-          "subtext": "You look for a chance to attack.",
-          "result": "When she pauses to reload, you dash into the school. Roll 4 dice for the crazed woman. Collect 2 dice for each survivor that is at the school and 2 dice for each gun symbol card equipped to a survivor at the school. Roll the collected dice. If the total of your roll is equal to or higher than the crazed woman's roll, she has been defeated. Nothing else happens. If your roll is lower than the crazed woman's roll, place a wound on each survivor at the school. If the survivors lose the encounter, the school is no longer safe. Place all survivors at the school back at the colony. For the remainder of the game whenever a survivor is moved to the school, that survivor receives one wound. Set this card aside to remember this persisting effect."
-        },
-        {
-          "label": "Safety",
-          "subtext": "Retreat back to the colony.",
-          "result": "You tell the colony the school is no longer safe. Place all survivors at the school back at the colony. These do not count as moves. For the remainder of the game whenever a survivor is moved to the school, that survivor receives one wound. Set this card aside to remember this persisting effect."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "crazed_soccer_mom" : {
+      "basic" : true,
+      "intro" : "\"These kids are just sick!\" screams a woman from the school window. You see her level a gun at you and you duck behind a pillar. \"Baby killers!\" she shrieks.",
+      "key" : "crazed_soccer_mom",
+      "name" : "Crazed Soccer Mom",
+      "options" : [ {
+        "label" : "Opportunity",
+        "result" : "When she pauses to reload, you dash into the school. Roll 4 dice for the crazed woman. Collect 2 dice for each survivor that is at the school and 2 dice for each gun symbol card equipped to a survivor at the school. Roll the collected dice. If the total of your roll is equal to or higher than the crazed woman's roll, she has been defeated. Nothing else happens. If your roll is lower than the crazed woman's roll, place a wound on each survivor at the school. If the survivors lose the encounter, the school is no longer safe. Place all survivors at the school back at the colony. For the remainder of the game whenever a survivor is moved to the school, that survivor receives one wound. Set this card aside to remember this persisting effect.",
+        "subtext" : "You look for a chance to attack."
+      }, {
+        "label" : "Safety",
+        "result" : "You tell the colony the school is no longer safe. Place all survivors at the school back at the colony. These do not count as moves. For the remainder of the game whenever a survivor is moved to the school, that survivor receives one wound. Set this card aside to remember this persisting effect.",
+        "subtext" : "Retreat back to the colony."
+      } ],
+      "persistent" : true,
+      "trigger" : "If a non-exiled survivor the player controls is ast the school:"
     },
-    "dead_alive": {
-      "key": "dead_alive",
-      "name": "Dead Alive",
-      "trigger": "If the player controls a survivor at a non-colony location, and there is at least 1 dead survivor in the graveyard:",
-      "intro": "\"It's like I just saw a ghost. You ever have a time, where you were in the downtown of some city, and you'd see someone who, for just a second, reminded you of someone you used to know? And you knew it wasn't them, but just for a second you thought maybe it was? I feel like that all the time now. I'll see some dead face and it will remind me of someone, and just for a second, I'm afraid it's them. Like just now, I saw a zombie over there that looked like you-know-who. Do you see? It's that one over there. Doesn't it look just like... oh. Oh God. Oh no, no, no.\"",
-      "options": [
-        {
-          "label": "Only Option",
-          "subtext": "Face your dead allies.",
-          "result": "Roll a die, and take that many dead survivors from the graveyard. Place 1 in a zombie space at the same non-colony location as 1 of the player's survivors. Place the rest at random locations (by rolling a 6-sided die) in zombie spaces. These dead survivors are zombie-survivors and follow all the rules for zombies. Any time a survivor ends its turn sharing a location with a zombie-survivor, place 1 despair token on that survivor. When removing zombies from a location, a player may choose to remove a zombie-survivor from that location instead of a normal zombie. Set this card aside to remember this persisting effect."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "creature_comforts" : {
+      "basic" : true,
+      "intro" : "\"Morale around this place is at an all-time low. I know fuel is scarce, but imagine what hot showers and meals could do for everybody? Get us feeling human again. Sometimes I think we focus so much on the obvious necessities that we forget about the emotional ones, you know?\"",
+      "key" : "creature_comforts",
+      "name" : "Creature Comforts",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Players may collectively place 3 fuel cards in the waste pile (without using their effects) to raise morale by 1. If they do not, nothing happens.",
+        "subtext" : "Optional contributions"
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony:"
+    },
+    "dead_alive" : {
+      "basic" : true,
+      "intro" : "\"It's like I just saw a ghost. You ever have a time, where you were in the downtown of some city, and you'd see someone who, for just a second, reminded you of someone you used to know? And you knew it wasn't them, but just for a second you thought maybe it was? I feel like that all the time now. I'll see some dead face and it will remind me of someone, and just for a second, I'm afraid it's them. Like just now, I saw a zombie over there that looked like you-know-who. Do you see? It's that one over there. Doesn't it look just like... oh. Oh God. Oh no, no, no.\"",
+      "key" : "dead_alive",
+      "name" : "Dead Alive",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Roll a die, and take that many dead survivors from the graveyard. Place 1 in a zombie space at the same non-colony location as 1 of the player's survivors. Place the rest at random locations (by rolling a 6-sided die) in zombie spaces. These dead survivors are zombie-survivors and follow all the rules for zombies. Any time a survivor ends its turn sharing a location with a zombie-survivor, place 1 despair token on that survivor. When removing zombies from a location, a player may choose to remove a zombie-survivor from that location instead of a normal zombie. Set this card aside to remember this persisting effect.",
+        "subtext" : "Face your dead allies."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player controls a survivor at a non-colony location, and there is at least 1 dead survivor in the graveyard:"
     },
     "disturbed" : {
       "explicit" : true,
@@ -194,24 +190,21 @@
       } ],
       "trigger" : "If a non-exiled survivor the player controls is killed:"
     },
-    "feral_dog_pack": {
-      "key": "feral_dog_pack",
-      "name": "Feral Dog Pack",
-      "trigger": "If the player moves a survivor to a new location and does not use fuel:",
-      "intro": "You see the pack of dogs roaming behind the buildings to your right, their fur ragged, their flanks lean. You notice them stealing glances at you and realize you're being hunted. Your blood runs cold. You take a side street when the opportunity presents itself, but the pack follows. Seconds later you hear the excited yapping as they close in behind you.",
-      "options": [
-        {
-          "label": "Intimidate",
-          "subtext": "Try to intimidate them.",
-          "result": "The dogs attack. Roll 3 dice. Place 1 wound on the survivor that moved for each die that equal to or lower than that survivor's attack value. If that survivor is not killed, add 3 food to the supply."
-        },
-        {
-          "label": "Run",
-          "subtext": "Keep running!",
-          "result": "Move the survivor to a different location, rolling for exposure normally. They cannot move to the location they have been to this turn."
-        }
-      ],
-      "basic": true
+    "feral_dog_pack" : {
+      "basic" : true,
+      "intro" : "You see the pack of dogs roaming behind the buildings to your right, their fur ragged, their flanks lean. You notice them stealing glances at you and realize you're being hunted. Your blood runs cold. You take a side street when the opportunity presents itself, but the pack follows. Seconds later you hear the excited yapping as they close in behind you.",
+      "key" : "feral_dog_pack",
+      "name" : "Feral Dog Pack",
+      "options" : [ {
+        "label" : "Intimidate",
+        "result" : "The dogs attack. Roll 3 dice. Place 1 wound on the survivor that moved for each die that equal to or lower than that survivor's attack value. If that survivor is not killed, add 3 food to the supply.",
+        "subtext" : "Try to intimidate them."
+      }, {
+        "label" : "Run",
+        "result" : "Move the survivor to a different location, rolling for exposure normally. They cannot move to the location they have been to this turn.",
+        "subtext" : "Keep running!"
+      } ],
+      "trigger" : "If the player moves a survivor to a new location and does not use fuel:"
     },
     "flier" : {
       "basic" : true,
@@ -259,6 +252,24 @@
       } ],
       "trigger" : "If the player controls a non-exiled survivor at a non-colony location and Gabriel Diaz is in the survivor deck:"
     },
+    "gray_beard" : {
+      "character" : true,
+      "intro" : "You are walking along the outskirts of the colony when you hear the familiar rapid pops of an automatic rifle in the near distance. You assume someone from the colony must be in trouble, and run toward the sound. Instead you find a tall, scraggly man blowing holes through a mass of undead. He swings his gun on you as you arrive, and your hands fly up. \"I'm alive,\" you shout. \"Don't shoot!\"",
+      "key" : "gray_beard",
+      "name" : "Gray Beard",
+      "options" : [ {
+        "label" : "Surrender",
+        "result" : "\"Just take it. I don't want any trouble!\" Choose a card at random from your hand. Remove it from the game.",
+        "subtext" : "Give up an item you are holding."
+      }, {
+        "label" : "Recruit",
+        "result" : "\"We could use a man like you in our group,\" you say. \"I wouldn't mind having some others watching my back - my crew's all dead,\" the stranger rasps. \"But here's the thing, I don't follow orders so good. If you want my aid, then we follow my rules.\" Search the survivor deck for Gray Beard, make him your group leader and place this card under him. Once per round, Gray Beard doesn't have to roll for exposure when attacking. As long as you control Gray Beard, you cannot add cards to a crisis.",
+        "subtext" : "Attempt to recruit the gunman."
+      } ],
+      "persistent" : true,
+      "traitor" : true,
+      "trigger" : "If the player moves a survivor and Gray Beard is currently in the survivor deck:"
+    },
     "heads_up" : {
       "basic" : true,
       "intro" : "You knew better than to go down into the morgue, but you figure it's the one place that has been searched the least. But once you find yourself downstairs in the darkness, you are so overcome with fear that you only have enough willpower to look in either the refrigerator, or the chemical vat.",
@@ -291,24 +302,21 @@
       } ],
       "trigger" : "If a player controls a survivor at the colony:"
     },
-    "horde": {
-      "key": "horde",
-      "name": "Horde",
-      "trigger": "If the player moves a survivor and doesn't play a fuel card:",
-      "intro": "The snow falls heavily as the world turns white, and visibility drops to only a few yards around you. You're not alone though. Another shape moves through the storm, gesticulating wildly as it struggles through the snow. And then another. And still another. Your stomach lurches as you realize you've walked into the middle of a roving horde of the dead. Weighing your options, you suspect the reduced visibility may help you pass with minimum detection. But you also have to admit the odds are not in your favor.",
-      "options": [
-        {
-          "label": "Keep Going",
-          "subtext": "You're destination is important, so you push forward.",
-          "result": "You push on, doing your best to avoid them all. Roll for exposure on the moved survivor 3 times."
-        },
-        {
-          "label": "Sit Still",
-          "subtext": "Focus on surviving and staying hidden.",
-          "result": "Your goal is important, but so is not becoming one of them. Place the moving survivor back at the location it was moving from (this does not count as a move). That survivor cannot be moved during this turn."
-        }
-      ],
-      "basic": true
+    "horde" : {
+      "basic" : true,
+      "intro" : "The snow falls heavily as the world turns white, and visibility drops to only a few yards around you. You're not alone though. Another shape moves through the storm, gesticulating wildly as it struggles through the snow. And then another. And still another. Your stomach lurches as you realize you've walked into the middle of a roving horde of the dead. Weighing your options, you suspect the reduced visibility may help you pass with minimum detection. But you also have to admit the odds are not in your favor.",
+      "key" : "horde",
+      "name" : "Horde",
+      "options" : [ {
+        "label" : "Keep Going",
+        "result" : "You push on, doing your best to avoid them all. Roll for exposure on the moved survivor 3 times.",
+        "subtext" : "You're destination is important, so you push forward."
+      }, {
+        "label" : "Sit Still",
+        "result" : "Your goal is important, but so is not becoming one of them. Place the moving survivor back at the location it was moving from (this does not count as a move). That survivor cannot be moved during this turn.",
+        "subtext" : "Focus on surviving and staying hidden."
+      } ],
+      "trigger" : "If the player moves a survivor and doesn't play a fuel card:"
     },
     "horse" : {
       "basic" : true,
@@ -393,25 +401,22 @@
       } ],
       "trigger" : "If the player performs a search action at the school, and John Price is in the survivor deck:"
     },
-    "king_shit_of_fuck_hill": {
-      "key": "king_shit_of_fuck_hill",
-      "name": "King Shit Of Fuck Hill",
-      "trigger": "If the player does something that another player complains about (the player holding this card is the judge of what is a complaint):",
-      "intro": "\"You know what? Why don't you shut the fuck up? I'm tired of your whiny bullshit. Could I just make one move without your unwanted supervision? Who the hell made you president of the goddamn apocalypse? HEY EVERYBODY, WHO WANTS TO MAKE THIS FUCKER PRESIDENT OF CAMP SHIT HOLE?\" Every non-exiled player must vote with a thumbs up or down.",
-      "options": [
-        {
-          "label": "Thumbs Up",
-          "subtext": "Make the player that complained leader for the round.",
-          "result": "\"All hail President Loud Mouth Asshole! Congratu-fucking-lations!\" For the remainder of the round, the player that complained may force each player to spend 1 of their action dice in the manner of their choosing."
-        },
-        {
-          "label": "Thumbs Down",
-          "subtext": "Do not make the player that complained leader.",
-          "result": "\"Yeah, I didn't think so!\" The player that complained must put a despair token on their leader and that player is not allowed to talk for the remainder of the round. If he does speak, he is immediately exiled without a vote."
-        }
-      ],
-      "explicit": true,
-      "traitor": true
+    "king_shit_of_fuck_hill" : {
+      "explicit" : true,
+      "intro" : "\"You know what? Why don't you shut the fuck up? I'm tired of your whiny bullshit. Could I just make one move without your unwanted supervision? Who the hell made you president of the goddamn apocalypse? HEY EVERYBODY, WHO WANTS TO MAKE THIS FUCKER PRESIDENT OF CAMP SHIT HOLE?\" Every non-exiled player must vote with a thumbs up or down.",
+      "key" : "king_shit_of_fuck_hill",
+      "name" : "King Shit Of Fuck Hill",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "\"All hail President Loud Mouth Asshole! Congratu-fucking-lations!\" For the remainder of the round, the player that complained may force each player to spend 1 of their action dice in the manner of their choosing.",
+        "subtext" : "Make the player that complained leader for the round."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "\"Yeah, I didn't think so!\" The player that complained must put a despair token on their leader and that player is not allowed to talk for the remainder of the round. If he does speak, he is immediately exiled without a vote.",
+        "subtext" : "Do not make the player that complained leader."
+      } ],
+      "traitor" : true,
+      "trigger" : "If the player does something that another player complains about (the player holding this card is the judge of what is a complaint):"
     },
     "let_there_be_light" : {
       "basic" : true,
@@ -430,19 +435,34 @@
       "persistent" : true,
       "trigger" : "If a player performs a search:"
     },
-    "light_house": {
-      "key": "light_house",
-      "name": "Light House",
-      "trigger": "If a survivor the player controls is at the colony:",
-      "intro": "\"Remember how that fire drew in all those zombies last week? Well the other day I was looking out at the light house and had an idea. What if we fired that thing up to lure out the dead? It hasn't seen full use in decades, but they'd light it up every now and then for special occasions, so I don't think it can be in that bad of shape.",
-      "options": [
-        {
-          "label": "Only Option",
-          "subtext": "Use the lighthouse.",
-          "result": "You may spend 1 unused action dice to remove 1 zombie from every location. If you do not, nothing happens."
-        }
-      ],
-      "basic": true
+    "light_house" : {
+      "basic" : true,
+      "intro" : "\"Remember how that fire drew in all those zombies last week? Well the other day I was looking out at the light house and had an idea. What if we fired that thing up to lure out the dead? It hasn't seen full use in decades, but they'd light it up every now and then for special occasions, so I don't think it can be in that bad of shape.",
+      "key" : "light_house",
+      "name" : "Light House",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "You may spend 1 unused action dice to remove 1 zombie from every location. If you do not, nothing happens.",
+        "subtext" : "Use the lighthouse."
+      } ],
+      "trigger" : "If a survivor the player controls is at the colony:"
+    },
+    "maude" : {
+      "basic" : true,
+      "intro" : "A snarling sound catches your attention and you see a zombie caught between two cars. She claws aimlessly toward the sky, her Meat & Stuff uniform stained with old blood. One blow to her head ends her, and you see her name tag says 'Maude'. She appears to have been crushed against her own car as she was trying to fill her trunk with supplies.",
+      "key" : "maude",
+      "name" : "Maude",
+      "notes" : "Changed the 'Store' option to specify that the player cannot play \"those food cards this turn\" instead of food cards in general.",
+      "options" : [ {
+        "label" : "Colony",
+        "result" : "Place the moved survivor in the colony (this does not count as a move) and add 3 food to the supply.",
+        "subtext" : "You take the food back to the colony right away."
+      }, {
+        "label" : "Store",
+        "result" : "You want to smile at your good fortune, but for some reason you can't stop thinking about Maude. Reveal cards from the top of the grocery store item deck until you find 2 food cards. Add them to your hand. Shuffle the rest of the revealed cards back into the deck. You cannot play those food cards during this turn.",
+        "subtext" : "You take the food and add it to your pack for later."
+      } ],
+      "trigger" : "If a non-exiled survivor the player controls is at the grocery store:"
     },
     "mike_cho" : {
       "character" : true,
@@ -493,44 +513,38 @@
       "traitor" : true,
       "trigger" : "If a non-exiled survivor that the player controls shares a location with an exiled survivor:"
     },
-    "music": {
-      "key": "music",
-      "name": "Music",
-      "trigger": "If the player makes a search action with a non-exiled survivor:",
-      "intro": "You laugh as you push the ruined shelves aside, revealing a guitar case. Inside you find an acoustic guitar in wonderful condition. You sit down with it and holding your breath, give it a strum. You wince at the noise, but after a few minutes of tuning, the notes that come from the instrument are enough to make tears form in your eyes.",
-      "options": [
-        {
-          "label": "Lullaby",
-          "subtext": "Play an evening melody for the colony.",
-          "result": "That evening, as things quiet down at the colony, you pull out your newfound prize and play. Your song soothes those present, and serves as a reminder that there is more to being human than just surviving. Gain 1 morale."
-        },
-        {
-          "label": "Inspirational",
-          "subtext": "Play a morning spiritual for the colony.",
-          "result": "The next morning as the people rise for their morning meal, you play an old spiritual that speaks of hope, and the good things that wait beyond all hardship and pain. All players roll an extra action die at the beginning of the next round. Set this card aside to remember this persisting effect."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "music" : {
+      "basic" : true,
+      "intro" : "You laugh as you push the ruined shelves aside, revealing a guitar case. Inside you find an acoustic guitar in wonderful condition. You sit down with it and holding your breath, give it a strum. You wince at the noise, but after a few minutes of tuning, the notes that come from the instrument are enough to make tears form in your eyes.",
+      "key" : "music",
+      "name" : "Music",
+      "options" : [ {
+        "label" : "Lullaby",
+        "result" : "That evening, as things quiet down at the colony, you pull out your newfound prize and play. Your song soothes those present, and serves as a reminder that there is more to being human than just surviving. Gain 1 morale.",
+        "subtext" : "Play an evening melody for the colony."
+      }, {
+        "label" : "Inspirational",
+        "result" : "The next morning as the people rise for their morning meal, you play an old spiritual that speaks of hope, and the good things that wait beyond all hardship and pain. All players roll an extra action die at the beginning of the next round. Set this card aside to remember this persisting effect.",
+        "subtext" : "Play a morning spiritual for the colony."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player makes a search action with a non-exiled survivor:"
     },
-    "nicu": {
-      "key": "nicu",
-      "name": "NICU",
-      "trigger": "If the player performs a search at the hospital:",
-      "intro": "\"Well that about does it for this floor,\" your companion says. \"I don't think we're going to find anything else of value.\"\n\"What about that place?\" you ask pointing at a large set of double doors bearing the sign Neonatal Intensive Care Unit.\n\"God no. Seriously. That place could have everything we might want, and I'd still tell you not to go in there.\"",
-      "options": [
-        {
-          "label": "Enter",
-          "subtext": "We might find some really useful supplies.",
-          "result": "You enter the NICU. It costs your sanity. Roll 2 dice and keep the lower result. Place that many despair tokens on a survivor the player controls at the hospital. If the survivor isn't killed, they player draws and keeps 5 item cards from the hospital deck."
-        },
-        {
-          "label": "Do Not Enter",
-          "subtext": "Heed your companion's warning.",
-          "result": "\"Yeah, I don't need to see what's in there,\" you agree. You leave it alone. Nothing happens."
-        }
-      ],
-      "basic": true
+    "nicu" : {
+      "basic" : true,
+      "intro" : "\"Well that about does it for this floor,\" your companion says. \"I don't think we're going to find anything else of value.\"\n\"What about that place?\" you ask pointing at a large set of double doors bearing the sign Neonatal Intensive Care Unit.\n\"God no. Seriously. That place could have everything we might want, and I'd still tell you not to go in there.\"",
+      "key" : "nicu",
+      "name" : "NICU",
+      "options" : [ {
+        "label" : "Enter",
+        "result" : "You enter the NICU. It costs your sanity. Roll 2 dice and keep the lower result. Place that many despair tokens on a survivor the player controls at the hospital. If the survivor isn't killed, they player draws and keeps 5 item cards from the hospital deck.",
+        "subtext" : "We might find some really useful supplies."
+      }, {
+        "label" : "Do Not Enter",
+        "result" : "\"Yeah, I don't need to see what's in there,\" you agree. You leave it alone. Nothing happens.",
+        "subtext" : "Heed your companion's warning."
+      } ],
+      "trigger" : "If the player performs a search at the hospital:"
     },
     "no_ammo" : {
       "basic" : true,
@@ -548,25 +562,22 @@
       } ],
       "trigger" : "If the player uses the ability of a gun symbol card, after resolving that ability:"
     },
-    "no_place_left_in_the_world": {
-      "key": "no_place_left_in_the_world",
-      "name": "No Place Left In The World",
-      "trigger": "If the player performs a search action with a non-exiled survivor:",
-      "intro": "The old woman lies on the sidewalk, her breathing labored, her vision distant. You approach cautiously, but see that she's alive. \"Are you okay?\" you ask. \"Oh, don't mind me,\" she replies in a hushed voice. \"Don't mind me. Got none of my medicine left. I got no place left in this world. It's not mine anymore.\" You see the photograph she clutches to her chest. In the photo she is many years younger, and she stands there smiling, held by a handsome young man.",
-      "options": [
-        {
-          "label": "Help",
-          "subtext": "Bring her back to the colony.",
-          "result": "\"Come back with me,\" you say. \"My friends and I might be able to help.\" Place 1 helpless survivor token at the colony and equip this card to the searching survivor. At the beginning of each turn, as long as there is at least 1 helpless survivor at the colony you may place 1 medicine symbol card in the waste pile without triggering its effect. If you do, remove all despair tokens from survivors you control. If you do not, kill 1 helpless survivor (losing 1 morale) and discard this card. If there are no helpless survivors at the colony discard this card."
-        },
-        {
-          "label": "Walk Away",
-          "subtext": "Apologize and go your own way.",
-          "result": ""
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "no_place_left_in_the_world" : {
+      "basic" : true,
+      "intro" : "The old woman lies on the sidewalk, her breathing labored, her vision distant. You approach cautiously, but see that she's alive. \"Are you okay?\" you ask. \"Oh, don't mind me,\" she replies in a hushed voice. \"Don't mind me. Got none of my medicine left. I got no place left in this world. It's not mine anymore.\" You see the photograph she clutches to her chest. In the photo she is many years younger, and she stands there smiling, held by a handsome young man.",
+      "key" : "no_place_left_in_the_world",
+      "name" : "No Place Left In The World",
+      "options" : [ {
+        "label" : "Help",
+        "result" : "\"Come back with me,\" you say. \"My friends and I might be able to help.\" Place 1 helpless survivor token at the colony and equip this card to the searching survivor. At the beginning of each turn, as long as there is at least 1 helpless survivor at the colony you may place 1 medicine symbol card in the waste pile without triggering its effect. If you do, remove all despair tokens from survivors you control. If you do not, kill 1 helpless survivor (losing 1 morale) and discard this card. If there are no helpless survivors at the colony discard this card.",
+        "subtext" : "Bring her back to the colony."
+      }, {
+        "label" : "Walk Away",
+        "result" : "",
+        "subtext" : "Apologize and go your own way."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player performs a search action with a non-exiled survivor:"
     },
     "oh_what_a_feeling" : {
       "basic" : true,
@@ -604,68 +615,58 @@
       } ],
       "trigger" : "If a survivor the player controls is at the colony and there are 1 or more helpless survivors at the colony:"
     },
-    "outsiders": {
-      "key": "outsiders",
-      "name": "Outsiders",
-      "trigger": "If a survivor the player controls is outside the colony:",
-      "intro": "\"I need everybody at the gate right now! There's a flatbed that just pulled up, loaded with refugees.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
-      "options": [
-        {
-          "label": "Thumbs Up",
-          "subtext": "Recruit them.",
-          "result": "\"We don't have much, but if your people are willing to pull their own weight we can give you a home. For the winter at least. After that you're on your own.\" Each player draws 1 survivor from the survivor deck and adds it to their following. Each player also adds 1 helpless survivor to the colony."
-        },
-        {
-          "label": "Thumbs Down",
-          "subtext": "Turn them away.",
-          "result": "\"I'm sorry we just can't take on any more. You're going to have to keep moving.\" Their faces suggest they've heard those words too many times before. They look downwards in acceptance and soon the truck is driving away. Three days later you find the truck collapsed on the side of the road. The people are gone, but blood is caked on the road. Nothing happens."
-        }
-      ],
-      "basic": true
+    "outsiders" : {
+      "basic" : true,
+      "intro" : "\"I need everybody at the gate right now! There's a flatbed that just pulled up, loaded with refugees.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
+      "key" : "outsiders",
+      "name" : "Outsiders",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "\"We don't have much, but if your people are willing to pull their own weight we can give you a home. For the winter at least. After that you're on your own.\" Each player draws 1 survivor from the survivor deck and adds it to their following. Each player also adds 1 helpless survivor to the colony.",
+        "subtext" : "Recruit them."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "\"I'm sorry we just can't take on any more. You're going to have to keep moving.\" Their faces suggest they've heard those words too many times before. They look downwards in acceptance and soon the truck is driving away. Three days later you find the truck collapsed on the side of the road. The people are gone, but blood is caked on the road. Nothing happens.",
+        "subtext" : "Turn them away."
+      } ],
+      "trigger" : "If a survivor the player controls is outside the colony:"
     },
-    "prison_break": {
-      "key": "prison_break",
-      "name": "Prison Break",
-      "trigger": "If the player moves a survivor and controls at least 2 survivors:",
-      "intro": "\"Remember how we talked about trying to raid the armory at the prison to get some riot gear?\"\n\"Sure and we decided that it would be suicide. That we were best off leaving that half sealed up.\"\n\"Yeah, well bad news. Some chuckleheads tried to get in there and now the front gate is wide open and the dead are pouring out.\"",
-      "options": [
-        {
-          "label": "Risk 0",
-          "subtext": "Fall back.",
-          "result": "You retreat. Add 2 zombies to all locations."
-        },
-        {
-          "label": "Risk 1",
-          "subtext": "Close the gate.",
-          "result": "Choose 2 survivors you control. Roll for exposure twice on each of the chosen survivors."
-        },
-        {
-          "label": "Risk 2",
-          "subtext": "Get the riot gear and then close the gate.",
-          "result": "Choose 2 survivors you control. Roll for exposure 4 times on each of the chosen survivors. If at least 1 of the chosen survivors is still alive, for the remainder of the game, when rolling exposure on the chosen survivors, treat every result as if it was a blank. Set this card next to the chosen survivors' cards to remember this persisting effect."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "prison_break" : {
+      "basic" : true,
+      "intro" : "\"Remember how we talked about trying to raid the armory at the prison to get some riot gear?\"\n\"Sure and we decided that it would be suicide. That we were best off leaving that half sealed up.\"\n\"Yeah, well bad news. Some chuckleheads tried to get in there and now the front gate is wide open and the dead are pouring out.\"",
+      "key" : "prison_break",
+      "name" : "Prison Break",
+      "options" : [ {
+        "label" : "Risk 0",
+        "result" : "You retreat. Add 2 zombies to all locations.",
+        "subtext" : "Fall back."
+      }, {
+        "label" : "Risk 1",
+        "result" : "Choose 2 survivors you control. Roll for exposure twice on each of the chosen survivors.",
+        "subtext" : "Close the gate."
+      }, {
+        "label" : "Risk 2",
+        "result" : "Choose 2 survivors you control. Roll for exposure 4 times on each of the chosen survivors. If at least 1 of the chosen survivors is still alive, for the remainder of the game, when rolling exposure on the chosen survivors, treat every result as if it was a blank. Set this card next to the chosen survivors' cards to remember this persisting effect.",
+        "subtext" : "Get the riot gear and then close the gate."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player moves a survivor and controls at least 2 survivors:"
     },
-    "prophet": {
-      "key": "prophet",
-      "name": "Prophet",
-      "trigger": "If an exiled survivor the player controls shares a location with a non-exiled survivor:",
-      "intro": "You are minding your own business, fully immersed in His Work, when who should spy but one of the lost sheep belonging to that God-forsaken colony? You know what must be done.",
-      "options": [
-        {
-          "label": "Evangelize",
-          "subtext": "Lead God's lamb to salvation.",
-          "result": "You approach the poor thing and speak of the sins the colony has committed. The sheep begins to weep, and confesses its shame. You cradle the pitiable thing in your arms, and promise everything will be okay. Take a non-exiled survivor that shares a location with one of your survivors and add them to your following."
-        },
-        {
-          "label": "Pacify",
-          "subtext": "Condemn the evildoer.",
-          "result": "This is no sheep, but a goat. You sneak up behind it, incapacitate it with a brick, then set to branding its flesh. When it returns to the colony, your warnings will be there for everyone to see. The colony loses 1 morale."
-        }
-      ],
-      "traitor": true
+    "prophet" : {
+      "intro" : "You are minding your own business, fully immersed in His Work, when who should spy but one of the lost sheep belonging to that God-forsaken colony? You know what must be done.",
+      "key" : "prophet",
+      "name" : "Prophet",
+      "options" : [ {
+        "label" : "Evangelize",
+        "result" : "You approach the poor thing and speak of the sins the colony has committed. The sheep begins to weep, and confesses its shame. You cradle the pitiable thing in your arms, and promise everything will be okay. Take a non-exiled survivor that shares a location with one of your survivors and add them to your following.",
+        "subtext" : "Lead God's lamb to salvation."
+      }, {
+        "label" : "Pacify",
+        "result" : "This is no sheep, but a goat. You sneak up behind it, incapacitate it with a brick, then set to branding its flesh. When it returns to the colony, your warnings will be there for everyone to see. The colony loses 1 morale.",
+        "subtext" : "Condemn the evildoer."
+      } ],
+      "traitor" : true,
+      "trigger" : "If an exiled survivor the player controls shares a location with a non-exiled survivor:"
     },
     "radio_signal" : {
       "basic" : true,
@@ -699,24 +700,21 @@
       } ],
       "trigger" : "If a survivor the player controls performs a search at the hospital:"
     },
-    "rats": {
-      "key": "rats",
-      "name": "Rats",
-      "trigger": "If there are 5 or more cards in the waste pile, 5 or more food in the supply, and at least 1 non-helpless survivor at the colony:",
-      "intro": "\"We have, like, a billion rats! I opened the door to the pantry and they didn't even scatter! They just looked at me like I opened the bathroom door on them.\" Every non-exiled player must vote with a thumbs up or down.",
-      "options": [
-        {
-          "label": "Thumbs Up",
-          "subtext": "Time to exterminate some rats.",
-          "result": "\"We're taking back the pantry!\" Collect a number of dice equal to the number of cards in the waste pile.Divide those dice among each player with 1 or more survivors at the colony. Each player rolls the dice they were given. Each player must place 1 wound on a survivor at the colony they control for each 3 or lower that they roll."
-        },
-        {
-          "label": "Thumbs Down",
-          "subtext": "Forfeit the pantry.",
-          "result": "\"We'll get some rat poison next time we're at the grocery store.\" Roll a number of dice equal to the number of cards in the waste pile. For every 3 or lower rolled, remove 1 food from the supply."
-        }
-      ],
-      "basic": true
+    "rats" : {
+      "basic" : true,
+      "intro" : "\"We have, like, a billion rats! I opened the door to the pantry and they didn't even scatter! They just looked at me like I opened the bathroom door on them.\" Every non-exiled player must vote with a thumbs up or down.",
+      "key" : "rats",
+      "name" : "Rats",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "\"We're taking back the pantry!\" Collect a number of dice equal to the number of cards in the waste pile.Divide those dice among each player with 1 or more survivors at the colony. Each player rolls the dice they were given. Each player must place 1 wound on a survivor at the colony they control for each 3 or lower that they roll.",
+        "subtext" : "Time to exterminate some rats."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "\"We'll get some rat poison next time we're at the grocery store.\" Roll a number of dice equal to the number of cards in the waste pile. For every 3 or lower rolled, remove 1 food from the supply.",
+        "subtext" : "Forfeit the pantry."
+      } ],
+      "trigger" : "If there are 5 or more cards in the waste pile, 5 or more food in the supply, and at least 1 non-helpless survivor at the colony:"
     },
     "riot" : {
       "basic" : true,
@@ -738,24 +736,21 @@
       } ],
       "trigger" : "If a player controls a survivor at the colony, there are more helpless survivors in the colony than non-helpless survivors, and there is food in the supply:"
     },
-    "sacrament": {
-      "key": "sacrament",
-      "name": "Sacrament",
-      "trigger": "If the player moves a non-exiled survivor:",
-      "intro": "You walk past the cathedral, and you realize that no one's been inside since the colony formed. It's certainly not the most tempting of targets... but you can think of something that might be of use.",
-      "options": [
-        {
-          "label": "Go",
-          "subtext": "Enter the cathedral.",
-          "result": "You mount the steps, and the heavy front door groans as you pull it open. You spend fifteen minutes searching before you find a small room holding the prize you wanted - half a dozen bottles of Communion wine. But as you move through the dark hallways towards the exit, a foul smelling shape slams into you. The priest's corpse gnashes its teeth, nearly taking off your nose. \"Looks like you were judged and found wanting.\" You slam the thing's head into the tiled floor repeatedly until all that's left were gory remains. You dust yourself off and wonder, did I just say a cheesy one-liner in a fight? That's badass! Roll for exposure on the moved survivor twice. If the survivor isn't killed by the exposure, gain 1 morale."
-        },
-        {
-          "label": "Stay",
-          "subtext": "Do not enter the cathedral.",
-          "result": "Not worth the risk you think, and keep moving. Nothing happens."
-        }
-      ],
-      "explicit": true
+    "sacrament" : {
+      "explicit" : true,
+      "intro" : "You walk past the cathedral, and you realize that no one's been inside since the colony formed. It's certainly not the most tempting of targets... but you can think of something that might be of use.",
+      "key" : "sacrament",
+      "name" : "Sacrament",
+      "options" : [ {
+        "label" : "Go",
+        "result" : "You mount the steps, and the heavy front door groans as you pull it open. You spend fifteen minutes searching before you find a small room holding the prize you wanted - half a dozen bottles of Communion wine. But as you move through the dark hallways towards the exit, a foul smelling shape slams into you. The priest's corpse gnashes its teeth, nearly taking off your nose. \"Looks like you were judged and found wanting.\" You slam the thing's head into the tiled floor repeatedly until all that's left were gory remains. You dust yourself off and wonder, did I just say a cheesy one-liner in a fight? That's badass! Roll for exposure on the moved survivor twice. If the survivor isn't killed by the exposure, gain 1 morale.",
+        "subtext" : "Enter the cathedral."
+      }, {
+        "label" : "Stay",
+        "result" : "Not worth the risk you think, and keep moving. Nothing happens.",
+        "subtext" : "Do not enter the cathedral."
+      } ],
+      "trigger" : "If the player moves a non-exiled survivor:"
     },
     "sewer_passage" : {
       "basic" : true,
@@ -804,6 +799,22 @@
       } ],
       "trigger" : "If the player moves a survivor and Sophie Robinson is currently in the survivor deck:"
     },
+    "spoiled" : {
+      "basic" : true,
+      "intro" : "You stare at the can of stew, desperately hoping you're not seeing what you think you see. Is the can bulging or is it just misshapen from being dropped? You're not in a rush to get botulism, but food isn't exactly plentiful around here.",
+      "key" : "spoiled",
+      "name" : "Spoiled",
+      "options" : [ {
+        "label" : "Keep Eating",
+        "result" : "You shake your head. \"I'm sure it's fine. I've got to stop being so paranoid.\" Choose a survivor you control and place a wound on it. Proceed to increase the action die result.",
+        "subtext" : "It's probably fine."
+      }, {
+        "label" : "Stop Eating",
+        "result" : "Better to lose a few pounds from hunger than lose everything to illness. You throw the can away. You do not increase your action die result. The food is still spent.",
+        "subtext" : "Better safe than sorry."
+      } ],
+      "trigger" : "If the player spends a food, after removing food from the supply but before increasing the action die result:"
+    },
     "supply_drop" : {
       "basic" : true,
       "intro" : "You lived near the airport when you were a kid, and used to climb up on the roof of your house to watch the planes take off. When one passed overhead you'd cheer as the displaced air whipped over your body. Just like right now. Wait, what? You snap awake and fall out of your lawn chair. An immense plane, like something from an old war movie, roars overhead before disgorging what looks like a crate. An orange parachute pops open, carrying the crate to safety - and away from the colony.",
@@ -820,25 +831,22 @@
       } ],
       "trigger" : "If a survivor the player controls is at the colony:"
     },
-    "the_arctic_king": {
-      "key": "the_arctic_king",
-      "name": "The Arctic King",
-      "trigger": "If a player performs a search at the gas station:",
-      "intro": "Snowflakes waft by, and your fingers begin to numb in the frigid cold. The eighth key you try works, and you lift the complaining garbage door up. You start to curse the noise but the words never make it past you lips. It sits there like some ancient idol. The words POLAR BEAR are emblazoned along the snowmobile's flank, and you joyously recall the TV jingle with no hint of irony. \"When winter try to trap you there, mount up on a Polar Bear.\"",
-      "options": [
-        {
-          "label": "Use",
-          "subtext": "Use the snowmobile when moving.",
-          "result": "Attach this card to the searching survivor. When moving with that survivor you do not roll for exposure but must place a noise token at the origin and destination. If the origin or destination is the colony, add 1 zombie to the colony instead. Each time you move, place a wound token on this snowmobile. When it has 4 wounds remove it from the game."
-        },
-        {
-          "label": "Siphon",
-          "subtext": "Siphon the snowmobile's gas.",
-          "result": ""
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "the_arctic_king" : {
+      "basic" : true,
+      "intro" : "Snowflakes waft by, and your fingers begin to numb in the frigid cold. The eighth key you try works, and you lift the complaining garbage door up. You start to curse the noise but the words never make it past you lips. It sits there like some ancient idol. The words POLAR BEAR are emblazoned along the snowmobile's flank, and you joyously recall the TV jingle with no hint of irony. \"When winter try to trap you there, mount up on a Polar Bear.\"",
+      "key" : "the_arctic_king",
+      "name" : "The Arctic King",
+      "options" : [ {
+        "label" : "Use",
+        "result" : "Attach this card to the searching survivor. When moving with that survivor you do not roll for exposure but must place a noise token at the origin and destination. If the origin or destination is the colony, add 1 zombie to the colony instead. Each time you move, place a wound token on this snowmobile. When it has 4 wounds remove it from the game.",
+        "subtext" : "Use the snowmobile when moving."
+      }, {
+        "label" : "Siphon",
+        "result" : "",
+        "subtext" : "Siphon the snowmobile's gas."
+      } ],
+      "persistent" : true,
+      "trigger" : "If a player performs a search at the gas station:"
     },
     "the_buddy_system" : {
       "basic" : true,
@@ -871,24 +879,21 @@
       "persistent" : true,
       "trigger" : "If a non-exiled survivor the player controls is at a non-colony location:"
     },
-    "the_gunfighter": {
-      "key": "the_gunfighter",
-      "name": "The Gunfighter",
-      "trigger": "If the player controls a survivor at a non-colony location equipped with a gun symbol card, and Alphonso Ortega is still in the survivor deck:",
-      "intro": "The dead woman lunges into you, the weight of her putrid body knocking you over, and your gun goes clattering across the ground. Panic seizes you as you realize you will likely die. But suddenly a man sprints out from an alleyway, snatches up your gun, takes aim, and pulls the trigger.\n\"No!\" you scream, but his aim is perfect, and the dead woman's face explodes over your own. \"Bendice esta arma, dulce Madre,\" the man whispers. You flip the corpse off you. \"Hey man, thanks for the assist,\" you say. The man looks back at you with intense eyes.",
-      "options": [
-        {
-          "label": "Communicate",
-          "subtext": "Attempt to recruit the man.",
-          "result": "\"You need a place to stay? Food?\" Search the survivor deck for Alfonso Ortega and add him to your following."
-        },
-        {
-          "label": "Leave",
-          "subtext": "Attempt to leave.",
-          "result": "\"So, uh, if I can have my gun, I'll be on my way.\" But the man just calmly turns and walks away. Remove the used gun symbol card from the game."
-        }
-      ],
-      "character": true
+    "the_gunfighter" : {
+      "character" : true,
+      "intro" : "The dead woman lunges into you, the weight of her putrid body knocking you over, and your gun goes clattering across the ground. Panic seizes you as you realize you will likely die. But suddenly a man sprints out from an alleyway, snatches up your gun, takes aim, and pulls the trigger.\n\"No!\" you scream, but his aim is perfect, and the dead woman's face explodes over your own. \"Bendice esta arma, dulce Madre,\" the man whispers. You flip the corpse off you. \"Hey man, thanks for the assist,\" you say. The man looks back at you with intense eyes.",
+      "key" : "the_gunfighter",
+      "name" : "The Gunfighter",
+      "options" : [ {
+        "label" : "Communicate",
+        "result" : "\"You need a place to stay? Food?\" Search the survivor deck for Alfonso Ortega and add him to your following.",
+        "subtext" : "Attempt to recruit the man."
+      }, {
+        "label" : "Leave",
+        "result" : "\"So, uh, if I can have my gun, I'll be on my way.\" But the man just calmly turns and walks away. Remove the used gun symbol card from the game.",
+        "subtext" : "Attempt to leave."
+      } ],
+      "trigger" : "If the player controls a survivor at a non-colony location equipped with a gun symbol card, and Alphonso Ortega is still in the survivor deck:"
     },
     "the_sunshine_state" : {
       "basic" : true,
@@ -905,6 +910,22 @@
         "subtext" : "Don't let them leave"
       } ],
       "trigger" : "If the player controls a survivor at the colony and there are 2 or more helpless survivors in the colony:"
+    },
+    "thin_ice" : {
+      "basic" : true,
+      "intro" : "The lake has frozen over, creating a tempting shortcut. You wouldn't have dared risk it in the life you had before, but the rules have all changed, and so has the cost of survival. The prospect of having more time to search has you seriously considering it. You place one foot on the ice and hear it creak. Is that normal? Probably. Another foot produces a similar noise. Are you really going to do this?",
+      "key" : "thin_ice",
+      "name" : "Thin Ice",
+      "options" : [ {
+        "label" : "Cross",
+        "result" : "Roll a die. On a result of 1-3, the moved survivor receives 1 frostbite wound. On a result of 4-6, search through an item deck of your choice for a card of your choice and add it to your hand.",
+        "subtext" : "You cross the frozen lake."
+      }, {
+        "label" : "Stay",
+        "result" : "You turn away. It isn't worth it. Nothing happens.",
+        "subtext" : "You don't cross the frozen lake."
+      } ],
+      "trigger" : "If the player moves a survivor:"
     },
     "this_is_hopeless" : {
       "explicit" : true,
@@ -934,25 +955,22 @@
       } ],
       "trigger" : "If a survivor the player controls is at the colony:"
     },
-    "traffic_violation": {
-      "key": "traffic_violation",
-      "name": "Traffic Violation",
-      "trigger": "If the player uses a fuel symbol card when moving a non-exiled survivor:",
-      "intro": "Your jaw drops when you see the flashing police lights in your rear view mirror. This isn't going to end well.",
-      "options": [
-        {
-          "label": "Go",
-          "subtext": "Floor it.",
-          "result": "You stomp on the gas but the cruiser easily catches up, ramming you hard. Your car careens into a tree. Injured and dazed, you flee into the woods. Add 1 wound to the moving survivor and then roll for exposure on that survivor."
-        },
-        {
-          "label": "Stop",
-          "subtext": "Pull over.",
-          "result": "You pull over. \"Where did you get the fuel for this automobile?\" the uniformed officer demands, gun drawn. He pulls you from the car and cuffs you. \"Let your friends know we're coming to collect a tax for keeping these streets safe,\" he says as he siphons your gas. For the remainder of the game, during the add zombies step of the colony phase, add 1 fewer zombies to the gas station, hospital, and police station. When this happens, a player may remove 1 fuel in their hand from the game. If no player does, every survivor at the colony receives 1 wound."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "traffic_violation" : {
+      "basic" : true,
+      "intro" : "Your jaw drops when you see the flashing police lights in your rear view mirror. This isn't going to end well.",
+      "key" : "traffic_violation",
+      "name" : "Traffic Violation",
+      "options" : [ {
+        "label" : "Go",
+        "result" : "You stomp on the gas but the cruiser easily catches up, ramming you hard. Your car careens into a tree. Injured and dazed, you flee into the woods. Add 1 wound to the moving survivor and then roll for exposure on that survivor.",
+        "subtext" : "Floor it."
+      }, {
+        "label" : "Stop",
+        "result" : "You pull over. \"Where did you get the fuel for this automobile?\" the uniformed officer demands, gun drawn. He pulls you from the car and cuffs you. \"Let your friends know we're coming to collect a tax for keeping these streets safe,\" he says as he siphons your gas. For the remainder of the game, during the add zombies step of the colony phase, add 1 fewer zombies to the gas station, hospital, and police station. When this happens, a player may remove 1 fuel in their hand from the game. If no player does, every survivor at the colony receives 1 wound.",
+        "subtext" : "Pull over."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player uses a fuel symbol card when moving a non-exiled survivor:"
     },
     "unsanitary_conditions" : {
       "basic" : true,
@@ -966,31 +984,44 @@
       } ],
       "trigger" : "If the player controls 1 or more wounded survivors and there are 5 or more cards in the waste pile:"
     },
-    "welcome_home": {
-      "key": "welcome_home",
-      "name": "Welcome Home",
-      "trigger": "If the player moves a survivor:",
-      "intro": "Oh God. This is the street your parents lived on. How changed is the world that you didn't recognize it? And now you can't stop yourself - you have to know. You turn from your intended destination, and soon open the back door to their house. The smell that assaults you warns of what awaits, but you still enter. You find your mother in the living room, face down on the floor. Her head is a halo of dried gore and your father's Colt lies next to her. You don't even have a chance to mourn before the thing that was your father comes crawling down the stairs.",
-      "options": [
-        {
-          "label": "Mercy",
-          "subtext": "Reach for the gun and shoot.",
-          "result": "You dive for the gun and take aim. You struggle to pull the trigger, but soon he's right on top of you, his hands scrabbling at your feet. \"I'm sorry Poppa.\" Roll once for exposure on the moved survivor. If the survivor isn't killed attach this card to it. Once per round when this survivor performs an attack do not roll for exposure."
-        },
-        {
-          "label": "Run",
-          "subtext": "Run and don't look back.",
-          "result": "You run out of the house and don't look back. There was no way you could have shot him. Nothing happens."
-        }
-      ],
-      "basic": true,
-      "persistent": true
+    "welcome_home" : {
+      "basic" : true,
+      "intro" : "Oh God. This is the street your parents lived on. How changed is the world that you didn't recognize it? And now you can't stop yourself - you have to know. You turn from your intended destination, and soon open the back door to their house. The smell that assaults you warns of what awaits, but you still enter. You find your mother in the living room, face down on the floor. Her head is a halo of dried gore and your father's Colt lies next to her. You don't even have a chance to mourn before the thing that was your father comes crawling down the stairs.",
+      "key" : "welcome_home",
+      "name" : "Welcome Home",
+      "options" : [ {
+        "label" : "Mercy",
+        "result" : "You dive for the gun and take aim. You struggle to pull the trigger, but soon he's right on top of you, his hands scrabbling at your feet. \"I'm sorry Poppa.\" Roll once for exposure on the moved survivor. If the survivor isn't killed attach this card to it. Once per round when this survivor performs an attack do not roll for exposure.",
+        "subtext" : "Reach for the gun and shoot."
+      }, {
+        "label" : "Run",
+        "result" : "You run out of the house and don't look back. There was no way you could have shot him. Nothing happens.",
+        "subtext" : "Run and don't look back."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player moves a survivor:"
+    },
+    "wounded_survivor" : {
+      "basic" : true,
+      "intro" : "\"Oh thank God you're alive,\" the stranger says. \"I was afraid you were one of the dead ones. God, I'm in bad shape. I was with some others I met a few weeks ago, but our group was gradually split up or killed. It'd sure be great to team up with somebody again. You got a group?\" Your gaze wanders from the stranger's eyes to the blood-soaked rags wrapped around their right hand. \"Oh this? This is nothing man. Just cut it up on some broken glass when I was looting a store back there.\" The stranger laughs it off as nothing, but they seem nervous about something.",
+      "key" : "wounded_survivor",
+      "name" : "Wounded Survivor",
+      "options" : [ {
+        "label" : "Recruit",
+        "result" : "Draw a card from the survivor deck and add it to your following. After the new survivor is placed in the colony, roll for exposure twice on that survivor.",
+        "subtext" : "You tell the stranger about the colony."
+      }, {
+        "label" : "Alone",
+        "result" : "\"I'm sorry friend, but I prefer to go it alone. Nothing personal.\" Nothing happens.",
+        "subtext" : "Do not tell the stranger about the colony."
+      } ],
+      "trigger" : "If the player performs a search with a non-exiled survivor:"
     }
   },
   "users" : {
     "T79gTLdZK3cmNSdFcxJScXoQW6E3" : {
       "email" : "lionelsquiambao@gmail.com",
-      "filter" : [ "army", "riot", "mugging", "disturbed", "this_is_hopeless", "gabriel_diaz", "john_price", "mike_cho", "sophie_robinson", "bitter_cold_night", "collapsing_barriers", "dying_wish", "flier", "fuel_tanker", "heads_up", "highway_to_hell", "horse", "hunted", "ice_fishing", "ill_show_them_i_can_help", "let_there_be_light", "missing_child", "no_ammo", "oh_what_a_feeling", "outbreak", "radio_signal", "rascals", "sewer_passage", "sleep", "supply_drop", "the_buddy_system", "the_deputy", "the_sunshine_state", "toxic_waste", "unsanitary_conditions" ],
+      "filter" : [ "army", "riot", "mugging", "disturbed", "this_is_hopeless", "gabriel_diaz", "john_price", "mike_cho", "sophie_robinson", "bitter_cold_night", "collapsing_barriers", "dying_wish", "flier", "fuel_tanker", "heads_up", "highway_to_hell", "horse", "hunted", "ice_fishing", "ill_show_them_i_can_help", "let_there_be_light", "missing_child", "no_ammo", "oh_what_a_feeling", "outbreak", "radio_signal", "rascals", "sewer_passage", "sleep", "supply_drop", "the_buddy_system", "the_deputy", "the_sunshine_state", "toxic_waste", "unsanitary_conditions", "book_of_the_dead", "cabin_fever", "car_crash", "crazed_soccer_mom", "creature_comforts", "dead_alive", "feral_dog_pack", "horde", "light_house", "maude", "music", "nicu", "no_place_left_in_the_world", "outsiders", "prison_break", "rats", "spoiled", "the_arctic_king", "thin_ice", "traffic_violation", "welcome_home", "wounded_survivor", "gray_beard", "the_gunfighter", "king_shit_of_fuck_hill", "prophet", "addiction", "sacrament" ],
       "username" : "GGLionCross"
     }
   }

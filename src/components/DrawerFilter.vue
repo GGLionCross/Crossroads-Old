@@ -25,6 +25,14 @@
           category="Explicit"
           :rows="explicitCards"
         ></filter-table>
+        <filter-table
+          category="Raxxon"
+          :rows="raxxonCards"
+        ></filter-table>
+        <filter-table
+          category="Bandits"
+          :rows="banditsCards"
+        ></filter-table>
       </q-scroll-area>
       <div class="close-ctn row justify-center">
         <q-btn
@@ -54,6 +62,8 @@ export default defineComponent({
     const characterCards = computed(() => allCards.value.filter(c => c.character));
     const traitorCards = computed(() => allCards.value.filter(c => c.traitor));
     const explicitCards = computed(() => allCards.value.filter(c => c.explicit));
+    const raxxonCards = computed(() => allCards.value.filter(c => c.raxxon));
+    const banditsCards = computed(() => allCards.value.filter(c => c.bandits));
 
     const hideDrawerFilter = () => emit("update:modelValue", false);
     return {
@@ -61,6 +71,8 @@ export default defineComponent({
       characterCards,
       traitorCards,
       explicitCards,
+      raxxonCards,
+      banditsCards,
       hideDrawerFilter
     }
   }

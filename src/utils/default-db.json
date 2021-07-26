@@ -1,6 +1,7 @@
 {
   "cards" : {
     "addiction" : {
+      "default" : true,
       "explicit" : true,
       "intro" : "Holy crap, this is the pure stuff. Most painkillers have a ton of filler, but you've really hit the jackpot now. Oh God, that feels good. It's been so long. When was the last time you felt like this? Hell, when was the last time you felt anything but terror and despair? You want more. Just the thought of not having the feeling again... it's almost too much. The player that the medicine was used on is the one who makes the choice.",
       "key" : "addiction",
@@ -19,6 +20,7 @@
     },
     "army" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The soldiers in army uniforms make predictable demands - have food ready when they return, or the colony will be burnt to the ground. Every player with 1 or more survivors at the colony must vote with a thumbs up or down. The option with most votes takes effect. The ALTERNATIVE option triggers if Thomas Heart is at the colony.",
       "key" : "army",
       "name" : "Army",
@@ -38,8 +40,22 @@
       "persistent" : true,
       "trigger" : "If a survivor the player controls is at the colony:"
     },
+    "bigpharmafail" : {
+      "intro" : "One minute you're feeling fine and the next you're lying on the ground, screaming, and desperately clutching your butt while your bowels revolt. You try to call for help, but all that comes out is a pitiable squeal, and suddenly the shadows in the room spring to life and begin dancing around you. \"Gotta lay off the pills,\" you gasp. \"Lay off the pills?\" asks a shadow. \"Aw baby, the only thing that's gonna fix you is more pills. And aardvark insurance. You insured your aardvark, didn't you baby?\"",
+      "key" : "bigpharmafail",
+      "name" : "#BIGPHARMAFAIL",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "At the beginning of every round, replace 1 of the pill effects equipped to a survivor you control with a random pill effect from the Raxxon side effect deck. If the last effect on you was positive, you now equip the negative effect of the new pill, and vice versa. Set this card aside to remember this persisting effect.",
+        "subtext" : "Taking more pills"
+      } ],
+      "persistent" : true,
+      "raxxon" : true,
+      "trigger" : "If a survivor the player controls has 1 or more pill effects equipped:"
+    },
     "bitter_cold_night" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The night brings with it a new understanding of cold. The snow stopped, but the wind picked up, and your extremities all ache from the icy pain that stabs you. You stagger to the door and bang as loudly as you can, shouting for someone to let you in. But the wind howls louder, and your hat is torn from your head. You hammer on the door again, panic gripping you as the cold instantly starts chewing on your ears. Every player with 1 or more survivors at the location that was moved to must vote with a thumbs up or down.",
       "key" : "bitter_cold_night",
       "name" : "Bitter Cold Night",
@@ -54,8 +70,23 @@
       } ],
       "trigger" : "If the player receives a frostbite wound as the result of rolling for exposure after moving to a location with 1 or more other survivors:"
     },
+    "blue" : {
+      "character" : true,
+      "intro" : "Look at Barry. Stupid face Barry. Barry has all the bananas. Barry just rolling in bananas, and Barry won't share bananas with Blue.\nUntil Barry shares bananas, Blue drag Barry to hell.",
+      "key" : "blue",
+      "name" : "Blue",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "\"She's not just a harmless chimp, I'm telling you! That freaking ape is psycho! Last night I woke up and she was just sitting there in the dark, staring at me.\" The chosen survivor is now 'Barry'. Place this card underneath the card of that survivor. At the beginning of the turn of the player that controls Barry, and Blue and Barry are the only survivors at a location, the player controlling Barry must give a food card to the player controlling Blue or receive 1 despair token. If Blue dies, remove all despair tokens from Barry and discard this card.",
+        "subtext" : "Give Blue bananas. Choose a survivor that shares a location with Blue."
+      } ],
+      "persistent" : true,
+      "raxxon" : true,
+      "trigger" : "If Blue shares a location with 1 other survivor:"
+    },
     "book_of_the_dead" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Deep in the stacks of the Special Collection, you discover a large, leather bound tome blanketed in dust. The title says Book of the Dead.",
       "key" : "book_of_the_dead",
       "name" : "Book Of The Dead",
@@ -72,6 +103,7 @@
     },
     "cabin_fever" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"I swear to God,\" you say. \"If I have to stare at these walls a minute longer, I'm going to freaking snap. I don't care how dangerous it is, I'm getting outside. Never thought I'd feel running from dead people was more desirable than holing up.\"\n\"That's not a bad idea,\" your friend agrees. \"Why should the zombies be the only ones enjoying the sunshine?\"",
       "key" : "cabin_fever",
       "name" : "Cabin Fever",
@@ -85,6 +117,7 @@
     },
     "car_crash" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Your headlights cut through the darkness, random snowflakes scuttling by on a bitter wind. The car is nowhere near as warm as you want, but every drop of fuel is precious. When your windshield begins to fog, you reach down and fumble at the dash for some heat. Suddenly a child walks into your oncoming lights. Instinct takes over before your brain registers that the child is dead, and you jerk hard on the wheel. Wheels screech as your car tumbles off the side of the road. Time slows as the world swirls sickeningly around you.",
       "key" : "car_crash",
       "name" : "Car Crash",
@@ -101,6 +134,7 @@
     },
     "collapsing_barriers" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"We've got a problem. They're piling up on the barricades. I've seen it - they're just a wall of meat, teeth, and claws. There's no way the barricades can hold up under that kind of weight. It's all makeshift anyway. I'm afraid we don't have a choice - we need to send in a team to clear them out.\" Every player with 1 or mor survivors at the colony must vote with a thumbs up or down.",
       "key" : "collapsing_barriers",
       "name" : "Collapsing Barriers",
@@ -115,8 +149,25 @@
       } ],
       "trigger" : "If a survivor the player controls is at the colony and there is at least 1 barricade and 1 zombie at the colony:"
     },
+    "competition_for_resources" : {
+      "bandits" : true,
+      "intro" : "\"Hey, what was that?\" demands a gruff voice from outside. You freeze in place. How did they get so close without you hearing them? \"Shhhh,\" another voice cautions. \"Over here,\" you hear broken glass crunching as someone on the sidewalk draws nearer. The broken shadows of the strangers fall across the room you crouch in, and you realize you have to choose quickly.",
+      "key" : "competition_for_resources",
+      "name" : "Competition For Resources",
+      "options" : [ {
+        "label" : "Run",
+        "result" : "\"Get some backup!\" an angry voice screams. Keep all the cards being looked at. Add 2 bandits to the searching survivor's location. Place the searching survivor at a random location by rolling a die. Roll for exposure twice on that survivor.",
+        "subtext" : "You grab all you can and run."
+      }, {
+        "label" : "Hide",
+        "result" : "\"They must have run. Heh. But look - they left us presents.\" Place all of the looked at cards at the bandit hideout.",
+        "subtext" : "Hide!"
+      } ],
+      "trigger" : "If a survivor the player controls makes noise while searching, after the player looks at the cards, but before they select one to keep:"
+    },
     "crazed_soccer_mom" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"These kids are just sick!\" screams a woman from the school window. You see her level a gun at you and you duck behind a pillar. \"Baby killers!\" she shrieks.",
       "key" : "crazed_soccer_mom",
       "name" : "Crazed Soccer Mom",
@@ -134,6 +185,7 @@
     },
     "creature_comforts" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Morale around this place is at an all-time low. I know fuel is scarce, but imagine what hot showers and meals could do for everybody? Get us feeling human again. Sometimes I think we focus so much on the obvious necessities that we forget about the emotional ones, you know?\"",
       "key" : "creature_comforts",
       "name" : "Creature Comforts",
@@ -146,6 +198,7 @@
     },
     "dead_alive" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"It's like I just saw a ghost. You ever have a time, where you were in the downtown of some city, and you'd see someone who, for just a second, reminded you of someone you used to know? And you knew it wasn't them, but just for a second you thought maybe it was? I feel like that all the time now. I'll see some dead face and it will remind me of someone, and just for a second, I'm afraid it's them. Like just now, I saw a zombie over there that looked like you-know-who. Do you see? It's that one over there. Doesn't it look just like... oh. Oh God. Oh no, no, no.\"",
       "key" : "dead_alive",
       "name" : "Dead Alive",
@@ -158,6 +211,7 @@
       "trigger" : "If the player controls a survivor at a non-colony location, and there is at least 1 dead survivor in the graveyard:"
     },
     "disturbed" : {
+      "default" : true,
       "explicit" : true,
       "intro" : "\"What are you up to buddy?\" you mean to ask, but the words stick in your throat as you suddenly realize what the little boy is doing. He holds a bloody stone over a pulpy mass of flesh and hair that used to be some kind of small animal.",
       "key" : "disturbed",
@@ -178,8 +232,25 @@
       } ],
       "trigger" : "If there are 4 or more helpless survivors in play:"
     },
+    "doin_time" : {
+      "bandits" : true,
+      "intro" : "Trapped! Fill the location with bandits.",
+      "key" : "doin_time",
+      "name" : "Doin' Time",
+      "options" : [ {
+        "label" : "Bribe",
+        "result" : "Roll a die. Add 1 to the roll for every card you placed in the bandit hideout. If you roll a 3 or higher remove all bandits from the station. If you roll lower than a 3, kill the survivor at the police station.",
+        "subtext" : "You attempt to bribe the bandits. Remove 1 or more cards from your hand and place them in the bandit hideout."
+      }, {
+        "label" : "Attract",
+        "result" : "Fill the police station with noise tokens. The rest of the colony must free you. Each player must choose a survivor they control and roll for exposure on the chosen survivor. Remove all bandits from the police station.",
+        "subtext" : "You scream and bang loudly against the bars to attract zombies and help."
+      } ],
+      "trigger" : "If there is only 1 survivor at the police station and the player controls that survivor:"
+    },
     "dying_wish" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You look up at the faces gathered around you. It's your life that's ending, yet your heart mourns for them. They look so scared. \"I know I'm dying,\" in a weak voice. \"But that's okay. Don't let it slow you down. If they didn't end, our lives would have no meaning. You still have so much to do. So much to fight for. It's easy to feel lost in a world that seems like it's rotting, but really, our lives never had more purpose than they do now. So please, for me, stop and think about what you are doing here. What is it that you want? Don't waste any more time. Find out what it is, then take hold of it and never let go.\"",
       "key" : "dying_wish",
       "name" : "Dying Wish",
@@ -190,8 +261,26 @@
       } ],
       "trigger" : "If a non-exiled survivor the player controls is killed:"
     },
+    "fanatics" : {
+      "bandits" : true,
+      "intro" : "\"And you shall shun the rot as a blight upon His name, and yea, upon ending your feast thou shalt offer the remnants to flame as that it shall never know the rot.\" The woman dumps gasoline on the leftovers of the evening meal and then lights it aflame. Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
+      "key" : "fanatics",
+      "name" : "Fanatics",
+      "options" : [ {
+        "label" : "Thumbs Up",
+        "result" : "\"These wack-jobs have to go.\" Remove half of the helpless survivors from the colony (rounded up). For every survivor removed place a bandit at a random location by rolling a die.",
+        "subtext" : "Stop the fanatics from performing their offerings."
+      }, {
+        "label" : "Thumbs Down",
+        "result" : "\"It's weird, but if it makes them feel better...\" For the remainder of the game, after the pay food step of the colony phase, you must remove any remaining food from the supply. Set this card aside to remember this persisting effect.",
+        "subtext" : "Allow the fanatics to continue."
+      } ],
+      "persistent" : true,
+      "trigger" : "If there are 2 or more helpless survivors at the colony:"
+    },
     "feral_dog_pack" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You see the pack of dogs roaming behind the buildings to your right, their fur ragged, their flanks lean. You notice them stealing glances at you and realize you're being hunted. Your blood runs cold. You take a side street when the opportunity presents itself, but the pack follows. Seconds later you hear the excited yapping as they close in behind you.",
       "key" : "feral_dog_pack",
       "name" : "Feral Dog Pack",
@@ -208,6 +297,7 @@
     },
     "flier" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Strong winds in the evening yielded a strange surprise when the sun rose. Fliers printed on bright orange paper covered the ground, and more were stuck in the surrounding trees, flapping there like dying birds. \"NO HELP COMING\" read the header, making the rest of the flier seem redundant. A last act of the government, it served both as a warning and a catalog of their failed attempts at combatting the dead. NO HELP COMING. Welcome to the new normal.",
       "key" : "flier",
       "name" : "Flier",
@@ -221,6 +311,7 @@
     },
     "fuel_tanker" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Holy crap.\" The fuel tanker sits just off the road, and it appears in excellent condition. You exit your car, and checking the perimeter you approach the cab, its driver side door hanging open. You slice the seatbelt apart, and bludgeon the head of the zombie that falls out. The trucker's bloody hat says Beaver Inspector, and you marvel at how stupid and frivolous your species used to be. Climbing into the cab you give the keys a twist, and the loud diesel engine roars to life like some ancient monster reborn into the world. You cringe. Noise like that is going to draw every dead thing for a mile.",
       "key" : "fuel_tanker",
       "name" : "Fuel Tanker",
@@ -238,6 +329,7 @@
     },
     "gabriel_diaz" : {
       "character" : true,
+      "default" : true,
       "intro" : "An explosion rocks the building as you cower in a back room. Thick black smoke billows in, and soon your eyes water and you begin to cough. You set the fire to distract the horde that trapped you, but things quickly got out of hand. The one window you found to escape from proved to be too small, and now there is nothing to do but wait for the smoke to asphyxiate you. The last thing you see before passing out, is a shape lurching toward you through the flames. You awake in the arms of a burly stranger. \"Good thing me and my family were passing by when we did,\" he says.",
       "key" : "gabriel_diaz",
       "name" : "Gabriel Diaz",
@@ -254,6 +346,7 @@
     },
     "gray_beard" : {
       "character" : true,
+      "default" : true,
       "intro" : "You are walking along the outskirts of the colony when you hear the familiar rapid pops of an automatic rifle in the near distance. You assume someone from the colony must be in trouble, and run toward the sound. Instead you find a tall, scraggly man blowing holes through a mass of undead. He swings his gun on you as you arrive, and your hands fly up. \"I'm alive,\" you shout. \"Don't shoot!\"",
       "key" : "gray_beard",
       "name" : "Gray Beard",
@@ -272,6 +365,7 @@
     },
     "heads_up" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You knew better than to go down into the morgue, but you figure it's the one place that has been searched the least. But once you find yourself downstairs in the darkness, you are so overcome with fear that you only have enough willpower to look in either the refrigerator, or the chemical vat.",
       "key" : "heads_up",
       "name" : "Heads Up",
@@ -288,6 +382,7 @@
     },
     "highway_to_hell" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You're knocked to the ground as a boom shakes the entire building. \"Breach!\" You find the barricades smashed, and a truck crunched into the building's side. Classic rock blares from the speaker in the cab. The zombie sitting in the driver's seat gnashes its teeth at you before a club obliterates its head. The note pinned to its jacket reveals the culprits - the other colony has sent you a message.",
       "key" : "highway_to_hell",
       "name" : "Highway To Hell",
@@ -304,6 +399,7 @@
     },
     "horde" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The snow falls heavily as the world turns white, and visibility drops to only a few yards around you. You're not alone though. Another shape moves through the storm, gesticulating wildly as it struggles through the snow. And then another. And still another. Your stomach lurches as you realize you've walked into the middle of a roving horde of the dead. Weighing your options, you suspect the reduced visibility may help you pass with minimum detection. But you also have to admit the odds are not in your favor.",
       "key" : "horde",
       "name" : "Horde",
@@ -320,6 +416,7 @@
     },
     "horse" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You slip through the alleyways, moving as quietly as you can, when you hear the clip-clop of a horse's hooves on pavement. Peering out from the wreckage of a burned out bakery, you see a half-starved horse walking down the street. The poor thing looks like it's been through a lot, but if it keeps walking through town it doesn't stand a chance of surviving.",
       "key" : "horse",
       "name" : "Horse",
@@ -335,8 +432,26 @@
       "persistent" : true,
       "trigger" : "If the player moves a non-exiled survivor:"
     },
+    "hugo_valentine" : {
+      "character" : true,
+      "intro" : "\"Hey man, you don't want to go in there.\" You jump at hearing the voice of a young man dressed like a bicycle courier - you never even heard him ride up. \"I was here man, you know, when it all went down\" he shakes his head solemnly. \"That place is ground zero, you know what I'm saying? I never even got to deliver my final parcel.\" He pats a bulging vinyl bag that sits on the back of his bike.",
+      "key" : "hugo_valentine",
+      "name" : "Hugo Valentine",
+      "options" : [ {
+        "label" : "Inspect",
+        "result" : "Hugo seems hesitant, as if giving it away confirms the world has collapsed. But in the end he relents and then rides away. The player may draw and keep 5 cards from the hospital search deck.",
+        "subtext" : "You ask to inspect the parcel."
+      }, {
+        "label" : "Recruit",
+        "result" : "Search the survivor deck for Hugo Valentine and add him to your following. Remove any despair tokens from any survivor the player controls.",
+        "subtext" : "You think Hugo's story about Raxxon might help the colony's research."
+      } ],
+      "raxxon" : true,
+      "trigger" : "If the survivor is at Raxxon Pharmaceuticals and Hugo Valentine is still in the survivor deck:"
+    },
     "hunted" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"They shot me! It was no accident either. I saw them! They were all decked out in camouflage and they had no interest in the zombies in the area. They were hunting me, and I tell you what - they don't look as rough as us. They look well fed. We've got armed cannibals in our backyard.\"",
       "key" : "hunted",
       "name" : "Hunted",
@@ -354,6 +469,7 @@
     },
     "ice_fishing" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"So we just cut a hole in the ice and stick the lures in there and, what? Jiggle them around? Are you sure there isn't more to it than this?\" you ask. The old timer just laughs and shakes his head.\n\"Well you're supposed to drink booze too, but seeing as the whiskey is reserved for medicine now, no, that's pretty much it.\"\n\"Ice fishing sucks,\" you grumble.\n\"That's why we drank,\" he replies.",
       "key" : "ice_fishing",
       "name" : "Ice Fishing",
@@ -366,6 +482,7 @@
     },
     "ill_show_them_i_can_help" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Once again, a loud mouth is accusing someone else of betrayal. However, the next morning, the accused is found dead. \"Who did this?!\" you demand. \"Me,\" says a meek little girl in the crowd. \"I... I saved everybody... Didn't I?\" Kill the leader of the player that was being accused of being a betrayer. Every non-exiled player must vote with a thumbs up or down.",
       "key" : "ill_show_them_i_can_help",
       "name" : "I'll Show Them I Can Help!",
@@ -384,8 +501,42 @@
       } ],
       "trigger" : "If a player is accused of being a betrayer (a casual accusation is enough) and there is at least 1 helpless survivor at the colony:"
     },
+    "inquiring_minds" : {
+      "intro" : "How did you not see the newspaper display by the door before? There it is, splashed all over the front page. Raxxon Pharmaceuticals. Scandal. Government investigation. And there on the faded newsprint is a picture of a person you recognize. A person in your colony. Look at a player's secret objective. Choose one of the two options below depending on whether or not that individual is a betrayer.",
+      "key" : "inquiring_minds",
+      "name" : "Inquiring Minds",
+      "options" : [ {
+        "label" : "Betrayer",
+        "result" : "\"Apparently some whistle blower told authorities that Raxxon was developing biological weapons,\" you tell the others. \"Well our friend here was the director at Raxxon, and under investigation by the feds. And as we all know, it was right when the feds raided Raxxon that everything went to hell.\" Reveal the betrayer's secret objective. The betrayer is immediately exiled.",
+        "subtext" : "If the player was a betrayer:"
+      }, {
+        "label" : "Hero",
+        "result" : "\"Did you know there is a hero living in our midst? They were a contractor working at Raxxon who saw too much. Pity their warnings came to late.\" Announce the investigated player is not a betrayer.",
+        "subtext" : "If the player was not a betrayer:"
+      } ],
+      "raxxon" : true,
+      "traitor" : true,
+      "trigger" : "If a survivor the player controls is at the gas station:"
+    },
+    "interrogation" : {
+      "bandits" : true,
+      "intro" : "\"Gimme your stuff or get your head blown off,\" the raider says, laughing, his gun in your face. It's almost a game to him, which is why he doesn't hear your companion sneak up behind him. The fire extinguisher reduces him to a crumpled heap, and you both agree to take advantage of the situation.",
+      "key" : "interrogation",
+      "name" : "Interrogation",
+      "options" : [ {
+        "label" : "Pain",
+        "result" : "You torture the bandit for information on where he came from and what his friends are planning. It doesn't take much for his tongue to loosen, but you can't bear to look at yourself in the mirror when you wash his blood off your hands. Lose 1 morale. Remove all bandits at each location from play.",
+        "subtext" : "Torture the bandit until he talks."
+      }, {
+        "label" : "Recruit",
+        "result" : "When the bandit comes to, he finds his wounds treated and a modest meal waiting for him. You wanted to win him over with kindness, but you're rewarded with a violent escape, and a futile chase. Spend 1 action die if possible. Nothing else happens.",
+        "subtext" : "Attempt to win the bandit over with medicine and food."
+      } ],
+      "trigger" : "If a survivor the player controls shares a location with 1 or more other survivors and exactly 1 bandit:"
+    },
     "john_price" : {
       "character" : true,
+      "default" : true,
       "intro" : "As you search through the school, you hear screaming and pounding at a door down the hallway. When you investigate, you see a teenager frantically banging on the door to the cafeteria. You start to unlock the door, when you notice the dead converging on him from behind. (DON'T READ ALOUD: Give the player 5 seconds to choose, after reading the options. If they do not choose, automatically choose the 2nd option.)",
       "key" : "john_price",
       "name" : "John Price",
@@ -402,6 +553,7 @@
       "trigger" : "If the player performs a search action at the school, and John Price is in the survivor deck:"
     },
     "king_shit_of_fuck_hill" : {
+      "default" : true,
       "explicit" : true,
       "intro" : "\"You know what? Why don't you shut the fuck up? I'm tired of your whiny bullshit. Could I just make one move without your unwanted supervision? Who the hell made you president of the goddamn apocalypse? HEY EVERYBODY, WHO WANTS TO MAKE THIS FUCKER PRESIDENT OF CAMP SHIT HOLE?\" Every non-exiled player must vote with a thumbs up or down.",
       "key" : "king_shit_of_fuck_hill",
@@ -420,6 +572,7 @@
     },
     "let_there_be_light" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"How are the lights on in this place?\"",
       "key" : "let_there_be_light",
       "name" : "Let There Be Light",
@@ -437,6 +590,7 @@
     },
     "light_house" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Remember how that fire drew in all those zombies last week? Well the other day I was looking out at the light house and had an idea. What if we fired that thing up to lure out the dead? It hasn't seen full use in decades, but they'd light it up every now and then for special occasions, so I don't think it can be in that bad of shape.",
       "key" : "light_house",
       "name" : "Light House",
@@ -449,6 +603,7 @@
     },
     "maude" : {
       "basic" : true,
+      "default" : true,
       "intro" : "A snarling sound catches your attention and you see a zombie caught between two cars. She claws aimlessly toward the sky, her Meat & Stuff uniform stained with old blood. One blow to her head ends her, and you see her name tag says 'Maude'. She appears to have been crushed against her own car as she was trying to fill her trunk with supplies.",
       "key" : "maude",
       "name" : "Maude",
@@ -464,8 +619,26 @@
       } ],
       "trigger" : "If a non-exiled survivor the player controls is at the grocery store:"
     },
+    "mexican_standoff" : {
+      "bandits" : true,
+      "explicit" : true,
+      "intro" : "You gaze down the barrel of your pistol at the ragged stranger aiming a gun at you. She's just a skinny girl, no older than fourteen, wearing a dirty parka that is far too big for her. You can see the fear in her eyes.",
+      "key" : "mexican_standoff",
+      "name" : "Mexican Standoff",
+      "options" : [ {
+        "label" : "Diplomacy",
+        "result" : "\"Neither of us wants this,\" you say. You lower your gun slowly and she, clearly relieved, does the same. Now you see her shape. She's pregnant. \"My friends and I have a safe place,\" you tell her. Add 2 helpless survivors to the colony and remove 1 bandit from this location.",
+        "subtext" : "You negotiate."
+      }, {
+        "label" : "Anarchy",
+        "result" : "Your bullet calls her bluff and her body hits the filthy ground. But as you search her corpse you discover she was pregnant. Maybe eight months. Add a despair token to all survivors at this location. Remove 1 bandit from this location.",
+        "subtext" : "Shoot to kill."
+      } ],
+      "trigger" : "If a survivor the player controls shares a location with 1 or more bandits (if multiple survivors meet this condition, choose 1):"
+    },
     "mike_cho" : {
       "character" : true,
+      "default" : true,
       "intro" : "The zombie crashing through the window cuts off your final escape route. There's no way out. The inevitability of your death begins to sink in, and you find you're surprised at how at peace you feel. The gnashing dead press in on you, and you close your eyes and whisper a final prayer. You hear a high pitched battle cry and open your eyes again to see a man dressed entirely in black, slicing through a zombie with a sword.",
       "key" : "mike_cho",
       "name" : "Mike Cho",
@@ -482,6 +655,7 @@
     },
     "missing_child" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Oh my God, Cindy! She was here a moment ago. Have you seen her? I think she was climbing on the old treat near the south wall. Did she go over? Did anyone see? Please, we have to look for her. We have to find my baby!\" Every player with 1 or mor survivors must vote with a thumbs up or down.",
       "key" : "missing_child",
       "name" : "Missing Child",
@@ -498,6 +672,7 @@
       "trigger" : "If there is at least 1 helpless survivor at the colony:"
     },
     "mugging" : {
+      "default" : true,
       "intro" : "Rough hands grab you from behind, and your head is slammed into a wall. You try to stagger to your feet, but you end up sprawled on the ground at someone's boots. Your attacker kneels down and a low voice whispers, \"I just want your gear. I can kill you for it, or you can spare yourself a lot of trouble and hand it over. Please believe that I'm perfectly happy to do it either way.\"",
       "key" : "mugging",
       "name" : "Mugging",
@@ -515,6 +690,7 @@
     },
     "music" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You laugh as you push the ruined shelves aside, revealing a guitar case. Inside you find an acoustic guitar in wonderful condition. You sit down with it and holding your breath, give it a strum. You wince at the noise, but after a few minutes of tuning, the notes that come from the instrument are enough to make tears form in your eyes.",
       "key" : "music",
       "name" : "Music",
@@ -532,6 +708,7 @@
     },
     "nicu" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Well that about does it for this floor,\" your companion says. \"I don't think we're going to find anything else of value.\"\n\"What about that place?\" you ask pointing at a large set of double doors bearing the sign Neonatal Intensive Care Unit.\n\"God no. Seriously. That place could have everything we might want, and I'd still tell you not to go in there.\"",
       "key" : "nicu",
       "name" : "NICU",
@@ -548,6 +725,7 @@
     },
     "no_ammo" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"That's right you ugly freak,\" you snarl at the zombie whose head you just blew off. \"Plenty more where that came from!\" You reach down to your belt for another clip, only to realize you were on your last one. \"Or not,\" you say to yourself. Looking over at the bloody ruin of the zombie, you wish you had shown a little restraint.",
       "key" : "no_ammo",
       "name" : "No Ammo",
@@ -564,6 +742,7 @@
     },
     "no_place_left_in_the_world" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The old woman lies on the sidewalk, her breathing labored, her vision distant. You approach cautiously, but see that she's alive. \"Are you okay?\" you ask. \"Oh, don't mind me,\" she replies in a hushed voice. \"Don't mind me. Got none of my medicine left. I got no place left in this world. It's not mine anymore.\" You see the photograph she clutches to her chest. In the photo she is many years younger, and she stands there smiling, held by a handsome young man.",
       "key" : "no_place_left_in_the_world",
       "name" : "No Place Left In The World",
@@ -581,6 +760,7 @@
     },
     "oh_what_a_feeling" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The storm is unexpected and so is the company. \"We should probably share a blanket, right?\" you ask awkwardly. You don't know each other very well, but the time has passed pleasantly so far. Your hands brush under the blanket. Your eyes lock. Both players that control a survivor at that location must vote on the count of 3 (no discussion) with a thumbs up or down.",
       "key" : "oh_what_a_feeling",
       "name" : "Oh What A Feeling...",
@@ -599,8 +779,40 @@
       } ],
       "trigger" : "If a human survivor the player controls shares a location a human survivor another player controls and those are the only 2 survivors at that location:"
     },
+    "on_the_hunt" : {
+      "bandits" : true,
+      "intro" : "You don't know what you expect to find here at your cousin's house, but curiosity won out. He and his family are nowhere to be found, but the trip isn't in vain. Later that evening you explain to the others, \"I knew my cuz was into hunting, but I didn't know just how much. There isn't a lot of ammo for these rifles, but look at all this camo gear! I say we form a hunting party.\"",
+      "key" : "on_the_hunt",
+      "name" : "On The Hunt",
+      "options" : [ {
+        "label" : "Deer",
+        "result" : "Roll 4 dice, for every 3 or higher rolled add 1 food to the supply.",
+        "subtext" : "\"How good would some venison taste right now?\""
+      }, {
+        "label" : "Bandits",
+        "result" : "For the remainder of the game, immediately after a bandit is put into play, roll a die. On a result of 4+, remove that bandit from play. Set this card aside to remember this persisting effect.",
+        "subtext" : "\"We need to do something about this group that keeps raiding our best supply depots. I bet with this camo gear we could ambush them when we cross paths.\""
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player moves a non-exiled survivor:"
+    },
+    "out_of_the_blue" : {
+      "character" : true,
+      "intro" : "Look at Barry stealing food. Stupid Barry reason no bananas in stupid place. Barry take bananas and leave Blue to go eat poop. Blue no want poop. Blue no like tummy full of ouchies. Maybe Barry should eat the poop.\nYou spot an elderly woman in the store, scrounging for supplies the same as yourself. You raise your hand in a cautious greeting, but the old woman gasps and looks above your head. \"I don't want to alarm you,\" she says slowly. \"But there's an angry chimpanzee trying to poop on your head.\"",
+      "key" : "out_of_the_blue",
+      "name" : "Out Of The Blue",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Search the survivor deck for Blue and add her to the following of any other player. Equip this card to the your chosen survivor. That survivor is now 'Barry'. At the beginning of the turn of the player that controls Barry, and Blue and Barry are the only survivors at a location, thee player controlling Barry must place a card from their hand in the waste pile or receive 1 despair token. If Blue dies, remove all despair tokens from Barry.",
+        "subtext" : "Give Barry bananas. Choose one of your survivors at the grocery store."
+      } ],
+      "persistent" : true,
+      "raxxon" : true,
+      "trigger" : "If the player has a survivor who performs a search at the grocery store, and Blue is still in the survivor deck:"
+    },
     "outbreak" : {
       "basic" : true,
+      "default" : true,
       "intro" : "At first Jerry just had a light fever, but the next day his neck was swollen and had a strange purple tint to it. Now three days have passed and you've never seen anything like it. The yellow buboes that have formed under Jerry's jaw are leaking pus, and the odor that surrounds him is harsh and bitter. This can't end well.",
       "key" : "outbreak",
       "name" : "Outbreak",
@@ -617,6 +829,7 @@
     },
     "outsiders" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"I need everybody at the gate right now! There's a flatbed that just pulled up, loaded with refugees.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
       "key" : "outsiders",
       "name" : "Outsiders",
@@ -633,6 +846,7 @@
     },
     "prison_break" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Remember how we talked about trying to raid the armory at the prison to get some riot gear?\"\n\"Sure and we decided that it would be suicide. That we were best off leaving that half sealed up.\"\n\"Yeah, well bad news. Some chuckleheads tried to get in there and now the front gate is wide open and the dead are pouring out.\"",
       "key" : "prison_break",
       "name" : "Prison Break",
@@ -653,6 +867,7 @@
       "trigger" : "If the player moves a survivor and controls at least 2 survivors:"
     },
     "prophet" : {
+      "default" : true,
       "intro" : "You are minding your own business, fully immersed in His Work, when who should spy but one of the lost sheep belonging to that God-forsaken colony? You know what must be done.",
       "key" : "prophet",
       "name" : "Prophet",
@@ -670,6 +885,7 @@
     },
     "radio_signal" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Check it out - I found this old mobile CB radio. It's beat up bad, but it seems to be receiving a signal.I think it's coming from close by. I can't pick up most of what they're saying, but I'd guess someone needs our help.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
       "key" : "radio_signal",
       "name" : "Radio Signal",
@@ -686,6 +902,7 @@
     },
     "rascals" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The air from the storage room is cold, and at first your heart sinks - aside from a stack of wooden pallets, the room is empty. It certainly isn't the trove of medical supplies you were hoping for. But then... you catch a glimpse of medical behind the pallets, and you walk around to investigate. Sitting there are four Rascal scooters. A quick check shows they are all fully charged, but a quick joyride down the hospital hallway forces you to admit the scooters are garbage. They couldn't even outrun a zombie. Hmm. Perhaps they could serve another purpose?",
       "key" : "rascals",
       "name" : "Rascals",
@@ -702,6 +919,7 @@
     },
     "rats" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"We have, like, a billion rats! I opened the door to the pantry and they didn't even scatter! They just looked at me like I opened the bathroom door on them.\" Every non-exiled player must vote with a thumbs up or down.",
       "key" : "rats",
       "name" : "Rats",
@@ -716,8 +934,21 @@
       } ],
       "trigger" : "If there are 5 or more cards in the waste pile, 5 or more food in the supply, and at least 1 non-helpless survivor at the colony:"
     },
+    "remote_detonation" : {
+      "bandits" : true,
+      "intro" : "Setting up barricades suck. Not only is the work hard, but you have to carry the Pole, a 10 foot long metal post with a sharpened end, used to push back the crowding dead. Last week, someone painted a flag on it, which you'd guess is the national flag of Poland. Is there even a Poland anymore? The Pole is unwieldy but useful in times like this. You jab into a zombie that gets too close to your work area.\n\"What the?\"\nThe zombie has another wound in its gut, and from out of the wound you see a blinking red light. You spot another corpse staggering towards you, a light in its belly as well. Looks like the bandits found some serious gear. You give one last shove with the Pole before turning to run.",
+      "key" : "remote_detonation",
+      "name" : "Remote Detonation",
+      "options" : [ {
+        "label" : "Only Option",
+        "result" : "Remove all zombies and barricades at the colony.",
+        "subtext" : "If there are more zombies than barricades at the colony, place 1 wound token on all survivors at the colony."
+      } ],
+      "trigger" : "If the player has a survivor at the colony, and that survivor takes a build a barricade action:"
+    },
     "riot" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"They don't care that we're starving! I can feel my ribs, yet the pantry door is locked up tight. Why? We need food. Well I don't care what those scum bags say - there's way more of us than them. I say we break that door down, and if any of them get in our way, well... it's their choice if things get ugly.\"",
       "key" : "riot",
       "name" : "Riot",
@@ -737,6 +968,7 @@
       "trigger" : "If a player controls a survivor at the colony, there are more helpless survivors in the colony than non-helpless survivors, and there is food in the supply:"
     },
     "sacrament" : {
+      "default" : true,
       "explicit" : true,
       "intro" : "You walk past the cathedral, and you realize that no one's been inside since the colony formed. It's certainly not the most tempting of targets... but you can think of something that might be of use.",
       "key" : "sacrament",
@@ -754,6 +986,7 @@
     },
     "sewer_passage" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You casually walk past an aisle of public records, when an idea strikes you. In half an hour you locate the city's sewage layout, and plot a route that goes from a manhole just outside the colony all the way to the hospital. You show your findings to the colony but no one is interested in traversing a pitch black labyrinth of waste.",
       "key" : "sewer_passage",
       "name" : "Sewer Passage",
@@ -771,6 +1004,7 @@
     },
     "sleep" : {
       "basic" : true,
+      "default" : true,
       "intro" : "God, you're tired. Anxiety kept you tossing and turning last night, and now you feel like you're passing through the day in a fog. You consider playing sick so you can turn in early, and really it isn't a bad idea. You've been making bad decisions all day and could genuinely use the rest.",
       "key" : "sleep",
       "name" : "Sleep",
@@ -784,6 +1018,7 @@
     },
     "sophie_robinson" : {
       "character" : true,
+      "default" : true,
       "intro" : "You run after the smoking helicopter as it spins through the sky. It vanishes from view behind a wall of towering trees, and the ground shakes from impact. Passing through the trees, you see fire and smoke billowing from the cab, but so too do you see the pilot's arms waving wildly. As you draw closer you see she's still alive, but her legs are pinned. \"Help me!\" she screams.",
       "key" : "sophie_robinson",
       "name" : "Sophie Robinson",
@@ -801,6 +1036,7 @@
     },
     "spoiled" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You stare at the can of stew, desperately hoping you're not seeing what you think you see. Is the can bulging or is it just misshapen from being dropped? You're not in a rush to get botulism, but food isn't exactly plentiful around here.",
       "key" : "spoiled",
       "name" : "Spoiled",
@@ -815,8 +1051,25 @@
       } ],
       "trigger" : "If the player spends a food, after removing food from the supply but before increasing the action die result:"
     },
+    "spy" : {
+      "bandits" : true,
+      "intro" : "\"Yeah, I heard her on the CB talking to someone about our supplies and weapons, and I'm pretty sure she was trying to describe our defenses. I'm telling you, that woman is spying on us! I don't know who she was reporting to, but we sure as hell better find out.\"",
+      "key" : "spy",
+      "name" : "Spy",
+      "options" : [ {
+        "label" : "Interrogate",
+        "result" : "She refuses to talk. Desperation and anger drive you to torture, and soon you learn the details of her plan. Remove up to 5 bandits from play. Lose 1 morale.",
+        "subtext" : "You lock the spy up and grill her for information."
+      }, {
+        "label" : "Exile",
+        "result" : "Remove 1 helpless survivor from the colony. Add 2 bandits to a random location by rolling a die.",
+        "subtext" : "Banish her."
+      } ],
+      "trigger" : "If there are 1 or more helpless survivors at the colony:"
+    },
     "supply_drop" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You lived near the airport when you were a kid, and used to climb up on the roof of your house to watch the planes take off. When one passed overhead you'd cheer as the displaced air whipped over your body. Just like right now. Wait, what? You snap awake and fall out of your lawn chair. An immense plane, like something from an old war movie, roars overhead before disgorging what looks like a crate. An orange parachute pops open, carrying the crate to safety - and away from the colony.",
       "key" : "supply_drop",
       "name" : "Supply Drop",
@@ -833,6 +1086,7 @@
     },
     "the_arctic_king" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Snowflakes waft by, and your fingers begin to numb in the frigid cold. The eighth key you try works, and you lift the complaining garbage door up. You start to curse the noise but the words never make it past you lips. It sits there like some ancient idol. The words POLAR BEAR are emblazoned along the snowmobile's flank, and you joyously recall the TV jingle with no hint of irony. \"When winter try to trap you there, mount up on a Polar Bear.\"",
       "key" : "the_arctic_king",
       "name" : "The Arctic King",
@@ -850,6 +1104,7 @@
     },
     "the_buddy_system" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You suck in your breath sharply as she wraps the bandage around the wound. \"I barely made it back on this leg,\" you gasp. \"I haven't felt that alone since before the colony. It's only dumb luck I made it back. I think it needs to be standard operating procedure to go out in pairs.\" Every non-exiled player, when moving, may choose to implement the buddy system.",
       "key" : "the_buddy_system",
       "name" : "The Buddy System",
@@ -864,6 +1119,7 @@
     },
     "the_deputy" : {
       "basic" : true,
+      "default" : true,
       "intro" : "A tap on the glass grabs your attention and you're startled to see four uniformed officers standing outside. One tips his hat at you. You begin to undo the simple barricade you set at the door, but the door is kicked open, and the four men wrestle you to the ground. A gun is placed to your head. \"We've seen your people around town. That's fine. I've got a key here to the gun locker back at the police station. We'll give it to you, but you got to promise your people will keep the area clear for us. Think you can do that?\"",
       "key" : "the_deputy",
       "name" : "The Deputy",
@@ -881,6 +1137,7 @@
     },
     "the_gunfighter" : {
       "character" : true,
+      "default" : true,
       "intro" : "The dead woman lunges into you, the weight of her putrid body knocking you over, and your gun goes clattering across the ground. Panic seizes you as you realize you will likely die. But suddenly a man sprints out from an alleyway, snatches up your gun, takes aim, and pulls the trigger.\n\"No!\" you scream, but his aim is perfect, and the dead woman's face explodes over your own. \"Bendice esta arma, dulce Madre,\" the man whispers. You flip the corpse off you. \"Hey man, thanks for the assist,\" you say. The man looks back at you with intense eyes.",
       "key" : "the_gunfighter",
       "name" : "The Gunfighter",
@@ -897,6 +1154,7 @@
     },
     "the_sunshine_state" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The sun shines brightly, reflecting off the beach's perfect white sands and light blue waters. \"The Sunshine State,\" declares Harold, shaking the postcard in your face. \"That's where we're headed. Why should we be fighting both the weather and the dead? I think the birds have it right. The wife and I are flying south.\"",
       "key" : "the_sunshine_state",
       "name" : "The Sunshine State",
@@ -911,8 +1169,43 @@
       } ],
       "trigger" : "If the player controls a survivor at the colony and there are 2 or more helpless survivors in the colony:"
     },
+    "the_thing_behind_the_wall" : {
+      "explicit" : true,
+      "intro" : "You regret finding the secret lab as you clamp a hand over your mouth. The thing behind the glass leers at you. \"They tried to kill me,\" it coos, \"but I ate them all, every tender bit.\" You retch as the thing caresses the foul ruin that sheds from its bones. \"You wonder if I can get out of here,\" it growls. \"Know that I made them each my lovers as well as my food. You too shall know that joy.\"",
+      "key" : "the_thing_behind_the_wall",
+      "name" : "The Thing Behind The Wall",
+      "options" : [ {
+        "label" : "Run",
+        "result" : "Your bag snags on something and rips open, but you keep on running. Shuffle 2 item cards from your hand into the Raxxon item deck.",
+        "subtext" : "You run like hell."
+      }, {
+        "label" : "Investigate",
+        "result" : "You find what looks like patient records. You learn that Raxxon was doing human drug trials, and it appears that earlier versions of Zomoxtrin caused irreversible insanity in human test subjects. Place 1 despair token on the survivor that performed the search.",
+        "subtext" : "You look around the laboratory as the thing behind the glass screams obscenities at you."
+      } ],
+      "raxxon" : true,
+      "trigger" : "If a player that has 2 or more cards in their hand performs a search at Raxxon with a non-exiled survivor:"
+    },
+    "the_tunnel" : {
+      "bandits" : true,
+      "intro" : "\"My God, it's a tunnel!\" you gasp. \"Who on earth made this?\" Your friend shakes their head. \"Must've been one of us,\" they say. \"But if they haven't seen fit to tell us, you have to wonder if their intentions aren't bad. The dead could get in this way. So could raiders.\" You sigh and hold your jaw in contemplation. \"This thing looks crazy long,\" you observe. \"There's no way someone had time to make this on their own.\" You've either found a useful tool, or the means to the colony's destruction.",
+      "key" : "the_tunnel",
+      "name" : "The Tunnel",
+      "options" : [ {
+        "label" : "Handy",
+        "result" : "Place this card at a random location by rolling a die. A survivor can move to and from that location without rolling exposure. When 1 or more zombies are placed at that location, roll a die. On a 3+ add a zombie to the colony as well.",
+        "subtext" : "Use the tunnel."
+      }, {
+        "label" : "Seal",
+        "result" : "You found the survivors that created the tunnel and exile them. Remove up to 2 helpless survivors from the colony. For each helpless survivor removed, place 1 bandit at a random location by rolling a die.",
+        "subtext" : "Close the tunnel."
+      } ],
+      "persistent" : true,
+      "trigger" : "If the player controls a survivor at the colony:"
+    },
     "thin_ice" : {
       "basic" : true,
+      "default" : true,
       "intro" : "The lake has frozen over, creating a tempting shortcut. You wouldn't have dared risk it in the life you had before, but the rules have all changed, and so has the cost of survival. The prospect of having more time to search has you seriously considering it. You place one foot on the ice and hear it creak. Is that normal? Probably. Another foot produces a similar noise. Are you really going to do this?",
       "key" : "thin_ice",
       "name" : "Thin Ice",
@@ -928,6 +1221,7 @@
       "trigger" : "If the player moves a survivor:"
     },
     "this_is_hopeless" : {
+      "default" : true,
       "explicit" : true,
       "intro" : "\"Guys, it's been real. Real shitty to be precise. If ya'll want to stay and watch this boat sink, that's your business. But us, we aren't sticking around. I'd wish you the best, but let's be honest - you poor bastards are screwed.\" Players who have completed all parts of their secret objective except for 'complete the main objective' may choose to leave the group as potential winners.",
       "key" : "this_is_hopeless",
@@ -941,6 +1235,7 @@
     },
     "toxic_waste" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"I told that lazy jerk to get the fuel and medical waste offsite. So guess what he didn't do? God only knows what's leeching into the ground now. Is our water supply contaminated? How about the garden? And of course now it's colder than a snowman's balls outside and we have to go clean that crap up.\" Every player with 1 or more survivors at the colony must vote with a thumbs up or down.",
       "key" : "toxic_waste",
       "name" : "Toxic Waste",
@@ -957,6 +1252,7 @@
     },
     "traffic_violation" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Your jaw drops when you see the flashing police lights in your rear view mirror. This isn't going to end well.",
       "key" : "traffic_violation",
       "name" : "Traffic Violation",
@@ -974,6 +1270,7 @@
     },
     "unsanitary_conditions" : {
       "basic" : true,
+      "default" : true,
       "intro" : "You can feel the heat coming from your throbbing wound. The slightest press of your index finger produces a foul colored pus and a pain that can't be ignored. You suppose infection was inevitable - there are no showers, no running water, and the soap ran out a week ago. And you're not the only one like this. Antibiotics are a precious resource now, so everyone's hoping to shake off infections naturally. But a glance at your wound tells you all you need to know. If you don't get treated soon you could die.",
       "key" : "unsanitary_conditions",
       "name" : "Unsanitary Conditions",
@@ -984,8 +1281,42 @@
       } ],
       "trigger" : "If the player controls 1 or more wounded survivors and there are 5 or more cards in the waste pile:"
     },
+    "wants_of_the_flesh" : {
+      "bandits" : true,
+      "explicit" : true,
+      "intro" : "You've never liked Mickey. He's a creep, and you wish you hadn't been left alone with him. But when you spot him sneaking off to the basement, you decide to follow. You hear growling in the darkness. What's going on down here? You find them behind a boiler, and clap a hand over your mouth. The dead woman has been tied to an old bed frame. She gnashes her teeth and struggles against her restraints as Mickey unzips his pants and crawls on top of her.",
+      "key" : "wants_of_the_flesh",
+      "name" : "Wants Of The Flesh",
+      "options" : [ {
+        "label" : "Sneak",
+        "result" : "You sneak up behind Mickey and give the monster what he deserves pushing his face down into the jaws of the dead woman. Remove the helpless survivor and place a despair token on the survivor at the colony.",
+        "subtext" : "Attempt to kill Mickey."
+      }, {
+        "label" : "Warn",
+        "result" : "You go to the others, and tell them what you've seen. Mickey curses you as you expel him naked from the colony. Remove the helpless survivor and place a bandit and a zombie together at a random location.",
+        "subtext" : "Tell the others."
+      } ],
+      "trigger" : "If the player has the only survivor at the colony, and there is only 1 helpless survivor:"
+    },
+    "war" : {
+      "bandits" : true,
+      "intro" : "\"This town can't support two communities and those bastards are picking the place clean. If we truly mean to make a home here, and God knows we've done everything we can, then it's time to fight. We can't keep battling the dead as well as the living.\" Every non-exiled player votes with a thumbs up or down.",
+      "key" : "war",
+      "name" : "War",
+      "options" : [ {
+        "label" : "War",
+        "result" : "Roll a die for each non-helpless survivor and set successes aside. A survivor with a gun equipped needs to roll 2+ to be a success. A survivor without a gun equipped needs to roll 5+ to be a success. Roll a die for each bandit. Set aside successes in a separate pile. Bandits need to roll 4+ to be a success. If the total number of survivor successes exceeds the total number of bandit successes, all bandits are killed. If the bandits have more successes all survivors receive 1 wound. If it's a tie, nothing happens.",
+        "subtext" : "Go to war."
+      }, {
+        "label" : "Peace",
+        "result" : "Nothing happens.",
+        "subtext" : "Don't go to war."
+      } ],
+      "trigger" : "If there are 6 or more bandits in play:"
+    },
     "welcome_home" : {
       "basic" : true,
+      "default" : true,
       "intro" : "Oh God. This is the street your parents lived on. How changed is the world that you didn't recognize it? And now you can't stop yourself - you have to know. You turn from your intended destination, and soon open the back door to their house. The smell that assaults you warns of what awaits, but you still enter. You find your mother in the living room, face down on the floor. Her head is a halo of dried gore and your father's Colt lies next to her. You don't even have a chance to mourn before the thing that was your father comes crawling down the stairs.",
       "key" : "welcome_home",
       "name" : "Welcome Home",
@@ -1003,6 +1334,7 @@
     },
     "wounded_survivor" : {
       "basic" : true,
+      "default" : true,
       "intro" : "\"Oh thank God you're alive,\" the stranger says. \"I was afraid you were one of the dead ones. God, I'm in bad shape. I was with some others I met a few weeks ago, but our group was gradually split up or killed. It'd sure be great to team up with somebody again. You got a group?\" Your gaze wanders from the stranger's eyes to the blood-soaked rags wrapped around their right hand. \"Oh this? This is nothing man. Just cut it up on some broken glass when I was looting a store back there.\" The stranger laughs it off as nothing, but they seem nervous about something.",
       "key" : "wounded_survivor",
       "name" : "Wounded Survivor",

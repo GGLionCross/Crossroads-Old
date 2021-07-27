@@ -77,8 +77,7 @@ import {
   vRequired,
   vEmail,
   vUsername,
-  vPassword,
-  vConfirm
+  vPassword
 } from "src/utils/validators.js";
 import BaseInput from "components/BaseComponents/BaseInput.vue";
 

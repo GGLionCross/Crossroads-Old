@@ -31,13 +31,3 @@ export const vPassword = {
     return value.match(regex);
   }
 }
-
-export const vConfirm = ($validator) => {
-  return {
-    vConfirm: {
-      $message: "Passwords don't match",
-      $params: { type: "confirm" },
-      $validator
-    }
-  }
-}

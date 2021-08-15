@@ -1,9 +1,8 @@
 <template>
   <q-card class="bg-drawer" flat>
     <q-btn-dropdown
-      :label="currentUser.username"
+      :label="currentUser.email"
       class="full-width"
-      icon="account_circle"
       dropdown-icon="expand_more"
       auto-close
       flat

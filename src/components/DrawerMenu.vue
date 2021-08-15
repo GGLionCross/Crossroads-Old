@@ -6,8 +6,10 @@
       side="right"
       dark
     >
-      <login-register v-if="!isUserLoggedIn" />
-      <user-card v-else />
+      <div class="row justify-center q-pa-sm">
+        <sign-in-with-google v-if="!isUserLoggedIn" />
+        <user-card v-else />
+      </div>
       <q-list>
         <drawer-menu-item v-close-popup label="Shuffle" icon="shuffle" @click="shuffleCrossroads" />
         <drawer-menu-item label="Filter" icon="filter_alt" @click="showDrawerFilter" />
@@ -24,15 +26,15 @@ import { computed, defineComponent, ref } from "vue";
 import { useStore } from "vuex";
 import DrawerFilter from "./DrawerFilter.vue";
 import DrawerMenuItem from "./DrawerMenuItem.vue";
-import LoginRegister from "./LoginRegister.vue";
+import SignInWithGoogle from "./SignInWithGoogle.vue";
 import UserCard from "./UserCard.vue";
 
 export default defineComponent({
   components: {
     DrawerMenuItem,
-    LoginRegister,
     UserCard,
-    DrawerFilter
+    DrawerFilter,
+    SignInWithGoogle
   },
   setup(props, { emit }) {
     const hideDrawer = () => emit("update:modelValue", false);

@@ -1,6 +1,15 @@
 export function getCards(state) {
   return state.cards;
 }
+export function getDefaultFilter(state) {
+  let defaultFilter = [];
+  for (const [key, value] of Object.entries(state.cards)) {
+    if (value.default) {
+      defaultFilter.push(key);
+    }
+  }
+  return defaultFilter;
+}
 export function getFilter(state) {
   return state.filter;
 }
